@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Sam&#39;s Blog</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Sam&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Aug 2023 14:20:37 -0500</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>/posts/test/</link>
+      <pubDate>Mon, 28 Aug 2023 14:20:37 -0500</pubDate>
+      
+      <guid>/posts/test/</guid>
+      <description>Sam is testing method 1 And I hope this could be easier for editing.</description>
+    </item>
+    
+  </channel>
+</rss>
