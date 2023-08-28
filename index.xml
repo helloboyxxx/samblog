@@ -2,17 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Sam&#39;s Blog</title>
-    <link>/</link>
+    <link>https://helloboyxxx.github.io/samblog/</link>
     <description>Recent content on Sam&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Aug 2023 14:20:37 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 14:35:27 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_basic_counting</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/413_basic_counting/</link>
+      <pubDate>Mon, 28 Aug 2023 14:35:27 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/413_basic_counting/</guid>
+      <description>The four basic counting principle Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1, S_2, &amp;hellip;, S_n$.
+Addition principle: $$ |S| = |S_1| + |S_2| + &amp;hellip; + |S_m| $$
+Ex:
+Path counting: In a $3 \times 3$ grid, if you can move 1 step upward or 1 step to the right. How many ways do we have to move from bottom-left to top-right corner?
+The idea is to break this problem into smaller problems.</description>
+    </item>
+    
     <item>
       <title>Test</title>
-      <link>/posts/test/</link>
+      <link>https://helloboyxxx.github.io/samblog/posts/test/</link>
       <pubDate>Mon, 28 Aug 2023 14:20:37 -0500</pubDate>
       
-      <guid>/posts/test/</guid>
+      <guid>https://helloboyxxx.github.io/samblog/posts/test/</guid>
       <description>Sam is testing method 1 And I hope this could be easier for editing.</description>
     </item>
     

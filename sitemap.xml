@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/posts/</loc>
+    <loc>https://helloboyxxx.github.io/samblog/posts/413_basic_counting/</loc>
+    <lastmod>2023-08-28T14:35:27-05:00</lastmod>
+  </url><url>
+    <loc>https://helloboyxxx.github.io/samblog/posts/</loc>
+    <lastmod>2023-08-28T14:35:27-05:00</lastmod>
+  </url><url>
+    <loc>https://helloboyxxx.github.io/samblog/</loc>
+    <lastmod>2023-08-28T14:35:27-05:00</lastmod>
+  </url><url>
+    <loc>https://helloboyxxx.github.io/samblog/posts/test/</loc>
     <lastmod>2023-08-28T14:20:37-05:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2023-08-28T14:20:37-05:00</lastmod>
+    <loc>https://helloboyxxx.github.io/samblog/categories/</loc>
   </url><url>
-    <loc>/posts/test/</loc>
-    <lastmod>2023-08-28T14:20:37-05:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-  </url><url>
-    <loc>/tags/</loc>
+    <loc>https://helloboyxxx.github.io/samblog/tags/</loc>
   </url>
 </urlset>
