@@ -6,25 +6,38 @@
     <description>Recent content in Posts on Sam&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Aug 2023 22:39:19 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 17:24:30 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Intersting_domino</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/intersting_domino/</link>
+      <title>413_chessboard</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/413_chessboard/</link>
+      <pubDate>Tue, 29 Aug 2023 17:24:30 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/413_chessboard/</guid>
+      <description>Gomor&amp;rsquo;s Theorem: If you move two cells of a $8 \times 8$ chessboard of opposite colors, the remaining cells can be fully domino tiled.
+Pf:
+Draw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)
+Choose the two cells to be removed, and the closed path we have will be sperated into two paths.
+If we lable the close path we chose in the beginning from 1 to 64 in the order we drew it, white cells have odd numbers, and black cells have even numbers (or reversed).</description>
+    </item>
+    
+    <item>
+      <title>Some latex tests</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/latex_test/</link>
       <pubDate>Mon, 28 Aug 2023 22:39:19 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/intersting_domino/</guid>
-      <description>Some latex tests Consider a $n \times m$ chessboard&amp;hellip;
+      <guid>https://helloboyxxx.github.io/samblog/posts/latex_test/</guid>
+      <description>Consider a $n \times m$ chessboard&amp;hellip;
 $$ \int{f(x)dx} $$
 Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in{1, 2, 3, 4}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$.</description>
     </item>
     
     <item>
-      <title>417_review</title>
+      <title>My Math 417 review notes</title>
       <link>https://helloboyxxx.github.io/samblog/posts/417_review/</link>
       <pubDate>Mon, 28 Aug 2023 15:50:48 -0500</pubDate>
       
       <guid>https://helloboyxxx.github.io/samblog/posts/417_review/</guid>
-      <description>My Math 417 review notes I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!
+      <description>I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!
 These are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.
 Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
     </item>
@@ -40,15 +53,6 @@ Addition principle: $$ |S| = |S_1| + |S_2| + &amp;hellip; + |S_m| $$
 Ex:
 Path counting: In a $3 \times 3$ grid, if you can move 1 step upward or 1 step to the right. How many ways do we have to move from bottom-left to top-right corner?
 The idea is to break this problem into smaller problems.</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/test/</link>
-      <pubDate>Mon, 28 Aug 2023 14:20:37 -0500</pubDate>
-      
-      <guid>https://helloboyxxx.github.io/samblog/posts/test/</guid>
-      <description>Sam is testing method 1 And I hope this could be easier for editing.</description>
     </item>
     
   </channel>
