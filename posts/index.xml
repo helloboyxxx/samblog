@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Sam&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Aug 2023 15:50:48 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Aug 2023 22:39:19 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intersting_domino</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/intersting_domino/</link>
+      <pubDate>Mon, 28 Aug 2023 22:39:19 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/intersting_domino/</guid>
+      <description>Some latex tests Consider a $n \times m$ chessboard&amp;hellip;
+$$ \int{f(x)dx} $$
+Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in{1, 2, 3, 4}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$.</description>
+    </item>
+    
     <item>
       <title>417_review</title>
       <link>https://helloboyxxx.github.io/samblog/posts/417_review/</link>
