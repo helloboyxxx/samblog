@@ -1,13 +1,9 @@
 ---
-title: "Intersting_domino"
+title: "Some latex tests"
 date: 2023-08-28T22:39:19-05:00
 draft: false
 math: true
 ---
-
-# Some latex tests
-
-
 
 Consider a $n \times m$ chessboard...
 
@@ -23,11 +19,6 @@ Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first play
 $\mathfrak{ABCDEFG}$
 
 
-$$
-\frac{1}{\Gamma(s)}\int_{0}^{\infty}\frac{u^{s-1}}{e^{u}-1}\mathrm{d}u
-$$
-
-
 Hi `$z = x + y$`.
 
 `$$a^2 + b^2 = c^2$$`
@@ -38,6 +29,7 @@ c & d
 
 from: https://yihui.org/en/2018/07/latex-math-markdown/
 
+### complex math (array)
 `$$
 \begin{array} {lcl}
   L(p,w_i) &=& \dfrac{1}{N}\Sigma_{i=1}^N(\underbrace{f_r(x_2
@@ -55,3 +47,47 @@ from: https://yihui.org/en/2018/07/latex-math-markdown/
   \rightarrow x_{k-1})}{p_a(x_{k-1})p_a(x_k)})
 \end{array}
 $$`
+
+
+### Testing alignments
+
+`$$
+\begin{align*}
+\frac{1}{\Gamma(s)}\int_{0}^{\infty}\frac{u^{s-1}}{e^{u}-1}\mathrm{d}u
+\end{align*}
+$$`
+
+
+### Hx tests
+test: 看看以下代码能不能打出来：
+
+1. 
+$$
+\mathcal{F}
+$$
+
+2. 
+$$
+\lambda_i \xlongequal[]{\text{eq.}(1)}\int_{\{i\}}
+$$
+
+3. 
+`$$
+\begin{align*}
+  \text{(1) } 0\oplus 0 & = 0\\
+  \text{(2) } 1\oplus 0 & = 1\\
+  \text{(3) } 0\oplus 1 & = 1\\
+  \text{(4) } 1\oplus 1 & = 0
+\end{align*}
+$$`
+
+We observe that:
+
+4.
+$$
+\begin{itemize}
+  \item for $y=x\oplus z$, $y$ agreees with $x$ if (1) or (3) happen; disagrees 
+  if (2) or (4) happen.
+  \item $y=0$ iff $x$ and $z$ agree; $y=1$ iff $x$ and $z$ disagree.
+\end{itemize}
+$$
