@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Sam&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Aug 2023 17:24:30 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Aug 2023 13:10:06 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interesting DFA</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/interesting_dfa/</link>
+      <pubDate>Wed, 30 Aug 2023 13:10:06 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/interesting_dfa/</guid>
+      <description>Deterministic Finite Automaition Definition: $(Q, s, A, S)$
+$Q$: A set of all the possible state. $s \in Q$ : starting state. The state to start the machine. $A \subseteq Q$: The set of states we accept. Return &amp;ldquo;good&amp;rdquo; when we end there. $S$: A function $Q \times \Sigma \rightarrow Q$. The set of all transition functions.
+There is an interesting DFA design question. The question is as follows:
+Given a bit-string (a string that contains only 0s and 1s), design a DFA that accepts the string if and only if the number represented by the string is divisible by 5.</description>
+    </item>
+    
     <item>
       <title>413_chessboard</title>
       <link>https://helloboyxxx.github.io/samblog/posts/413_chessboard/</link>
