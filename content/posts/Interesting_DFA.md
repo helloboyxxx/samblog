@@ -10,9 +10,14 @@ math: true
 Definition: $(Q, s, A, S)$
 
 $Q$: A set of all the possible state.
+
 $s \in Q$ : starting state. The state to start the machine. 
+
 $A \subseteq Q$: The set of states we accept. Return "good" when we end there. 
+
 $S$: A function $Q \times \Sigma \rightarrow Q$. The set of all transition functions.
+
+---
 
 
 
