@@ -103,3 +103,23 @@ How many computer passwords have a repeat symbol?
 ans: The number of total passwords - passwords that don't repeat. 
 
 = $36^6 - 36 * 35 * 34 * 33 * 32 * 31$
+
+### **Division principle**
+
+Let $S$ be a finite set htat is partitioned into k parts in such a way that each part contains the **same** number of objects. Then the number of parts in the partition is given by the rule.
+$$
+k = \frac{|S|}{|S_i|}
+$$
+A multiset is a modification of the concept of a set that, unlike a set, allows for multiple instances for each of its elements. 
+
+Ex: $\{a, a, b\}$ the element a has multiplicity 2, and b has multiplicity 1. 
+
+
+
+**Division principle for multisets**
+
+Let $S$ be a finite multiset in which each element has the same multiplicity $m$, Let $A$ be the underlying set of $S$, formed from its distinct elements. The the size is given by: 
+$$
+|A| = \frac{|S|}{m}
+$$
+
