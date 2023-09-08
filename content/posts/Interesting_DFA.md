@@ -7,7 +7,7 @@ math: true
 
 ### Deterministic Finite Automaition
 
-Definition: $(Q, s, A, S)$
+Definition: $(Q, s, A, \delta)$
 
 $Q$: A set of all the possible state.
 
@@ -15,7 +15,7 @@ $s \in Q$ : starting state. The state to start the machine.
 
 $A \subseteq Q$: The set of states we accept. Return "good" when we end there. 
 
-$S$: A function $Q \times \Sigma \rightarrow Q$. The set of all transition functions.
+$\delta$: A function $Q \times \Sigma \rightarrow Q$. The set of all transition functions.
 
 ---
 
@@ -40,7 +40,7 @@ I also wrote a short python script for verifying this:
 # Q is a finite set of states
 # q0 is the start state
 # A is a set of accepting states
-# S is a transition function that takes a state and an input symbol and returns a state
+# delta is a transition function that takes a state and an input symbol and returns a state
 
 # also consider the alphabet sigma, we can use this to generate random inputs
 sigma = [0, 1] # this is the alphabet.
@@ -55,7 +55,7 @@ A = [0]
 # the value is the next state
 # the size of this dictionay == |Q| * |sigma|
 
-S = {
+delta = {
     (0, 0): 0,
     (0, 1): 1,
     (1, 0): 2, 
@@ -89,7 +89,7 @@ def verify_dfa(dfa, input_string):
 
 
 # now we can test the function
-dfa = (Q, q0, A, S)
+dfa = (Q, q0, A, delta)
 
 import random
 
