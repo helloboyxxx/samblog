@@ -1,7 +1,7 @@
 ---
 title: "Some latex tests"
 date: 2023-08-28T22:39:19-05:00
-draft: false
+draft: true
 math: true
 ---
 
