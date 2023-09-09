@@ -3,6 +3,7 @@ title: "Interesting DFA"
 date: 2023-08-30T13:10:06-05:00
 draft: false
 math: true
+tags: ["CS 374"]
 ---
 
 ### Deterministic Finite Automaition

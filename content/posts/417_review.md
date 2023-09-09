@@ -3,6 +3,7 @@ title: "My Math 417 review notes"
 date: 2023-08-28T15:50:48-05:00
 draft: false
 math: true
+tags: ["MATH 417"]
 ---
 
 

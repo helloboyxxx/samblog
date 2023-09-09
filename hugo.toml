@@ -1,8 +1,41 @@
 baseURL = 'https://helloboyxxx.github.io/samblog'
 
 languageCode = 'en-us'
-title = "Sam's Blog"
+title = "Sam's Meanderings"
 theme = 'PaperMod'
 
+
+[params.homeInfoParams]
+Title = "Stay 😎, Be 😊, Keep 📚"
+Content = '"Meanderings of a curious mind"'
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/helloboyxxx"
+
+[[params.socialIcons]]
+name = "email"
+url = "yuec12@illinois.edu"
+
+[[menu.main]]
+name = "Archive"
+url = "archives"
+weight = 5
+
+[[menu.main]]
+name = "Search"
+url = "search/"
+weight = 10
+
+[[menu.main]]
+name = "Tags"
+url = "tags/"
+weight = 10
+
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+
 [params]
-  katex = true
+ShowCodeCopyButtons = true

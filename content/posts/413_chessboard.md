@@ -3,6 +3,7 @@ title: "413_chessboard"
 date: 2023-08-29T17:24:30-05:00
 draft: false
 math: true
+tags: ["MATH 413"]
 ---
 
 ### Gomor's Theorem:

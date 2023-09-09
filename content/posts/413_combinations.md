@@ -3,6 +3,7 @@ title: "413_combinations"
 date: 2023-09-08T13:23:54-05:00
 draft: false
 math: true
+tags: ["MATH 413"]
 ---
 
 A combination of a set $S$ is a term usually used to denote an unordered selection of the element of $S$. It is simply a selection of a subset of $S$.
