@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Interesting DFA | Sam&#39;s Blog</title>
-<meta name="keywords" content="">
+<title>Interesting DFA | Sam&#39;s Meanderings</title>
+<meta name="keywords" content="CS 374">
 <meta name="description" content="Deterministic Finite Automaition Definition: $(Q, s, A, \delta)$
 $Q$: A set of all the possible state.
 $s \in Q$ : starting state. The state to start the machine.
@@ -63,11 +63,6 @@ Given a bit-string (a string that contains only 0s and 1s), design a DFA that ac
 
     </style>
 </noscript>
-
-
-
-
-
 
  
 
@@ -150,7 +145,7 @@ Given a bit-string (a string that contains only 0s and 1s), design a DFA that ac
   "name": "Interesting DFA",
   "description": "Deterministic Finite Automaition Definition: $(Q, s, A, \\delta)$\n$Q$: A set of all the possible state.\n$s \\in Q$ : starting state. The state to start the machine.\n$A \\subseteq Q$: The set of states we accept. Return \u0026ldquo;good\u0026rdquo; when we end there.\n$\\delta$: A function $Q \\times \\Sigma \\rightarrow Q$. The set of all transition functions.\nThere is an interesting DFA design question. The question is as follows:\nGiven a bit-string (a string that contains only 0s and 1s), design a DFA that accepts the string if and only if the number represented by the string is divisible by 5.",
   "keywords": [
-    
+    "CS 374"
   ],
   "articleBody": "Deterministic Finite Automaition Definition: $(Q, s, A, \\delta)$\n$Q$: A set of all the possible state.\n$s \\in Q$ : starting state. The state to start the machine.\n$A \\subseteq Q$: The set of states we accept. Return “good” when we end there.\n$\\delta$: A function $Q \\times \\Sigma \\rightarrow Q$. The set of all transition functions.\nThere is an interesting DFA design question. The question is as follows:\nGiven a bit-string (a string that contains only 0s and 1s), design a DFA that accepts the string if and only if the number represented by the string is divisible by 5.\nInitially, I was thinking of the trailing bits of the binary representation. However, there are too many states to consider. A better way of constructing the states of this machine is to consider the reminders. By doing this, it only uses 5 states — it worth a try. So, I tried to write out the binary numbers and tried to design the transition functions for simple cases. It turns out that the result works well.\nI also wrote a short python script for verifying this:\n# verifying dfa # for this specific task, we need to use DFA to determine wheter the incomming bit string can be divible by 5. # The general definition of a DFA is: # M = (Q, q0, A, S) # Q is a finite set of states # q0 is the start state # A is a set of accepting states # delta is a transition function that takes a state and an input symbol and returns a state # also consider the alphabet sigma, we can use this to generate random inputs sigma = [0, 1] # this is the alphabet. # We need to define the machine, and then we can verify it Q = [0, 1, 2, 3, 4] q0 = 0 A = [0] # represent the transition function as a dictionary # the key is a tuple of (state, input symbol) # the value is the next state # the size of this dictionay == |Q| * |sigma| delta = { (0, 0): 0, (0, 1): 1, (1, 0): 2, (1, 1): 3, (2, 0): 4, (2, 1): 0, (3, 0): 1, (3, 1): 2, (4, 0): 3, (4, 1): 4 } # now we can write a function to verify the DFA # we assume that the given dfa is an tuple of (Q, q0, A, S) def verify_dfa(dfa, input_string): # first we need to check if the input_string is valid for c in input_string: if (int)(c) not in sigma: return False # start the verification current_state = dfa[1] for c in input_string: current_state = dfa[3][(current_state, (int)(c))] # looking up the dict for the next state if current_state in dfa[2]: return True return False # end of verify_dfa # now we can test the function dfa = (Q, q0, A, delta) import random # randomly generate strings of length less than length l test_num = 100 l = 10 result = True for _ in range(test_num): length = random.randint(1, l) input_string = '' for _ in range(length): input_string += str(random.randint(0, 1)) if (int(input_string, 2) % 5 == 0) != verify_dfa(dfa, input_string): result = False break # print in the order: dfa result, actual resultinput string in decimal, seperated by tab # print(verify_dfa(dfa, input_string), end='\\t') # print(int(input_string, 2) % 5 == 0, end='\\t') # print(int(input_string, 2), end='\\n') # end of for print(f\"tested {test_num} times with bit string of length less than {l}, \", end=\"\") if result: print(\"the DFA is correct!\") else: print(\"the DFA is not correct!\") ",
   "wordCount" : "598",
@@ -163,7 +158,7 @@ Given a bit-string (a string that contains only 0s and 1s), design a DFA that ac
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Sam's Blog",
+    "name": "Sam's Meanderings",
     "logo": {
       "@type": "ImageObject",
       "url": "https://helloboyxxx.github.io/samblog/favicon.ico"
@@ -188,7 +183,7 @@ Given a bit-string (a string that contains only 0s and 1s), design a DFA that ac
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://helloboyxxx.github.io/samblog" accesskey="h" title="Sam&#39;s Blog (Alt + H)">Sam&#39;s Blog</a>
+            <a href="https://helloboyxxx.github.io/samblog" accesskey="h" title="Sam&#39;s Meanderings (Alt + H)">Sam&#39;s Meanderings</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -213,6 +208,21 @@ Given a bit-string (a string that contains only 0s and 1s), design a DFA that ac
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -334,13 +344,14 @@ Given a bit-string (a string that contains only 0s and 1s), design a DFA that ac
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://helloboyxxx.github.io/samblog/tags/cs-374/">CS 374</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://helloboyxxx.github.io/samblog">Sam&#39;s Blog</a></span>
+    <span>&copy; 2023 <a href="https://helloboyxxx.github.io/samblog">Sam&#39;s Meanderings</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -406,6 +417,53 @@ Given a bit-string (a string that contains only 0s and 1s), design a DFA that ac
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>My Math 417 review notes | Sam&#39;s Blog</title>
-<meta name="keywords" content="">
+<title>My Math 417 review notes | Sam&#39;s Meanderings</title>
+<meta name="keywords" content="MATH 417">
 <meta name="description" content="I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!
 These are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.
 Previous Next &nbsp; &nbsp; / [pdf] View the PDF file here.">
@@ -59,11 +59,6 @@ Previous Next &nbsp; &nbsp; / [pdf] View the PDF file here.">
 
     </style>
 </noscript>
-
-
-
-
-
 
  
 
@@ -138,7 +133,7 @@ Previous Next &nbsp; &nbsp; / [pdf] View the PDF file here."/>
   "name": "My Math 417 review notes",
   "description": "I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!\nThese are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.\nPrevious Next \u0026nbsp; \u0026nbsp; / [pdf] View the PDF file here.",
   "keywords": [
-    
+    "MATH 417"
   ],
   "articleBody": "I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!\nThese are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.\nPrevious Next / [pdf] View the PDF file here. ",
   "wordCount" : "71",
@@ -151,7 +146,7 @@ Previous Next &nbsp; &nbsp; / [pdf] View the PDF file here."/>
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Sam's Blog",
+    "name": "Sam's Meanderings",
     "logo": {
       "@type": "ImageObject",
       "url": "https://helloboyxxx.github.io/samblog/favicon.ico"
@@ -176,7 +171,7 @@ Previous Next &nbsp; &nbsp; / [pdf] View the PDF file here."/>
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://helloboyxxx.github.io/samblog" accesskey="h" title="Sam&#39;s Blog (Alt + H)">Sam&#39;s Blog</a>
+            <a href="https://helloboyxxx.github.io/samblog" accesskey="h" title="Sam&#39;s Meanderings (Alt + H)">Sam&#39;s Meanderings</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -201,6 +196,21 @@ Previous Next &nbsp; &nbsp; / [pdf] View the PDF file here."/>
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -473,13 +483,14 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-9169a613" href="
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://helloboyxxx.github.io/samblog/tags/math-417/">MATH 417</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://helloboyxxx.github.io/samblog">Sam&#39;s Blog</a></span>
+    <span>&copy; 2023 <a href="https://helloboyxxx.github.io/samblog">Sam&#39;s Meanderings</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -545,6 +556,53 @@ View the PDF file <a class="pdf-source" id="pdf-source-noscript-9169a613" href="
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

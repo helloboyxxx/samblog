@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>413_basic_counting | Sam&#39;s Blog</title>
-<meta name="keywords" content="">
+<title>413_basic_counting | Sam&#39;s Meanderings</title>
+<meta name="keywords" content="MATH 413">
 <meta name="description" content="The four basic counting principle Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1, S_2, &hellip;, S_n$.
 Addition principle: $$ |S| = |S_1| &#43; |S_2| &#43; &hellip; &#43; |S_m| $$
 Ex:
@@ -61,11 +61,6 @@ The idea is to break this problem into smaller problems.">
 
     </style>
 </noscript>
-
-
-
-
-
 
  
 
@@ -144,7 +139,7 @@ The idea is to break this problem into smaller problems."/>
   "name": "413_basic_counting",
   "description": "The four basic counting principle Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1, S_2, \u0026hellip;, S_n$.\nAddition principle: $$ |S| = |S_1| + |S_2| + \u0026hellip; + |S_m| $$\nEx:\nPath counting: In a $3 \\times 3$ grid, if you can move 1 step upward or 1 step to the right. How many ways do we have to move from bottom-left to top-right corner?\nThe idea is to break this problem into smaller problems.",
   "keywords": [
-    
+    "MATH 413"
   ],
   "articleBody": "The four basic counting principle Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1, S_2, …, S_n$.\nAddition principle: $$ |S| = |S_1| + |S_2| + … + |S_m| $$\nEx:\nPath counting: In a $3 \\times 3$ grid, if you can move 1 step upward or 1 step to the right. How many ways do we have to move from bottom-left to top-right corner?\nThe idea is to break this problem into smaller problems. Addition principle guarrantees that we can add the numbers together.\nThink of the final step we need to take. It must be either an up or a right. This makes the problem to become a similar but smaller problem that has $2 \\times 3$ size. Mark it $n_{2\\times 3}$\nUsing the same idea, we have:\n$$ n_{3 \\times 3} = 2 \\cdot n_{2 \\times 3} = 2 \\cdot (n_{2 \\times 2} + n_{3 \\times 1}) $$\nMultiplication principle Let $S$ be a set of ordered pairs $(a, b)$ of objects, where the first object $a$ comes from a set of size $p$, and for each choice of object $a$ there are q choices for object $b$. Then the size of $S$ is\n$$ |S| = p \\cdot q $$\nGeneralized multiplicative principle\nLet $S$ be a finite set of $p$-tuples $a = (a_1, …, a_p)$ and let $t_1, …, t_p$ be some positive numbers.\nSuppose that for every $a = (a_1, …, a_p) \\in S$, and every $i \\in {1, …, p}$, we have $$ |{b \\in S:b_j = a_j, \\forall j \\neq i}| = t_i $$ Then, $$ |S| = t_1 \\cdot t_2 \\cdot … t_p $$ (4) counts the number of choices if we fix all other dimension except $i$.\nEx:\nDetermine the number of positive integers that are factors of the number $2^{10}\\cdot 7 \\cdot 13^3$.\nThis number can be written as: $2^{a}\\cdot 7^b \\cdot 13^c$. Then just consider the number of choices for $a, b, c$:\n$a \\in {0, 1, … 10}$ $b \\in {0, 1}$ $c \\in {0, 1, 2, 3}$\nIn total, $11 \\cdot 2 \\cdot 4 = 88$\nObservation In the multiplication principle the $q$ choices for object $b$ may vary the choice of $a$. The only requirement is that there be the same number $q$ of choices, not necessarily the same choices.\n(When we choose one coordinate, the choices for other coordinates changes)\nEx:\nHow many two-digit numbers have distinct and nonzero digits?\n9 * 8 = 72. The first digit has 9 choices, the second digit has 8 (since 0 and the 1st choice are not allowed)\nSubtraction Principle Let $A$ be a set and let $U$ be a larger set containing $A$. Let $$ \\bar{A} = U \\setminus A = {x \\in U : x \\notin A} $$\nEx:\nComputer passwords are consist of a string of six symbols taken from digit 0 to 9 and letters a to z.\nHow many computer passwords have a repeat symbol?\nans: The number of total passwords - passwords that don’t repeat.\n= $36^6 - 36 * 35 * 34 * 33 * 32 * 31$\nDivision principle Let $S$ be a finite set htat is partitioned into k parts in such a way that each part contains the same number of objects. Then the number of parts in the partition is given by the rule. $$ k = \\frac{|S|}{|S_i|} $$ A multiset is a modification of the concept of a set that, unlike a set, allows for multiple instances for each of its elements.\nEx: ${a, a, b}$ the element a has multiplicity 2, and b has multiplicity 1.\nDivision principle for multisets\nLet $S$ be a finite multiset in which each element has the same multiplicity $m$, Let $A$ be the underlying set of $S$, formed from its distinct elements. The the size is given by: $$ |A| = \\frac{|S|}{m} $$\n",
   "wordCount" : "648",
@@ -157,7 +152,7 @@ The idea is to break this problem into smaller problems."/>
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Sam's Blog",
+    "name": "Sam's Meanderings",
     "logo": {
       "@type": "ImageObject",
       "url": "https://helloboyxxx.github.io/samblog/favicon.ico"
@@ -182,7 +177,7 @@ The idea is to break this problem into smaller problems."/>
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://helloboyxxx.github.io/samblog" accesskey="h" title="Sam&#39;s Blog (Alt + H)">Sam&#39;s Blog</a>
+            <a href="https://helloboyxxx.github.io/samblog" accesskey="h" title="Sam&#39;s Meanderings (Alt + H)">Sam&#39;s Meanderings</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -207,6 +202,21 @@ The idea is to break this problem into smaller problems."/>
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -296,13 +306,14 @@ $$</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://helloboyxxx.github.io/samblog/tags/math-413/">MATH 413</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://helloboyxxx.github.io/samblog">Sam&#39;s Blog</a></span>
+    <span>&copy; 2023 <a href="https://helloboyxxx.github.io/samblog">Sam&#39;s Meanderings</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -368,6 +379,53 @@ $$</p>
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

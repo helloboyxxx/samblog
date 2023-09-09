@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>413_chessboard | Sam&#39;s Blog</title>
-<meta name="keywords" content="">
+<title>413_chessboard | Sam&#39;s Meanderings</title>
+<meta name="keywords" content="MATH 413">
 <meta name="description" content="Gomor&rsquo;s Theorem: If you move two cells of a $8 \times 8$ chessboard of opposite colors, the remaining cells can be fully domino tiled.
 Pf:
 Draw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)
@@ -61,11 +61,6 @@ If we lable the close path we chose in the beginning from 1 to 64 in the order w
 
     </style>
 </noscript>
-
-
-
-
-
 
  
 
@@ -144,7 +139,7 @@ If we lable the close path we chose in the beginning from 1 to 64 in the order w
   "name": "413_chessboard",
   "description": "Gomor\u0026rsquo;s Theorem: If you move two cells of a $8 \\times 8$ chessboard of opposite colors, the remaining cells can be fully domino tiled.\nPf:\nDraw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)\nChoose the two cells to be removed, and the closed path we have will be sperated into two paths.\nIf we lable the close path we chose in the beginning from 1 to 64 in the order we drew it, white cells have odd numbers, and black cells have even numbers (or reversed).",
   "keywords": [
-    
+    "MATH 413"
   ],
   "articleBody": "Gomor’s Theorem: If you move two cells of a $8 \\times 8$ chessboard of opposite colors, the remaining cells can be fully domino tiled.\nPf:\nDraw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)\nChoose the two cells to be removed, and the closed path we have will be sperated into two paths.\nIf we lable the close path we chose in the beginning from 1 to 64 in the order we drew it, white cells have odd numbers, and black cells have even numbers (or reversed).\nEasy to see that the path in between the two cells crosses even number tiles.\nGomor’s on more general chessboard ($n \\times m$ board): The two opposite corners must be in opposite color iff n and m has different paritity.\nPF: Consider the “L” shape edge of the board(half the square), there are $m + n - 1$ tiles. When this number is even, they are in opposite color.\nThen check: When m and n have different parity, then there must be an “S” shape closed path to cross all the tiles.\nDef: b-ominos. It covers b tiles in a row…\nThm: An $m \\times n$ board has a tiling with b-ominos iff $b|m$ or $b|n$. $\\leftarrow$ is trivial.\n$\\rightarrow$:\nColor the board:\n$$ \\begin{matrix} 1 \u0026 2 \u0026 3 \u0026 4 \u0026 5 \u0026 6 \u0026...\\\\ 3 \u0026 1 \u0026 2 \u0026 3 \u0026 4 \u0026 5 \u0026... \\\\ 2 \u0026 3 \u0026 1 \u0026 2 \u0026 3 \u0026 4 \u0026... \\\\ .\\\\ .\\\\ . \\end{matrix} $$\nConsider the board has dimension $m \\times n$ and $m = qb + r$, $n = tb + s$\nThen, on this board, each b-omino see a color exactly once.\nAssume, for contradiction, $r, s \\neq 0$\nAs we are assuming to have a b-omino tiling, each color shows up the same number of times $\\rightarrow$ then in the little $r \\times s$ chessboard, each color has the same number of squares. WLOG, assume $s \\leq r$. The number of 1’s in the $r \\times s$ chessboard = $s$. The total number of squares is $rs$. Consider we tiling with b-ominos, the number of sqares is also $sb$ (Each b-omino sees every color once, so number of 1’s = number of tiles. So $sb$). Cancle out the b, we have the contradiction.\n",
   "wordCount" : "400",
@@ -157,7 +152,7 @@ If we lable the close path we chose in the beginning from 1 to 64 in the order w
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Sam's Blog",
+    "name": "Sam's Meanderings",
     "logo": {
       "@type": "ImageObject",
       "url": "https://helloboyxxx.github.io/samblog/favicon.ico"
@@ -182,7 +177,7 @@ If we lable the close path we chose in the beginning from 1 to 64 in the order w
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://helloboyxxx.github.io/samblog" accesskey="h" title="Sam&#39;s Blog (Alt + H)">Sam&#39;s Blog</a>
+            <a href="https://helloboyxxx.github.io/samblog" accesskey="h" title="Sam&#39;s Meanderings (Alt + H)">Sam&#39;s Meanderings</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -207,6 +202,21 @@ If we lable the close path we chose in the beginning from 1 to 64 in the order w
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://helloboyxxx.github.io/samblog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -251,13 +261,14 @@ The total number of squares is $rs$. Consider we tiling with b-ominos, the numbe
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://helloboyxxx.github.io/samblog/tags/math-413/">MATH 413</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://helloboyxxx.github.io/samblog">Sam&#39;s Blog</a></span>
+    <span>&copy; 2023 <a href="https://helloboyxxx.github.io/samblog">Sam&#39;s Meanderings</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -323,6 +334,53 @@ The total number of squares is $rs$. Consider we tiling with b-ominos, the numbe
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
