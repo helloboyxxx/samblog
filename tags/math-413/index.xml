@@ -6,7 +6,17 @@
     <description>Recent content in MATH 413 on Sam&#39;s Meanderings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Sep 2023 13:23:54 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/tags/math-413/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Sep 2023 17:35:33 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/tags/math-413/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_binomial</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/413_binomial/</link>
+      <pubDate>Tue, 12 Sep 2023 17:35:33 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/413_binomial/</guid>
+      <description>Binomial Coefficient and Binomial Identity Pascal&amp;rsquo;s Triangle $$ \begin{matrix} {0 \choose 0}\ {1 \choose 0} &amp;amp; {1 \choose 1}\ {2 \choose 0} &amp;amp; {2 \choose 1} &amp;amp; {2 \choose 2}\ {3 \choose 0} &amp;amp; {3 \choose 1} &amp;amp; {3 \choose 2} &amp;amp; {3 \choose 3}\ {4 \choose 0} &amp;amp; {4 \choose 1} &amp;amp; {4 \choose 2} &amp;amp; {4 \choose 3} &amp;amp; {4 \choose 4}\ .\ .\ . \end{matrix} $$
+Pascal&amp;rsquo;s Formula For all integers $n$ and $k$ with $1 \leq k \leq n - 1$, we have: $$ {n \choose k} = {{n-1} \choose k} + {{n-1} \choose {k-1}} $$</description>
+    </item>
+    
     <item>
       <title>413_combinations</title>
       <link>https://helloboyxxx.github.io/samblog/posts/413_combinations/</link>
