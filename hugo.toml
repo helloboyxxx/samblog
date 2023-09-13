@@ -6,7 +6,7 @@ theme = 'PaperMod'
 
 
 [params.homeInfoParams]
-Title = "Stay 😎, Be 😊, Keep 📚"
+Title = "Stay 😎. Be 😊. Keep 📚"
 Content = '"Meanderings of a curious mind"'
 
 [[params.socialIcons]]
