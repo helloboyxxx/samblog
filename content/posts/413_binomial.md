@@ -11,7 +11,7 @@ tags: ["Math 413"]
 
 ### Pascal's Triangle
 
-$$
+`$$
 \begin{matrix}
 {0 \choose 0}\\
 {1 \choose 0} & {1 \choose 1}\\
@@ -22,7 +22,7 @@ $$
 .\\
 .
 \end{matrix}
-$$
+$$`
 
 ### **Pascal's Formula**
 
@@ -42,10 +42,12 @@ $\mathcal{C} = \{A : A \subseteq S, |A| = k\}$
 (1) $|\mathcal{C}| = {n \choose k}$
 
 (2) Define: 
-$$
-\mathcal{C_1} = \{A : A \subseteq S, |A| = k, 1 \in A\}\\
-\mathcal{C_2} = \{A : A \subseteq S, |A| = k, 1 \not\in A\}
-$$
+`$$
+\begin{align*}
+  \mathcal{C_1} = \{A : A \subseteq S, |A| = k, 1 \in A\}\\
+  \mathcal{C_2} = \{A : A \subseteq S, |A| = k, 1 \not\in A\}
+\end{align*}
+$$`
 Note that: $\mathcal{C_1}$ and $\mathcal{C_2}$ are disjoint, $\mathcal{C} = \mathcal{C_1} \cup \mathcal{C_2}$
 
 Since $|\mathcal{C_1}| = {{n-1} \choose {k-1}}$, $|\mathcal{C_2}| = {{n-1} \choose {k}}$, we get the identity.

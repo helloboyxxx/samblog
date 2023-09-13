@@ -39,3 +39,7 @@ home = [ "HTML", "RSS", "JSON" ]
 
 [params]
 ShowCodeCopyButtons = true
+
+
+[markup.goldmark.renderer]
+unsafe= true
