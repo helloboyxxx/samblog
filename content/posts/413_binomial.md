@@ -134,3 +134,60 @@ Among $n$ people, we want to select $k$ people and we want to elect one of these
 (1) First select $k$ people, then select the boss: ${n \choose k} \cdot k$
 
 (2) First select the boss, then choose subset of $n$ that contains this boss: $n \cdot {{n-1} \choose {k-1}}$
+
+
+
+### <span style="color:#3c66b5">$\boldsymbol{\textsf{Theorem}}$</span>
+
+For $n\geq 1$ we have: 
+$$
+1{n \choose 1} + 2{n \choose 2} + ... + n{n \choose n} = n2^{n-1}
+$$
+
+
+
+<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+
+$n$ people, select a group of people with one boss. How many choices do we have?
+
+(1)
+
+- Select the size of the group: $i \in \{1, ..., n\}$
+- Select a group with $i$ people: $n \choose i$
+- Inside the group, assign someone to be the boss: $i$
+
+This gives us the left side of the identity.
+
+(2)
+
+- Choose the boss: $n$
+- Chose the rest of the group: A subset of remainning people: $2^{n-1}$
+
+### <span style="color:#3c66b5">$\boldsymbol{\textsf{Theorem}}$</span>
+
+For $n \geq 0$ we have:
+$$
+\sum_{k=0}^{n}{n \choose k}^2 = {{2n}\choose n}
+$$
+Right side: The number of choices for selecting a group of $n$ people out of $2n$ people.
+
+Labeling the people: $\{1, ..., 2n\}$. Splitting this $2n$ people into two $n$ people group. Given a specific $k$, we can select $k$ people from the first group, and then $n-k$ people from the second group. In that situation, we have ${n \choose k} \cdot {n \choose {n-k}}$. The final thing to do is simply take the sum of all the $k$'s. This gives us the left side of this identity.
+
+### <span style="color:#3c66b5">$\boldsymbol{\textsf{The hockey-stick identity}}$</span>
+
+For $0 \leq k \leq n$ we have: 
+$$
+\sum_{m=k}^{n}{m \choose k} = {{n+1} \choose {k+1}}
+$$
+Intuition: Choose a column, and draw a box. Summing the values in the box gives the value at position $(n+1, k+1)$.
+
+<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+
+$n+1$ people, select $k+1$: ${{n+1} \choose {k+1}}$
+
+Order people by height, from smallest to tallest: $1, 2, ..., n+1$
+
+- Select the tallest person in the group of size $m+1$, and then choose the rest $k$ people: ${{m} \choose {k}}$
+- $m$ varies from $k$ to $n$
+- Summing all the $m$ cases gives us the left side of this identity.
+
