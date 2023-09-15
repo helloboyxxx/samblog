@@ -20,7 +20,7 @@ n+1 &\leq n\cdot a_j \\
 1 &< a_j
 \end{align*}
 `
-Note that this conclusion doesn't hole if you have $n$ objects or less.
+Note that this conclusion doesn't hold if you have $n$ objects or less.
 
 
 
