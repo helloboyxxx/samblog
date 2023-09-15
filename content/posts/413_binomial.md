@@ -3,7 +3,7 @@ title: "413_binomial"
 date: 2023-09-12T17:35:33-05:00
 draft: false
 math: true
-tags: ["Math 413"]
+tags: ["Combinatorics"]
 ---
 
 
