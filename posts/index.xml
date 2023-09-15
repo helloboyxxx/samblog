@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Sam&#39;s Meanderings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Sep 2023 17:35:33 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Sep 2023 17:28:11 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_Pigeonhole_Principle</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/413_pigeonhole/</link>
+      <pubDate>Fri, 15 Sep 2023 17:28:11 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/413_pigeonhole/</guid>
+      <description>If $n+1$ objects are distributed into $n$ boxes, then at least one box contains two or more of the objects.
+$\boldsymbol{\sf Proof}$
+For each $i\in \set{1, &amp;hellip;, n}$, let $a_i = $ number of objects in box $i$. Then, $a_1 + &amp;hellip; + a_n = n+1$ Let $a_j = \text{max } a_i$. Then, \begin{align*} n+1 &amp;amp;\leq n\cdot a_j \\ \frac{n+1}{n} &amp;amp;\leq a_j \\ 1 &amp;lt; \frac{n+1}{n} &amp;amp;\leq a_j\\ 1 &amp;amp;&amp;lt; a_j \end{align*} Note that this conclusion doesn&amp;rsquo;t hole if you have $n$ objects or less.</description>
+    </item>
+    
     <item>
       <title>413_binomial</title>
       <link>https://helloboyxxx.github.io/samblog/posts/413_binomial/</link>
