@@ -230,11 +230,17 @@ Clearly, there is a contradiction. $\blacksquare$
 
 <span style="color:#04c2b2">$\boldsymbol{\sf Exercise}$</span>
 
-Given two disks, one smaller than the other. Each disk is divided into 200 congruent sectors. In the larger disk 100 sectors are chosen arbitrarily and painted red; the other 100 sectors are painted blue. In the smaller disk each sector is painted either red or blue with no  stipulation on the number of red and blue sectors. The smaller disk is placed on the larger disk so that the centers and sectors coincide. 
+* Two disks, one smaller than the other, are each divided into 200 congruent sectors.
 
-Show that it is possible to align the two disks so that the number of  sectors of the smaller disk whose color matches the corresponding sector of the larger disk is at least 100.
+* In the larger disk, 100 of the sectors are chosen arbitrarily and painted red; the other 100 sectors are painted blue. 
 
-> Text copied from https://www.cut-the-knot.org/pigeonhole/TwoTwoColorDisks.shtml. [Alexander Bogomolny](https://www.cut-the-knot.org/index.shtml)
+* In the smaller disk, each sector is painted either red or blue with no stipulation on the number of red and blue sectors. 
+
+* The small disk is then placed on the larger disk so that their centers coincide. 
+
+* Show that it is possible to align the two disks so that the number of sectors of the small disk whose color matches the corresponding sector of the large disk is at least 100.
+
+> Text copied from professor Leticia Dias Mattos's Slide: https://lmattos.web.illinois.edu/math-413-lecture-log/
 
 <span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
 

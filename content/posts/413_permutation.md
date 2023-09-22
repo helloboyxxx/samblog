@@ -1,6 +1,6 @@
 ---
 title: "413_permutation"
-date: 2023-09-22T13:45:07-05:00
+date: 2023-09-18T13:45:07-05:00
 draft: false
 math: true
 tags: []
