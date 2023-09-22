@@ -6,7 +6,19 @@
     <description>Recent content on Sam&#39;s Meanderings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Sep 2023 15:24:34 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Sep 2023 13:45:07 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_permutation</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/413_permutation/</link>
+      <pubDate>Fri, 22 Sep 2023 13:45:07 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/413_permutation/</guid>
+      <description>Permutation of Sets $\boldsymbol{\sf Definition: }$ permutation A permutation of a set $S$ can be thought of as a listing of the elements $S$ in some order.
+$P(n, r)$ denotes the number of $r$-permutations of an $n$-element set.
+$\boldsymbol{\sf Definition:}$ $r$-permutation
+An $r$-permutation of a set $S$ is a string $a_1, a_2, &amp;hellip; a_r$ where $a_i \in S, \forall i \in [r]$ and $a_i \neq a_j$ for $i \neq j$.</description>
+    </item>
+    
     <item>
       <title>445_texture</title>
       <link>https://helloboyxxx.github.io/samblog/posts/445_texture/</link>
