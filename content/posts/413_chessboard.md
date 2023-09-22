@@ -65,3 +65,8 @@ As we are assuming to have a b-omino tiling, each color shows up the same number
 WLOG, assume $s \leq r$. The number of 1's in the $r \times s$ chessboard = $s$.
 The total number of squares is $rs$. Consider we tiling with b-ominos, the number of sqares is also $sb$ (Each b-omino sees every color once, so number of 1's = number of tiles. So $sb$). Cancle out the b, we have the contradiction.
 
+
+### Reference:
+
+https://lmattos.web.illinois.edu/math-413-lecture-log/, MATH 413, Leticia Dias Mattos
+

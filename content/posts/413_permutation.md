@@ -83,6 +83,10 @@ Similar to the line permutation. We divide the number by $r$ because the same ci
 
 
 
+### Reference:
+
+https://lmattos.web.illinois.edu/math-413-lecture-log/, MATH 413, Leticia Dias Mattos
+
 
 
 

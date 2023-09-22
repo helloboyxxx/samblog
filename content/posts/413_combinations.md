@@ -209,3 +209,9 @@ $$
 {n \choose k} = {{n-1} \choose k} + {{n-1} \choose {k-1}}
 $$
 
+
+
+### Reference:
+
+https://lmattos.web.illinois.edu/math-413-lecture-log/, MATH 413, Leticia Dias Mattos
+

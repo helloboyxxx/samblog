@@ -191,3 +191,8 @@ Order people by height, from smallest to tallest: $1, 2, ..., n+1$
 - $m$ varies from $k$ to $n$
 - Summing all the $m$ cases gives us the left side of this identity.
 
+
+### Reference:
+
+https://lmattos.web.illinois.edu/math-413-lecture-log/, MATH 413, Leticia Dias Mattos
+
