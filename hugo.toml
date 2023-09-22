@@ -43,6 +43,3 @@ ShowCodeCopyButtons = true
 
 [markup.goldmark.renderer]
 unsafe= true
-
-
-googleAnalytics = 'G-ZND76LDKNZ'
