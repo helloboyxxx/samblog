@@ -6,7 +6,22 @@
     <description>Recent content on Sam&#39;s Meanderings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Sep 2023 17:28:11 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Sep 2023 15:24:34 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>445_texture</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/445_texture/</link>
+      <pubDate>Sun, 17 Sep 2023 15:24:34 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/445_texture/</guid>
+      <description>Texture Synthesis &amp;amp; Hole Filling Texture Texture depicts spacially repeating patterns.
+Texture Synthesis Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.
+The challenge:
+Need to model the whole spectrum: from repeated to stochastic texture.
+One idea:
+Compute statistics of input texture Generate a new texture that keeps those same statistics. But it is hard to model those probabilities distributions.
+Another idea: ==Efros &amp;amp; Leung algorithm==</description>
+    </item>
+    
     <item>
       <title>413_Pigeonhole_Principle</title>
       <link>https://helloboyxxx.github.io/samblog/posts/413_pigeonhole/</link>
