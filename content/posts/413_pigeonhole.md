@@ -104,4 +104,168 @@ Whenever we have some $k \in \set{1, .., m}$ such that $a_1 + ... + a_k = qm = q
 
 Otherwise, putting $m$ pigeons into $m-1$ pigeonholes gives us a fact that $\exists i, j \in \set{1, ..., m}, i \neq j$ such that $(a_1 + ... + a_i) \equiv (a_1 + ... a_j) \text{ mod }m $. WLOG, suppose $i < j$, we have $m \mid (a_{i+1} + ... + a_j)$, giving us what we want.
 
+<span style="color:#04c2b2">$\boldsymbol{\sf Exercise}$</span>
+
+A chess master who has 11 weeks to prepare for a turnament decies to play at least one game everday. But to avoid tiring himself, he decides not to play more than 12 games during any calendar week. Show that there exists a succession of days during which the chess master will have played exactly 21 games. 
+
+**Solution:**
+
+$77 \leq \text{number of games} \leq 132$
+
+Define the sequence: 
+`$$
+\begin{align*}
+a_1 &= \text{# games played at day 1}\\
+a_2 &= \text{# games played at day 1 and day 2}\\
+\vdots\\
+a_{77} &= \text{# games played from day 1 to day 77}
+\end{align*}
+$$`
+Define another sequence: 
+`$$
+\begin{align*}
+&a_1 + 21\\
+&a_2 + 21\\
+&\vdots\\
+&a_{77}+21
+\end{align*}
+$$`
+
+
+Put these two sequences together, we have a sequance of size $77 \cdot 2 = 154$
+
+The goal is to show that two of them are equal. Note that there are 132 games at maximum, then the maximum number in this $132 + 21 = 153$.
+
+By the pigeonhole pirinciple, two of them are equal. And since these two equal number may not come from the same sequence, $\exists a_i = a_j + 21$, which gives us the consecutive days $i$ to $j$. 
+
+
+
+### <span style="color:#3c66b5">$\boldsymbol{\textsf{Chinese Remainder Theorem}}$</span>
+
+Let $m$ and $n$ be relatively prime positive integers, and let $a$ and $b$ be integers where $0 \leq a \leq m - 1$ and $0 \leq b \leq n - 1$.
+
+Then, there is a positive integer $x$ such that $x = pm + a = qn + b$ for some integer $p,q$.
+
+<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+
+Consider the sequence that has $n$ numbers in this sequence. 
+$$
+a, m + a, 2m+a, ..., (n-1)m + a
+$$
+
+**Claim:** No two numbers in this sequence have same remainder division by $n$. 
+
+Suppose, by contradiction, that $\exists i< j, p, q, \in \mathbb{Z}, \text{and } r \in \set{0, ..., n-1}$ such that: 
+
+$im + a = pn + r$ and $jm + a = qn + r$. This gives us:
+$$
+(j - i)m = n(q-p)\\
+\implies n \mid (j - i)m\\
+\implies n \mid (j-i)
+$$
+As $i, j \leq n - 1 \implies 0 \leq j-i \leq n-1 \implies j-i = 0$, giving us a contradiction
+
+Then the claim is true. 
+
+Therefore, all the remainders show up $\implies$ there exists $i$ such that $im + a = pn + b, p \in \mathbb{Z}$. $\blacksquare$
+
+
+
+### <span style="color:#3c66b5">$\boldsymbol{\textsf{Strong Form of Pigeonhole Principle}}$</span>
+
+Let $q_1, q_2, ..., q_n$ be positive integers.
+If $q_1 + ... + q_n - n + 1$ objects are distributed into $n$ boxes, then either the first box contains at least $q_1$ objects, or the second box contains at least $q_2$ objects,... or the $n$th box contains at least $q_n$ objects.
+
+<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+
+Suppose for contradiction that: 
+
+- Box 1 recieves $\leq q_1 - 1$
+- Box 2 recieves $\leq q_2 - 1$
+- ...
+- Box $n$ recieves $\leq q_n - 1$ 
+
+Which sums to $(q_1 + .. + q_n) - n$
+
+As we have the number of objects = $q_1 + ... + q_n - n + 1$
+
+Then the contradiction happens. $\blacksquare$
+
+
+#### <span style="color:#3c66b5">$\boldsymbol{\textsf{Corollary}}$</span>
+
+If $n(r-1)+1$ objects are distributed into $n$ boxes, then at least one of the boxes contains $r$ or more of the objects.
+
+<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+
+Take $q_1 = q_2 = ... = q_n = r$
+
+$n(r - 1) + 1 = nr - n + 1 = (q_1 + ... + q_n) - n + 1$
+
+By theorem, there must be one box $\geq r$. $\blacksquare$
+
+
+
+### <span style="color:#3c66b5">$\boldsymbol{\textsf{Another way to formulate the pigeonhole principle}}$</span>
+
+Let $m_1, m_2, ..., m_n$ be non-negative integers. if 
+$$
+\frac{m_1 + ... + m_n}{n} > r - 1
+$$
+then at least one of the integers is greater or equal to $r$. 
+
+<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+
+By contradiction, suppose that $m_i < r, \forall i$. We can take the maximum value: $mi = r-1, \forall i$, which gives us: 
+
+`$$
+\begin{align*}
+\sum_{i=1}^{n} m_i = n(r-1)\\
+\frac{\sum_{i=1}^{n} m_i}{n} = (r-1)
+\end{align*}
+$$`
+Clearly, there is a contradiction. $\blacksquare$
+
+
+
+<span style="color:#04c2b2">$\boldsymbol{\sf Exercise}$</span>
+
+Given two disks, one smaller than the other. Each disk is divided into 200 congruent sectors. In the larger disk 100 sectors are chosen arbitrarily and painted red; the other 100 sectors are painted blue. In the smaller disk each sector is painted either red or blue with no  stipulation on the number of red and blue sectors. The smaller disk is placed on the larger disk so that the centers and sectors coincide. 
+
+Show that it is possible to align the two disks so that the number of  sectors of the smaller disk whose color matches the corresponding sector of the larger disk is at least 100.
+
+> Text copied from https://www.cut-the-knot.org/pigeonhole/TwoTwoColorDisks.shtml. [Alexander Bogomolny](https://www.cut-the-knot.org/index.shtml)
+
+<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+
+**Define:** a configuration $c$ is just a way of placing the small disk on the large disk with aligned colors.
+
+We can label (or mark the position of) the disk from 1 to 200
+
+Double counting the following set:
+$$
+S = \set{(c, i): c \text{ is a configuration and the sector } i \text{ have matching colors}}
+$$
+(1)
+
+For each $i$, let $t_i = $ number of configurations so that the sector $i$ has matching colors
+
+Then $|S| = \sum_{i=1}^{200} t_i = 200 \cdot 100$ 
+
+(2)
+
+For each configuration $c$, let $a_c$ be the number of sectors that has same color in the same label(position)
+`$$
+\begin{align*}
+|S| &= \sum_{\text{c config}}^{} a_c\\
+\frac{|S|}{200} &= \frac{\sum_{\text{c config}}^{} a_c}{200} = 100 > 100-1
+\end{align*}
+$$`
+By pigeonhole principle, done. $\blacksquare$
+
+
+
+### Reference:
+
+https://lmattos.web.illinois.edu/math-413-lecture-log/, MATH 413, Leticia Dias Mattos
 
