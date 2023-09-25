@@ -15,7 +15,7 @@ url = "https://github.com/helloboyxxx"
 
 [[params.socialIcons]]
 name = "email"
-url = "yuec12@illinois.edu"
+url = "mailto:yuec12@illinois.edu"
 
 [[menu.main]]
 name = "Archive"
