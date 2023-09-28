@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Sam&#39;s Meanderings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Sep 2023 13:45:07 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Sep 2023 20:56:13 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_Erdos Szekeres Theorem and Ramsey Theory</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</link>
+      <pubDate>Wed, 27 Sep 2023 20:56:13 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</guid>
+      <description>$\boldsymbol{\textsf{Erdos-Szekeres Theorem}}$ Given $r, s$ any sequence of distinct real numbers with length at least $(r-1)(s-1)+1$ contains a monotonically increasing subsequence of length $r$ or a monotonically decreasing subsequece of length $s$.
+That is, given the subsequence: $a_1, a_2, &amp;hellip;, a_{(s-1)(r-1)+1}$, we can find:
+Indicies $i_1 &amp;lt; i_2 &amp;lt; &amp;hellip;&amp;lt; i_r$ so that $a_{i1} &amp;lt; a_{i2} &amp;lt; &amp;hellip;&amp;lt; a_{ir}$ OR
+Indicies $j_1 &amp;lt; j_2 &amp;lt; &amp;hellip;&amp;lt; j_r$ so that $a_{j1} &amp;gt; a_{j2} &amp;gt; &amp;hellip; &amp;gt; a_{jr}$ Example: $s = 3, r = 3$, Sequence: $10, 11, 7, 8$ has no such property.</description>
+    </item>
+    
     <item>
       <title>413_permutation</title>
       <link>https://helloboyxxx.github.io/samblog/posts/413_permutation/</link>
