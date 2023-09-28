@@ -197,3 +197,8 @@ According to vertex coloring of $v_1, v_2, \cdots, v_{i}$, select majority color
 
 <img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/image-20230927135538985.png" alt="image-20230927135538985" style="zoom: 33%;" />
 
+
+### Reference:
+
+https://lmattos.web.illinois.edu/math-413-lecture-log/, MATH 413, Leticia Dias Mattos
+
