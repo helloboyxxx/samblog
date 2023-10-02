@@ -18,6 +18,8 @@ Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first play
 
 $\mathfrak{ABCDEFG}$
 
+$\mathscr{ABCDEFG}$
+
 
 Hi `$z = x + y$`.
 

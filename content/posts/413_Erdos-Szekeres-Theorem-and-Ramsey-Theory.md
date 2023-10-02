@@ -92,7 +92,7 @@ Now that the two claims are done, we can construct this box that contains $(r-1)
 
 $\blacksquare$
 
-
+---
 
 ## Graph & Ramsey's theories
 
