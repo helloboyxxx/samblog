@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Sam&#39;s Meanderings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Sep 2023 20:56:13 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 15:00:37 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_General_Ramsey Theories</title>
+      <link>https://helloboyxxx.github.io/samblog/posts/413_general_ramsey-theories/</link>
+      <pubDate>Mon, 02 Oct 2023 15:00:37 -0500</pubDate>
+      
+      <guid>https://helloboyxxx.github.io/samblog/posts/413_general_ramsey-theories/</guid>
+      <description>General Ramsey on normal graph Notation General notation for Ramsey theory:
+$K_n \to (K_s,K_t)$ is the assertion that for any coloring of the edges of $K_n$ with red and blue, we can always find a red $K_s$ or a blue $K_t$.
+$K_n \not \to (K_s,K_t)$ is the assertion that there exists a coloring of the edges of $K_n$ with red and blue with no red $K_s$ nor blue $K_t$.
+Notation Off-diagonal Ramsey numbers:</description>
+    </item>
+    
     <item>
       <title>413_Erdos Szekeres Theorem and Ramsey Theory</title>
       <link>https://helloboyxxx.github.io/samblog/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</link>
