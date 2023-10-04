@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Sam&#39;s Meanderings</title>
-    <link>https://helloboyxxx.github.io/samblog/</link>
+    <link>https://ohuro.me/</link>
     <description>Recent content on Sam&#39;s Meanderings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Oct 2023 15:00:37 -0500</lastBuildDate><atom:link href="https://helloboyxxx.github.io/samblog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Oct 2023 15:00:37 -0500</lastBuildDate><atom:link href="https://ohuro.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>413_General_Ramsey Theories</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/413_general_ramsey-theories/</link>
+      <link>https://ohuro.me/posts/413_general_ramsey-theories/</link>
       <pubDate>Mon, 02 Oct 2023 15:00:37 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/413_general_ramsey-theories/</guid>
+      <guid>https://ohuro.me/posts/413_general_ramsey-theories/</guid>
       <description>General Ramsey on normal graph Notation General notation for Ramsey theory:
 $K_n \to (K_s,K_t)$ is the assertion that for any coloring of the edges of $K_n$ with red and blue, we can always find a red $K_s$ or a blue $K_t$.
 $K_n \not \to (K_s,K_t)$ is the assertion that there exists a coloring of the edges of $K_n$ with red and blue with no red $K_s$ nor blue $K_t$.
@@ -21,10 +21,10 @@ Notation Off-diagonal Ramsey numbers:</description>
     
     <item>
       <title>413_Erdos Szekeres Theorem and Ramsey Theory</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</link>
+      <link>https://ohuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</link>
       <pubDate>Wed, 27 Sep 2023 20:56:13 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</guid>
+      <guid>https://ohuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</guid>
       <description>$\boldsymbol{\textsf{Erdos-Szekeres Theorem}}$ Given $r, s$ any sequence of distinct real numbers with length at least $(r-1)(s-1)+1$ contains a monotonically increasing subsequence of length $r$ or a monotonically decreasing subsequece of length $s$.
 That is, given the subsequence: $a_1, a_2, &amp;hellip;, a_{(s-1)(r-1)+1}$, we can find:
 Indicies $i_1 &amp;lt; i_2 &amp;lt; &amp;hellip;&amp;lt; i_r$ so that $a_{i1} &amp;lt; a_{i2} &amp;lt; &amp;hellip;&amp;lt; a_{ir}$ OR
@@ -33,10 +33,10 @@ Indicies $j_1 &amp;lt; j_2 &amp;lt; &amp;hellip;&amp;lt; j_r$ so that $a_{j1} &a
     
     <item>
       <title>413_permutation</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/413_permutation/</link>
+      <link>https://ohuro.me/posts/413_permutation/</link>
       <pubDate>Mon, 18 Sep 2023 13:45:07 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/413_permutation/</guid>
+      <guid>https://ohuro.me/posts/413_permutation/</guid>
       <description>Permutation of Sets $\boldsymbol{\sf Definition: }$ permutation A permutation of a set $S$ can be thought of as a listing of the elements $S$ in some order.
 $P(n, r)$ denotes the number of $r$-permutations of an $n$-element set.
 $\boldsymbol{\sf Definition:}$ $r$-permutation
@@ -45,10 +45,10 @@ An $r$-permutation of a set $S$ is a string $a_1, a_2, &amp;hellip; a_r$ where $
     
     <item>
       <title>445_texture</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/445_texture/</link>
+      <link>https://ohuro.me/posts/445_texture/</link>
       <pubDate>Sun, 17 Sep 2023 15:24:34 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/445_texture/</guid>
+      <guid>https://ohuro.me/posts/445_texture/</guid>
       <description>Texture Synthesis &amp;amp; Hole Filling Texture Texture depicts spacially repeating patterns.
 Texture Synthesis Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.
 The challenge:
@@ -60,10 +60,10 @@ Another idea: ==Efros &amp;amp; Leung algorithm==</description>
     
     <item>
       <title>413_Pigeonhole_Principle</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/413_pigeonhole/</link>
+      <link>https://ohuro.me/posts/413_pigeonhole/</link>
       <pubDate>Fri, 15 Sep 2023 17:28:11 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/413_pigeonhole/</guid>
+      <guid>https://ohuro.me/posts/413_pigeonhole/</guid>
       <description>If $n+1$ objects are distributed into $n$ boxes, then at least one box contains two or more of the objects.
 $\boldsymbol{\sf Proof}$
 For each $i\in \set{1, &amp;hellip;, n}$, let $a_i = $ number of objects in box $i$. Then, $a_1 + &amp;hellip; + a_n = n+1$ Let $a_j = \text{max } a_i$. Then, \begin{align*} n+1 &amp;amp;\leq n\cdot a_j \\ \frac{n+1}{n} &amp;amp;\leq a_j \\ 1 &amp;lt; \frac{n+1}{n} &amp;amp;\leq a_j\\ 1 &amp;amp;&amp;lt; a_j \end{align*} Note that this conclusion doesn&amp;rsquo;t hold if you have $n$ objects or less.</description>
@@ -71,30 +71,30 @@ For each $i\in \set{1, &amp;hellip;, n}$, let $a_i = $ number of objects in box 
     
     <item>
       <title>413_binomial</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/413_binomial/</link>
+      <link>https://ohuro.me/posts/413_binomial/</link>
       <pubDate>Tue, 12 Sep 2023 17:35:33 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/413_binomial/</guid>
+      <guid>https://ohuro.me/posts/413_binomial/</guid>
       <description>Binomial Coefficient and Binomial Identity Pascal&amp;rsquo;s Triangle $$ \begin{matrix} {0 \choose 0}\\ {1 \choose 0} &amp;amp; {1 \choose 1}\\ {2 \choose 0} &amp;amp; {2 \choose 1} &amp;amp; {2 \choose 2}\\ {3 \choose 0} &amp;amp; {3 \choose 1} &amp;amp; {3 \choose 2} &amp;amp; {3 \choose 3}\\ {4 \choose 0} &amp;amp; {4 \choose 1} &amp;amp; {4 \choose 2} &amp;amp; {4 \choose 3} &amp;amp; {4 \choose 4}\\ .\\ .\\ . \end{matrix} $$
 Pascal&amp;rsquo;s Formula For all integers $n$ and $k$ with $1 \leq k \leq n - 1$, we have: $$ {n \choose k} = {{n-1} \choose k} + {{n-1} \choose {k-1}} $$</description>
     </item>
     
     <item>
       <title>413_combinations</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/413_combinations/</link>
+      <link>https://ohuro.me/posts/413_combinations/</link>
       <pubDate>Fri, 08 Sep 2023 13:23:54 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/413_combinations/</guid>
+      <guid>https://ohuro.me/posts/413_combinations/</guid>
       <description>A combination of a set $S$ is a term usually used to denote an unordered selection of the element of $S$. It is simply a selection of a subset of $S$.
 $r$-combination = $r$-subset. $n\choose r$ is the number of $r$-subset in the set of size $n$. Theorem For $0 \leq r \leq n$, we have: $$ P(n, r) = r! {n \choose r} \text{ and } {n \choose r} = \frac{n!</description>
     </item>
     
     <item>
       <title>Interesting DFA</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/interesting_dfa/</link>
+      <link>https://ohuro.me/posts/interesting_dfa/</link>
       <pubDate>Wed, 30 Aug 2023 13:10:06 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/interesting_dfa/</guid>
+      <guid>https://ohuro.me/posts/interesting_dfa/</guid>
       <description>Deterministic Finite Automaition Definition: $(Q, s, A, \delta)$
 $Q$: A set of all the possible state.
 $s \in Q$ : starting state. The state to start the machine.
@@ -106,10 +106,10 @@ Given a bit-string (a string that contains only 0s and 1s), design a DFA that ac
     
     <item>
       <title>413_chessboard</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/413_chessboard/</link>
+      <link>https://ohuro.me/posts/413_chessboard/</link>
       <pubDate>Tue, 29 Aug 2023 17:24:30 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/413_chessboard/</guid>
+      <guid>https://ohuro.me/posts/413_chessboard/</guid>
       <description>Gomor&amp;rsquo;s Theorem: If you move two cells of a $8 \times 8$ chessboard of opposite colors, the remaining cells can be fully domino tiled.
 Pf:
 Draw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)
@@ -119,10 +119,10 @@ If we lable the close path we chose in the beginning from 1 to 64 in the order w
     
     <item>
       <title>Some latex tests</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/latex_test/</link>
+      <link>https://ohuro.me/posts/latex_test/</link>
       <pubDate>Mon, 28 Aug 2023 22:39:19 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/latex_test/</guid>
+      <guid>https://ohuro.me/posts/latex_test/</guid>
       <description>Consider a $n \times m$ chessboard&amp;hellip;
 $$ \int{f(x)dx} $$
 Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in{1, 2, 3, 4}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$.</description>
@@ -130,10 +130,10 @@ Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first play
     
     <item>
       <title>My Math 417 review notes</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/417_review/</link>
+      <link>https://ohuro.me/posts/417_review/</link>
       <pubDate>Mon, 28 Aug 2023 15:50:48 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/417_review/</guid>
+      <guid>https://ohuro.me/posts/417_review/</guid>
       <description>I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!
 These are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.
 Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
@@ -141,10 +141,10 @@ Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description
     
     <item>
       <title>413_basic_counting</title>
-      <link>https://helloboyxxx.github.io/samblog/posts/413_basic_counting/</link>
+      <link>https://ohuro.me/posts/413_basic_counting/</link>
       <pubDate>Mon, 28 Aug 2023 14:35:27 -0500</pubDate>
       
-      <guid>https://helloboyxxx.github.io/samblog/posts/413_basic_counting/</guid>
+      <guid>https://ohuro.me/posts/413_basic_counting/</guid>
       <description>The four basic counting principle Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1, S_2, &amp;hellip;, S_n$.
 Addition principle: $$ |S| = |S_1| + |S_2| + &amp;hellip; + |S_m| $$
 Ex:
