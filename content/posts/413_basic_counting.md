@@ -5,7 +5,6 @@ draft: false
 math: true
 tags: ["Combinatorics"]
 ---
-
 # The four basic counting principle
 
 Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1, S_2, ..., S_n$. 
@@ -27,16 +26,16 @@ The idea is to break this problem into smaller problems. Addition principle guar
 Think of the final step we need to take. It must be either an up or a right. This makes the problem to become a similar but smaller problem that has $2 \times 3$ size. Mark it $n_{2\times 3}$
 
 Using the same idea, we have: 
-
 $$
-n_{3 \times 3} = 2 \cdot n_{2 \times 3}
-= 2 \cdot (n_{2 \times 2} + n_{3 \times 1})
+\begin{align*}
+n_{3 \times 3} = 2 * n_{2 \times 3}
+= 2 * (n_{2 \times 2} + n_{3 \times 1})\\
+\end{align*}
 $$
 
 ### **Multiplication principle**
 
 Let $S$ be a set of ordered pairs $(a, b)$ of objects, where the first object $a$ comes from a set of size $p$, and for each choice of object $a$ there are q choices for object $b$. Then the size of $S$ is 
-
 $$
 |S| = p \cdot q
 $$
@@ -104,6 +103,10 @@ How many computer passwords have a repeat symbol?
 ans: The number of total passwords - passwords that don't repeat. 
 
 = $36^6 - 36 * 35 * 34 * 33 * 32 * 31$
+
+
+
+
 
 ### **Division principle**
 

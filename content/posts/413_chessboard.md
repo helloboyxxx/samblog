@@ -15,7 +15,12 @@ tags: ["Combinatorics"]
 
 Draw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)
 
-<img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/chessboard-theorem-red.png" alt="chessboard-theorem-red" style="width: 20%;" />
+
+<center>
+  <figure>
+    <img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/chessboard-theorem-red.png" alt="chessboard-theorem-red" style="width: 20%;" />
+  </figure>
+</center>
 
 Choose the two cells to be removed, and the closed path we have will be sperated into two paths. 
 
@@ -53,7 +58,7 @@ $\leftarrow$ is trivial.
 $\rightarrow$: 
 
 Color the board: 
-$$
+`
 \begin{matrix}
 1 & 2 & 3 & 4 & 5 & 6 &...\\
 3 & 1 & 2 & 3 & 4 & 5 &... \\
@@ -62,7 +67,7 @@ $$
 .\\
 .
 \end{matrix}
-$$
+`
 Consider the board has dimension $m \times n$ and $m = qb + r$, $n = tb + s$
 
 Then, on this board, each b-omino see a color exactly once. 

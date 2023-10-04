@@ -93,6 +93,21 @@ $$
 \end{itemize}
 $$
 
+### <span style="color:#3c66b5">Theorem</span>
+
+<span style="color:#eb861c">Proof</span>
+
+<span style="color:#28a745">Definition</span>
+
+<span style="color:#34ce57">Notation</span>
+
+<span style="color:#04c2b2">Exercise</span>
+
+<span style="color:#599eff">Proposition</span>
+
+<span style="color:#3c66b5">Corollary</span>
+
+<span style="color:#9650af">Observation</span>
 
 
 If you need these source codes: 

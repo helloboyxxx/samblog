@@ -1,12 +1,12 @@
 ---
-title: "413_Erdos Szekeres Theorem and Ramsey Theory"
+title: "413_Erdos-Szekeres Theorem and Ramsey Theory"
 date: 2023-09-27T20:56:13-05:00
 draft: false
 math: true
 tags: ["Combinatorics"]
 ---
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{Erdos-Szekeres Theorem}}$</span>
+### <span style="color:#3c66b5">Erdos-Szekeres Theorem</span>
 
 Given $r, s$ any sequence of distinct real numbers with length at least $(r-1)(s-1)+1$ contains a monotonically increasing subsequence of length $r$ or a monotonically decreasing subsequece of length $s$. 
 
@@ -24,11 +24,11 @@ E-S thm is best possible:
 
 $\exists$ subsequence of length $(s-1)(r-1)$ so that $\not \exists$ increasing subsequence of length $r$ nor a decreasing subsequence of length $s$.
 
-<img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/image-20230925111501395.png" alt="image-20230925111501395" style="zoom:25%;" />
+<img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/image-20230925111501395.png" alt="image-20230925111501395" style="zoom:30%;" />
 
 
 
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+<span style="color:#eb861c">Proof</span>
 
 The subsequence: $a_1, a_2, ..., a_{(s-1)(r-1)+1}$.
 
@@ -40,14 +40,14 @@ $y_i = $ the length of the longest decreasing subsequence $a_1, ..., a_i$
 
 **Example:** subsequence $1, 4, 5, 2, 7, 3$
 
-$(x_1, y_1) = (1, 1)$
-
-$(x_2, y_2) = (2, 1)$
-
-$(x_3, y_3) = (3, 1)$
-
-$(x_4, y_4) = (3, 2)$
-
+`
+\begin{align*}
+(x_1, y_1) = (1, 1)\\
+(x_2, y_2) = (2, 1)\\
+(x_3, y_3) = (3, 1)\\
+(x_4, y_4) = (3, 2)\\
+\end{align*}
+`
 
 
 **Claim 1:** Let $i \in \set{1, ..., (s-1)(r-1)}$
@@ -85,7 +85,6 @@ There are two options:
 - $a_j < a_i$. Then we can take $a_t, ..., a_{ty_i}, a_j$ , which give us longer decreasing $y_j > y_i$.
 
 
-
 Now that the two claims are done, we can construct this box that contains $(r-1)(s-1)$ points. Then the extra one point in the 2D space gives us the fact that along one dimension, we have $s$ or $r$ points.
 
 <img src='https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/1PxvYf.png' alt='1PxvYf' style="zoom: 50%;" />
@@ -96,7 +95,7 @@ $\blacksquare$
 
 ## Graph & Ramsey's theories
 
-<span style="color:#28a745">$\boldsymbol{\sf Definition}$</span>
+<span style="color:#28a745">Definition</span>
 
 A graph is an ordered pair $G = (V, E)$ comprising: 
 
@@ -104,13 +103,13 @@ A graph is an ordered pair $G = (V, E)$ comprising:
 
 - $E \subseteq \{\{x,y\}: x,y \in V \text{ and } x \neq y\}$, a set of edges (also called links or lines), which are unordered pairs of vertices. 
 
-<span style="color:#28a745">$\boldsymbol{\sf Definition}$</span>
+<span style="color:#28a745">Definition</span>
 
 - A complete graph is a graph in which each pair of graph vertices is connected by an edge. 
 
 - The complete graph with $n$ vertices is denoted by $K_n$.
 
-<span style="color:#04c2b2">$\boldsymbol{\sf Exercise}$</span>
+<span style="color:#04c2b2">Exercise</span>
 
 What is the number edges in $K_n$?
 
@@ -118,7 +117,7 @@ $\sum_{i=1}^{n-1} i$, or simply ${{n} \choose {2}}$
 
 
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{Theorem of Ramsey}}$</span>
+### <span style="color:#3c66b5">Theorem of Ramsey</span>
 
 Of six (or more) people, either there are three, each of pair of whom are acquainted, or there are three, each pair of whom are unaquainted. 
 
@@ -126,11 +125,11 @@ In graph theory language: for any coloring of the edges of $K_6$ with red or blu
 
 
 
-**Question:** How many ways to color $K_6$?
+> Question: How many ways to color $K_6$?
 
 There are $e = {{6} \choose {2}} = 15$ edges, so the number of ways is $2^{15}$. It would be horrible to brute force checking all the possibilities.
 
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+<span style="color:#eb861c">Proof</span>
 
 Labeling the graph verticies from 1 to 6. 
 
@@ -147,17 +146,17 @@ $K_n \to K_s$ is the assertion that for any coloring of the edges of $K_n$ with 
 
 $K_n \not \to K_s$ is the assertion that there exists a coloring of the edges of $K_n$ with red and blue with **no** monochromatic $K_s$.
 
-<span style="color:#28a745">$\boldsymbol{\sf Definition \textsf{ Ramsey number}}$</span>
+<span style="color:#28a745">Notation</span> Ramsey number
 
 Let $t \in \set{1, 2, 3,...}$. The Ramsey number $R(t)$ is the smallest value of $n$ such that $K_n \to K_t$.
 
 
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{Ramsey's theorem}}$</span>
+### <span style="color:#3c66b5">Ramsey's theorem</span>
 
 For every $k \in \mathbb{N}$, we have $R(k) < 4^k$.
 
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>: $k$ is fixed
+<span style="color:#eb861c">Proof</span>: $k$ is fixed
 
 Take $n = 4^k$. Take one vertex, label it $v_1$. $v_1$ has $4^k - 1$ neighbors. 
 

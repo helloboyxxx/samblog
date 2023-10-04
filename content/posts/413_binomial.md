@@ -6,12 +6,11 @@ math: true
 tags: ["Combinatorics"]
 ---
 
-
 # Binomial Coefficient and Binomial Identity
 
-### Pascal's Triangle
+### <span style="color:#3c66b5">Pascal's Triangle</span>
 
-`$$
+`
 \begin{matrix}
 {0 \choose 0}\\
 {1 \choose 0} & {1 \choose 1}\\
@@ -22,16 +21,16 @@ tags: ["Combinatorics"]
 .\\
 .
 \end{matrix}
-$$`
+`
 
-### **Pascal's Formula**
+### <span style="color:#3c66b5">Pascal's Formula</span>
 
 For all integers $n$ and $k$ with $1 \leq k \leq n - 1$, we have: 
 $$
 {n \choose k} = {{n-1} \choose k} + {{n-1} \choose {k-1}}
 $$
 
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+<span style="color:#eb861c">Proof</span>
 
 Let $S = \{1, 2, ..., n\}$ be a set of size n.
 
@@ -42,19 +41,19 @@ $\mathcal{C} = \{A : A \subseteq S, |A| = k\}$
 (1) $|\mathcal{C}| = {n \choose k}$
 
 (2) Define: 
-`$$
+`
 \begin{align*}
-  \mathcal{C_1} = \{A : A \subseteq S, |A| = k, 1 \in A\}\\
-  \mathcal{C_2} = \{A : A \subseteq S, |A| = k, 1 \not\in A\}
+\mathcal{C_1} = \{A : A \subseteq S, |A| = k, 1 \in A\}\\
+\mathcal{C_2} = \{A : A \subseteq S, |A| = k, 1 \not\in A\}
 \end{align*}
-$$`
+`
 Note that: $\mathcal{C_1}$ and $\mathcal{C_2}$ are disjoint, $\mathcal{C} = \mathcal{C_1} \cup \mathcal{C_2}$
 
 Since $|\mathcal{C_1}| = {{n-1} \choose {k-1}}$, $|\mathcal{C_2}| = {{n-1} \choose {k}}$, we get the identity.
 
 
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{Theorem}}$</span>
+### <span style="color:#3c66b5">Theorem</span>
 
 For $n \geq 0$, we have: 
 $$
@@ -62,7 +61,7 @@ $$
 $$
 This is a row in the Pascal's triangle. 
 
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+<span style="color:#eb861c">Proof</span>
 
 Let $\mathcal{C}$ = $n$-digit binary numbers. Two way to count this: 
 
@@ -74,13 +73,13 @@ Then simply $|\mathcal{C}| = \sum_{i=0}^{n}\mathcal{C_i}$   , as they are all di
 
 
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{Theorem}}$</span>
+### <span style="color:#3c66b5">Theorem</span>
 
 $$
 {n \choose 0} + {n \choose 2} + ... = {n \choose 1} + {n \choose 3} + ...
 $$
 
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+<span style="color:#eb861c">Proof</span>
 
 Let $S = \{1, ...,n\}$
 
@@ -90,7 +89,7 @@ $\mathcal{C_1} = $ subsets of $S$ with odd size
 
 $\mathcal{C_2} = $ subsets of $S$ with even size
 
-Question: How to select an even subset?
+> Question: How to select an even subset?
 
 First, select any subset $A \subseteq \{1, ..., n - 1\}$:
 
@@ -101,17 +100,17 @@ As this constructs a bijection, $|\mathcal{C_1}| = |\mathcal{C_2}| = 2^{n-1}$
 
 
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{The Binomial Theorem}}$</span>
+### <span style="color:#3c66b5">The Binomial Theorem</span>
 
 Let $n$ be a positive integer. Then, for all $x$ and $y$ we have: 
 $$
 (x+y)^n = \sum_{k=0}^{n} {n \choose k} x^{n-k}y^k
 $$
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+<span style="color:#eb861c">Proof</span>
 
 As we have $n$ $(x+y)$ multiplication, we choose either an $x$ or a $y$ from each pair to multiply. This makes sure that we must have all terms in the form: $x^iy^{n-i}$. The remaining task is simply count the number of $x^iy^{n-i}$. Given this $i$, we have $n \choose i$ ways to choose the combination, thus we have the resulting formula.
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{Corollary}}$</span>
+<span style="color:#3c66b5">Corollary</span>
 
 Let $n$ be a positive integer. Then, for all $x$ we have
 
@@ -119,13 +118,13 @@ $$
 (1+x)^n = \sum \limits_{k=0}^{n} \binom{n}{k} x^k
 $$
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{Theorem}}$</span>
+### <span style="color:#3c66b5">Theorem</span>
 
 For $1 \leq k \leq n$, we have: 
 $$
 {n \choose k} = \frac{n}{k} {{n - 1} \choose {k-1}}
 $$
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+<span style="color:#eb861c">Proof</span>
 
 Goal: $k{n \choose k} = n{{n - 1} \choose {k-1}}$ 
 
@@ -137,7 +136,7 @@ Among $n$ people, we want to select $k$ people and we want to elect one of these
 
 
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{Theorem}}$</span>
+### <span style="color:#3c66b5">Theorem</span>
 
 For $n\geq 1$ we have: 
 $$
@@ -146,7 +145,7 @@ $$
 
 
 
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+<span style="color:#eb861c">Proof</span>
 
 $n$ people, select a group of people with one boss. How many choices do we have?
 
@@ -163,7 +162,7 @@ This gives us the left side of the identity.
 - Choose the boss: $n$
 - Chose the rest of the group: A subset of remainning people: $2^{n-1}$
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{Theorem}}$</span>
+### <span style="color:#3c66b5">Theorem</span>
 
 For $n \geq 0$ we have:
 $$
@@ -173,7 +172,7 @@ Right side: The number of choices for selecting a group of $n$ people out of $2n
 
 Labeling the people: $\{1, ..., 2n\}$. Splitting this $2n$ people into two $n$ people group. Given a specific $k$, we can select $k$ people from the first group, and then $n-k$ people from the second group. In that situation, we have ${n \choose k} \cdot {n \choose {n-k}}$. The final thing to do is simply take the sum of all the $k$'s. This gives us the left side of this identity.
 
-### <span style="color:#3c66b5">$\boldsymbol{\textsf{The hockey-stick identity}}$</span>
+### <span style="color:#3c66b5">The hockey-stick identity</span>
 
 For $0 \leq k \leq n$ we have: 
 $$
@@ -181,7 +180,7 @@ $$
 $$
 Intuition: Choose a column, and draw a box. Summing the values in the box gives the value at position $(n+1, k+1)$.
 
-<span style="color:#eb861c">$\boldsymbol{\sf Proof}$</span>
+<span style="color:#eb861c">Proof</span>
 
 $n+1$ people, select $k+1$: ${{n+1} \choose {k+1}}$
 
@@ -190,6 +189,16 @@ Order people by height, from smallest to tallest: $1, 2, ..., n+1$
 - Select the tallest person in the group of size $m+1$, and then choose the rest $k$ people: ${{m} \choose {k}}$
 - $m$ varies from $k$ to $n$
 - Summing all the $m$ cases gives us the left side of this identity.
+
+
+
+
+
+
+
+
+
+
 
 
 ### Reference:
