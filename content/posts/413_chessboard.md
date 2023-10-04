@@ -5,14 +5,17 @@ draft: false
 math: true
 tags: ["Combinatorics"]
 ---
-
-### Gomor's Theorem:
+### <span style="color:#3c66b5">Gomory's Theorem</span>
 
 **If you move two cells of a $8 \times 8$ chessboard of opposite colors, the remaining cells can be fully domino tiled.** 
 
-Pf: 
+<span style="color:#eb861c">Proof</span>
+
+
 
 Draw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)
+
+<img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/chessboard-theorem-red.png" alt="chessboard-theorem-red" style="width: 20%;" />
 
 Choose the two cells to be removed, and the closed path we have will be sperated into two paths. 
 
@@ -22,29 +25,35 @@ Easy to see that the path in between the two cells crosses even number tiles.
 
 
 
-### Gomor's on more general chessboard ($n \times m$ board):
+### <span style="color:#3c66b5">Gomory's on more general chessboard ($n \times m$ board)</span>
 
 **The two opposite corners must be in opposite color iff n and m has different paritity.** 
 
-PF: Consider the "L" shape edge of the board(half the square), there are $m + n - 1$ tiles. When this number is even, they are in opposite color. 
+<span style="color:#eb861c">Proof</span>
+
+Consider the "L" shape edge of the board(half the square), there are $m + n - 1$ tiles. When this number is even, they are in opposite color. 
 
 Then check: **When m and n have different parity, then there must be an "S" shape closed path to cross all the tiles.** 
 
 
 
-Def: b-ominos. It covers b tiles in a row...
+<span style="color:#28a745">Definition</span>
+
+b-ominos. It covers b tiles in a row...
 
 
+### <span style="color:#3c66b5">Theorem</span>
 
-### Thm: An $m \times n$ board has a tiling with b-ominos iff $b|m$ or $b|n$. 
+An $m \times n$ board has a tiling with b-ominos iff $b|m$ or $b|n$. 
+
+<span style="color:#eb861c">Proof</span>
 
 $\leftarrow$ is trivial. 
 
 $\rightarrow$: 
 
 Color the board: 
-
-`$$
+$$
 \begin{matrix}
 1 & 2 & 3 & 4 & 5 & 6 &...\\
 3 & 1 & 2 & 3 & 4 & 5 &... \\
@@ -53,8 +62,7 @@ Color the board:
 .\\
 .
 \end{matrix}
-$$`
-
+$$
 Consider the board has dimension $m \times n$ and $m = qb + r$, $n = tb + s$
 
 Then, on this board, each b-omino see a color exactly once. 

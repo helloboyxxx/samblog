@@ -1,5 +1,5 @@
 ---
-title: "413_basic_counting"
+title: "413_basic counting"
 date: 2023-08-28T14:35:27-05:00
 draft: false
 math: true

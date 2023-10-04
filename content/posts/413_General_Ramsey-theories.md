@@ -1,5 +1,5 @@
 ---
-title: "413_General_Ramsey Theories"
+title: "413_General Ramsey Theories"
 date: 2023-10-02T15:00:37-05:00
 draft: false
 math: true
@@ -223,6 +223,10 @@ $c' : E(K_{n-1}^{r-1}) \to \{\text{red, blue, green}\}$ as follows:
 ==TBC on lecture 18...==
 
 
+
+### Reference:
+
+https://lmattos.web.illinois.edu/math-413-lecture-log/, MATH 413, Leticia Dias Mattos
 
 
 
