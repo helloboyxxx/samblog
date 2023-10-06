@@ -1,7 +1,7 @@
 ---
 title: "413_lower bounded Ramsey"
 date: 2023-10-04T17:28:53-05:00
-draft: false
+draft: true
 math: true
 tags: []
 ---

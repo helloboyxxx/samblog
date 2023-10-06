@@ -7,7 +7,7 @@ theme = 'PaperMod'
 
 [params.homeInfoParams]
 Title = "Stay 😎. Be 😊. Keep 📚"
-Content = '"Meanderings of a curious mind"'
+Content = 'おふろ🛁 => Bathing in the ocean of knowledge'
 
 [[params.socialIcons]]
 name = "github"
