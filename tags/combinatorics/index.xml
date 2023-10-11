@@ -6,7 +6,28 @@
     <description>Recent content in Combinatorics on Sam&#39;s Meanderings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Oct 2023 15:00:37 -0500</lastBuildDate><atom:link href="https://ohuro.me/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 22:55:46 -0500</lastBuildDate><atom:link href="https://ohuro.me/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_Unimodality of binomial coefficients</title>
+      <link>https://ohuro.me/posts/413_unimodality/</link>
+      <pubDate>Tue, 10 Oct 2023 22:55:46 -0500</pubDate>
+      
+      <guid>https://ohuro.me/posts/413_unimodality/</guid>
+      <description>If we examine the binomial coefficients in a row of Pascal&amp;rsquo;s triangle, we notice that the numbers increase for a while and then decrease. A sequence of numbers with this property is called unimodal.
+Theorem Let $n$ be a positive integer. The sequence of binomial coefficients $$ {{n} \choose {0}}, {{n} \choose {1}}, \ldots, {{n} \choose {n}} $$ is a unimodal sequence. Mor precisely, $$ {{n} \choose {0}} &amp;lt; {{n} \choose {1}} &amp;lt; \ldots &amp;lt; {{n} \choose {\lfloor n/2\rfloor}} $$ and $$ {{n} \choose {\lceil n/2 \rceil}} &amp;gt; \ldots {{n} \choose {n-1}} &amp;gt; {{n} \choose {n}} $$</description>
+    </item>
+    
+    <item>
+      <title>413_lower bounded Ramsey</title>
+      <link>https://ohuro.me/posts/413_lower-bounded-ramsey/</link>
+      <pubDate>Wed, 04 Oct 2023 17:28:53 -0500</pubDate>
+      
+      <guid>https://ohuro.me/posts/413_lower-bounded-ramsey/</guid>
+      <description>Theorem $$ \text{For every } k \in \mathbb{N}, \text{we have } R(k)\ge 2^{k/2} $$
+Before we start the proof, let&amp;rsquo;s look at 3 ingredients we need:
+The probabilistic method The union bound The binomial estimate The probabilistic method Let $\Omega$ be the set of all possible outcomes of an experiment. Suppose that each outcome is equally likely. Let $A \subseteq \Omega$ be an event. $$ \text{If } \operatorname{Prob}(A) &amp;lt; 1 \text{, then } \operatorname{Prob}(A^c) &amp;gt; 0 $$</description>
+    </item>
+    
     <item>
       <title>413_General Ramsey Theories</title>
       <link>https://ohuro.me/posts/413_general_ramsey-theories/</link>
@@ -29,6 +50,19 @@ Notation Off-diagonal Ramsey numbers:</description>
 That is, given the subsequence: $a_1, a_2, &amp;hellip;, a_{(s-1)(r-1)+1}$, we can find:
 Indicies $i_1 &amp;lt; i_2 &amp;lt; &amp;hellip;&amp;lt; i_r$ so that $a_{i1} &amp;lt; a_{i2} &amp;lt; &amp;hellip;&amp;lt; a_{ir}$ OR
 Indicies $j_1 &amp;lt; j_2 &amp;lt; &amp;hellip;&amp;lt; j_r$ so that $a_{j1} &amp;gt; a_{j2} &amp;gt; &amp;hellip; &amp;gt; a_{jr}$ Example: $s = 3, r = 3$, Sequence: $10, 11, 7, 8$ has no such property.</description>
+    </item>
+    
+    <item>
+      <title>413_permutation</title>
+      <link>https://ohuro.me/posts/413_permutation/</link>
+      <pubDate>Mon, 18 Sep 2023 13:45:07 -0500</pubDate>
+      
+      <guid>https://ohuro.me/posts/413_permutation/</guid>
+      <description>Permutation of Sets Definition permutation A permutation of a set $S$ can be thought of as a listing of the elements $S$ in some order.
+$P(n, r)$ denotes the number of $r$-permutations of an $n$-element set.
+Definition $r$-permutation
+An $r$-permutation of a set $S$ is a string $a_1, a_2, &amp;hellip; a_r$ where $a_i \in S, \forall i \in [r]$ and $a_i \neq a_j$ for $i \neq j$.
+Note: $[r] = {1, 2, &amp;hellip;, r}$</description>
     </item>
     
     <item>
