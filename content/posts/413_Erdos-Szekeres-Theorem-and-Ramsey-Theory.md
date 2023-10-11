@@ -154,7 +154,7 @@ Let $t \in \set{1, 2, 3,...}$. The Ramsey number $R(t)$ is the smallest value of
 
 ### <span style="color:#3c66b5">Ramsey's theorem</span>
 
-For every $k \in \mathbb{N}$, we have $R(k) < 4^k$.
+For every $k \in \mathbb{N}$, we have $R(k) \leq 4^k$.
 
 <span style="color:#eb861c">Proof</span>: $k$ is fixed
 
