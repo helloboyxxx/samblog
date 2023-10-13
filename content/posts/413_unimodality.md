@@ -1,7 +1,7 @@
 ---
 title: "413_Unimodality of binomial coefficients"
 date: 2023-10-10T22:55:46-05:00
-draft: false
+draft: true
 math: true
 tags: ["Combinatorics"]
 ---
