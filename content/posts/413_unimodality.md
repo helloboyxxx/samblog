@@ -28,7 +28,7 @@ $$
 
 <span style="color:#eb861c">Proof</span>
 
-$k \in \{0, \ldots, n\}$
+$k \in \set{0, \ldots, n}$
 
 Compare ${{n} \choose {k}}$ to ${{n} \choose {k-1}}$ by using division: 
 $$
@@ -68,7 +68,7 @@ Let $\mathcal{F}$ be a collection of sets. It is an antichain if $A, B \in \math
 
 
 
-Example: $\{\{1,2\}, \{2,3\}, \{3,4\}\}$
+Example: $\set{\{1,2\}, \{2,3\}, \{3,4\}}$
 
 > Question: Let $S$ be a set of $n$ elements. What is the maximum size of a antichain on $S$?
 
@@ -82,13 +82,13 @@ Let $S$ be a set of $n$ elements. The maximum size of an antichain on $S$ is $\b
 
 <span style="color:#eb861c">Proof</span>
 
-$[n] = \{1, 2, \ldots, n\}$
+$[n] = \set{1, 2, \ldots, n}$
 
 Fix $\mathcal{F}$ antichain in $[n]$
 
-$\mathcal{C} = \{A \subset S : |A| = {\lfloor n/2\rfloor}\}$
+$\mathcal{C} = \set{A \subset S : |A| = {\lfloor n/2\rfloor}}$
 
-$\mathcal{P} = \{(\mathcal{C}, A): A \in \mathcal{F} \cap \mathcal{C} \text{ and  } \mathcal{C} \text{ is the maximal chain in }S\}$. 🧐 This is CRITICAL
+$\mathcal{P} = \set{(\mathcal{C}, A): A \in \mathcal{F} \cap \mathcal{C} \text{ and  } \mathcal{C} \text{ is the maximal chain in }S}$. 🧐 This is CRITICAL
 
 We want to proof this theorem by double conting this $\mathcal{P}$.  Our goal is to bound $|\mathcal{F}|$ using $\mathcal{P}$. 
 
@@ -152,7 +152,7 @@ Let $r \in \mathbb{Z}$ fixed.
 
 Define:
 $$
-\mathcal{S} = \{(a_1, \ldots, a_n): a_i \in \{±1\}, \sum_{i=1}^{n}a_iv_i = r\}
+\mathcal{S} = \set{(a_1, \ldots, a_n): a_i \in \{±1\}, \sum_{i=1}^{n}a_iv_i = r}
 $$
 
 $$
@@ -161,11 +161,11 @@ $$
 
 For each solution $s = (a_1, \ldots, a_n) \in \mathcal{S}$ define: 
 $$
-A_s = \{i : a_i = 1\}
+A_s = \set{i : a_i = 1}
 $$
 <span style="color:#9650af">Observation</span> given this $A_s$, we can always find an $s$. 
 
-**Claim:** the family $\mathcal{F} = \{A_s : s \in \mathcal{S}\}$ is an antichain. 
+**Claim:** the family $\mathcal{F} = \set{A_s : s \in \mathcal{S}}$ is an antichain. 
 
 Short proof by contradiction: Suppose there exists some $s_1, s_2$ such that $A_{s_1} \subset A_{s_2}$. We have $s_1$ as one solution, and it has $|A_{s_1}|$ many $+1$ steps. Also because that $A_{s_1} \subset A_{s_2}$ , $s_2$ has all the $+1$ steps as $s_1$, but it also flips some $-1$ steps of $s_1$ to $+1$ steps. This makes the resulting point bypass the goal, $r$, which results in an contradiction as $s_2$ cannot be a solution. 
 

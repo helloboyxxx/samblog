@@ -32,19 +32,19 @@ $$
 
 <span style="color:#eb861c">Proof</span>
 
-Let $S = \{1, 2, ..., n\}$ be a set of size n.
+Let $S = \set{1, 2, ..., n}$ be a set of size n.
 
 We'll count in two ways of the size of the following set:
 
-$\mathcal{C} = \{A : A \subseteq S, |A| = k\}$
+$\mathcal{C} = \set{A : A \subseteq S, |A| = k}$
 
 (1) $|\mathcal{C}| = {n \choose k}$
 
 (2) Define: 
 `
 \begin{align*}
-\mathcal{C_1} = \{A : A \subseteq S, |A| = k, 1 \in A\}\\
-\mathcal{C_2} = \{A : A \subseteq S, |A| = k, 1 \not\in A\}
+\mathcal{C_1} = \set{A : A \subseteq S, |A| = k, 1 \in A}\\
+\mathcal{C_2} = \set{A : A \subseteq S, |A| = k, 1 \not\in A}
 \end{align*}
 `
 Note that: $\mathcal{C_1}$ and $\mathcal{C_2}$ are disjoint, $\mathcal{C} = \mathcal{C_1} \cup \mathcal{C_2}$
@@ -81,7 +81,7 @@ $$
 
 <span style="color:#eb861c">Proof</span>
 
-Let $S = \{1, ...,n\}$
+Let $S = \set{1, ...,n}$
 
 Define: 
 
@@ -91,10 +91,10 @@ $\mathcal{C_2} = $ subsets of $S$ with even size
 
 > Question: How to select an even subset?
 
-First, select any subset $A \subseteq \{1, ..., n - 1\}$:
+First, select any subset $A \subseteq \set{1, ..., n - 1}$:
 
-- If $|A|$ is even, then $A \in \mathcal{C_2}$, and $A \cup \{n\} \in \mathcal{C_1}$
-- If $|A|$ is odd, then $A \in \mathcal{C_1}$, and $A \cup \{n\} \in \mathcal{C_2}$
+- If $|A|$ is even, then $A \in \mathcal{C_2}$, and $A \cup \set{set} \in \mathcal{C_1}$
+- If $|A|$ is odd, then $A \in \mathcal{C_1}$, and $A \cup \set{n} \in \mathcal{C_2}$
 
 As this constructs a bijection, $|\mathcal{C_1}| = |\mathcal{C_2}| = 2^{n-1}$
 
@@ -151,7 +151,7 @@ $n$ people, select a group of people with one boss. How many choices do we have?
 
 (1)
 
-- Select the size of the group: $i \in \{1, ..., n\}$
+- Select the size of the group: $i \in \set{1, ..., n}$
 - Select a group with $i$ people: $n \choose i$
 - Inside the group, assign someone to be the boss: $i$
 
@@ -170,7 +170,7 @@ $$
 $$
 Right side: The number of choices for selecting a group of $n$ people out of $2n$ people.
 
-Labeling the people: $\{1, ..., 2n\}$. Splitting this $2n$ people into two $n$ people group. Given a specific $k$, we can select $k$ people from the first group, and then $n-k$ people from the second group. In that situation, we have ${n \choose k} \cdot {n \choose {n-k}}$. The final thing to do is simply take the sum of all the $k$'s. This gives us the left side of this identity.
+Labeling the people: $\set{1, ..., 2n}$. Splitting this $2n$ people into two $n$ people group. Given a specific $k$, we can select $k$ people from the first group, and then $n-k$ people from the second group. In that situation, we have ${n \choose k} \cdot {n \choose {n-k}}$. The final thing to do is simply take the sum of all the $k$'s. This gives us the left side of this identity.
 
 ### <span style="color:#3c66b5">The hockey-stick identity</span>
 

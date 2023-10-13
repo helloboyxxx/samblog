@@ -48,12 +48,12 @@ Left as an exercise.
 
 
 <span style="color:#04c2b2">Exercise</span>
-How many seven-digit numbers are there such that the digits are distinct integers taken from $\{1, 2, ..., 9\}$ and such that the digits 5 and 6 do not appear consecutively in either order?
+How many seven-digit numbers are there such that the digits are distinct integers taken from $\set{1, 2, ..., 9}$ and such that the digits 5 and 6 do not appear consecutively in either order?
 
 **solution:** 
 $m$ = The number of all possible combination = $\frac{9!}{2!}$.
 
-$k$ = The number of strings of size 6 with distinct elements in $\{1, 2, 3, 4, 7, 8, 9, x\}$ and containning $x$, where $x = 56$.
+$k$ = The number of strings of size 6 with distinct elements in $\set{1, 2, 3, 4, 7, 8, 9, x}$ and containning $x$, where $x = 56$.
 $= 6 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3$
 
 The first 6 is for the position to place $x$.

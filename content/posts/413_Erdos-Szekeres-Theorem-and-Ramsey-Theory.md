@@ -101,7 +101,7 @@ A graph is an ordered pair $G = (V, E)$ comprising:
 
 - $V$, a set of vertices (also called nodes or points)
 
-- $E \subseteq \{\{x,y\}: x,y \in V \text{ and } x \neq y\}$, a set of edges (also called links or lines), which are unordered pairs of vertices. 
+- $E \subseteq \set{\{x,y\}: x,y \in V \text{ and } x \neq y}$, a set of edges (also called links or lines), which are unordered pairs of vertices. 
 
 <span style="color:#28a745">Definition</span>
 

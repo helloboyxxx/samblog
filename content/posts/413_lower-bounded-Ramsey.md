@@ -116,18 +116,18 @@ Experiment: color each edge of $K_n$ uniformly at random with red or blue.
 
 Set of all possible outcome is:
 $$
-\Omega = \{\text{red, blue}\}^{{n} \choose {2}}
+\Omega = \set{\text{red, blue}}^{{n} \choose {2}}
 $$
 
 Then, choose a $k$. Label all the copies of $K_k$ inside $K_n$. There are ${{n} \choose {k}}$ of them. 
 
 Our events will be of the following form: 
 $$
-A_i = \{i^{th} \text{ clique is monochromatic}\}
+A_i = \set{i^{th} \text{ clique is monochromatic}}
 $$
 
 
-Consider the probability of each of these $A_i$. They should have the same probability. So $\forall i \in \{1, \ldots, \binom{n}{k} \}, A_i = A_1$. For  each edge in the $K_k$ graph, it can be colored either red or blue. By applying the multiplication principle, this is:
+Consider the probability of each of these $A_i$. They should have the same probability. So $\forall i \in \set{1, \ldots, \binom{n}{k} }, A_i = A_1$. For  each edge in the $K_k$ graph, it can be colored either red or blue. By applying the multiplication principle, this is:
 $$
 \mathbb{P}(A_i) = 2 \cdot \left( \frac{1}{2} \right)^{|E(K_k)|} = 2 \cdot \left( \frac{1}{2} \right)^{\binom{k}{2}}
 $$

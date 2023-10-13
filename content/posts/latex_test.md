@@ -13,7 +13,7 @@ $$
 $$
 
 
-Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in\{1, 2, 3, 4\}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$. Since $94$ is included, the first player must win. 
+Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in\set{1, 2, 3, 4}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$. Since $94$ is included, the first player must win. 
 
 
 $\mathfrak{ABCDEFG}$
@@ -69,7 +69,7 @@ $$
 
 2. 
 $$
-\lambda_i \xlongequal[]{\text{eq.}(1)}\int_{\{i\}}
+\lambda_i \xlongequal[]{\text{eq.}(1)}\int_{\set{i}}
 $$
 
 3. 
@@ -122,7 +122,7 @@ $$
 $$
 
 
-Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in\{1, 2, 3, 4\}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$. Since $94$ is included, the first player must win. 
+Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in\set{1, 2, 3, 4}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$. Since $94$ is included, the first player must win. 
 
 
 $\mathfrak{ABCDEFG}$
@@ -176,7 +176,7 @@ $$
 
 2. 
 $$
-\lambda_i \xlongequal[]{\text{eq.}(1)}\int_{\{i\}}
+\lambda_i \xlongequal[]{\text{eq.}(1)}\int_{\set{i}}
 $$
 
 3. 

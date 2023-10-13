@@ -22,11 +22,11 @@ P(n, r) = r! {n \choose r} \text{ and }
 $$
 <span style="color:#eb861c">Proof</span>
 
-Let $S$ be a set of size $n$. $S = \{s_1, ..., s_n\}$
+Let $S$ be a set of size $n$. $S = \set{s_1, ..., s_n}$
 
 First, let us choose a string of size $r$ formed by elements of $S$ ($r$-permutation):
 $$
-\mathcal{P}(n, r) = \{(s_{i1}, ..., s_{ir}): s_{ij} \in S, \text{all distinct}\}
+\mathcal{P}(n, r) = \set{(s_{i1}, ..., s_{ir}): s_{ij} \in S, \text{all distinct}}
 $$
 And define: 
 $$
@@ -35,7 +35,7 @@ $$
 Define the function: 
 $$
 f:\mathcal{P}(n, r) \to \mathcal{C}(n, r)\\
-f(s_{i1}, ..., s_{ir}) = \{s_{i1}, ..., s_{ir}\}
+f(s_{i1}, ..., s_{ir}) = \set{s_{i1}, ..., s_{ir}}
 $$
 Consider: How many times a set is being counted? 
 
@@ -70,7 +70,7 @@ Let $S$ be a multiset with objects of $k$ different types, where each object has
 
 There are $r$ position to be filled in. Each position has $k$ choices since we have infinite number of each type in this multiset S. This gives us $k^r$
 
-Another examle: $S = \{a, a, b\}$. If we want 3-permutation of S. In this case, $(a, a, a)$ is not a 3-permutation of S. 
+Another examle: $S = \set{a, a, b}$. If we want 3-permutation of S. In this case, $(a, a, a)$ is not a 3-permutation of S. 
 
 
 
@@ -93,16 +93,16 @@ Let $a_1^3, ..., a_{n_3}^3$ be a labelling of the elements of type 3.
 
 Let $a_1^k, ..., a_{n_k}^k$ be a labelling of the elements of type 3.
 
-Consider the set $S' = \{a_1^1, ..., a_{n_1}^1, ..., a_1^k, ..., a_{n_k}^k\}$
+Consider the set $S' = \set{a_1^1, ..., a_{n_1}^1, ..., a_1^k, ..., a_{n_k}^k}$
 
 The permutations of $S' = n!$. Then we can create a function: 
 $$
-f:\{\text{permutations of }S'\} \to \{\text{permutation of }S\}\\
+f:\set{\text{permutations of }S'\} \to \{\text{permutation of }S}\\
 f(\text{string} = \text{string where the labels are removed})
 $$
 Removing the label makes all those elements in the same type indistinguishable. (You cannot tell the different between $a_1^1$ and $a_2^1$ if the lable is removed.)
 
-Consider: For a given permutation $A$ of $S$, what's the number of the set $\{S: f(S) = A\}$? 
+Consider: For a given permutation $A$ of $S$, what's the number of the set $\set{S: f(S) = A}$? 
 
 Ans: $(n_1)!(n_2)! ... (n_k)!$
 
@@ -112,7 +112,7 @@ Ans: $(n_1)!(n_2)! ... (n_k)!$
 
 <span style="color:#04c2b2">Exercise</span>
 
-How many ways do we have of partitioning the set $\{1, 2, ..., 10\}$ into 3 sets: out of size 2, out of size 3, and another of size 5?
+How many ways do we have of partitioning the set $\set{1, 2, ..., 10}$ into 3 sets: out of size 2, out of size 3, and another of size 5?
 
 **Solution 1:**
 $$
@@ -121,14 +121,14 @@ $$
 $$
 **Solution 2:**
 
-Define the set: $\mathcal{P}(10) =$ set of all permutations of $\{1, ..., 10\}$. Then, $|\mathcal{P} = 10!|$
+Define the set: $\mathcal{P}(10) =$ set of all permutations of $\set{1, ..., 10}$. Then, $|\mathcal{P} = 10!|$
 
-Define: $f: \mathcal{P} \to \{\text{Box configurations}\}$ by:
+Define: $f: \mathcal{P} \to \set{\text{Box configurations}}$ by:
 $$
 f(a_1, ..., a_{10}) 
-= \left( \{a_1, a_2\}, \{a_3, a_4, a_5\}, \{...\} \right)
+= \left( \set{a_1, a_2\}, \{a_3, a_4, a_5\}, \{...} \right)
 $$
-> Question: Given a box configuration $\mathcal{B}$, what is the number $\{S:f(S) = \mathcal{B}\}$, where $S$ are strings? 
+> Question: Given a box configuration $\mathcal{B}$, what is the number $\set{S:f(S) = \mathcal{B}}$, where $S$ are strings? 
 
 
 $$
@@ -160,12 +160,12 @@ Now: we need to select a submultiset. Each submultiset is associated to a soluti
 `
 \begin{align*}
 X_1 + ... + X_k &= r\\
-X_1, ..., X_k &\in \mathbb{N} \cup \{0\}
+X_1, ..., X_k &\in \mathbb{N} \cup \set{0}
 \end{align*}
 `
 Let $\mathcal{S}$ be the set of solutions.  
 
-Define: $f: \mathcal{S} \to \{0, 1 \text{ bit strings with } k - 1 \text{ ones and }r \text{ zeros}\}$ by : 
+Define: $f: \mathcal{S} \to \set{0, 1 \text{ bit strings with } k - 1 \text{ ones and }r \text{ zeros}}$ by : 
 
 $f(x_1, ..., x_k) = (00 ...0(X_1\text{ zeros})) 1 (00 ...0(X_2\text{ zeros})) 1 ... (00 ...0(X_k\text{ zeros}))$
 
@@ -203,7 +203,7 @@ X_4 &= Y_4 + 5\\
 This gives us: 
 $Y_1 + Y_2 + Y_3 + Y_4 = 20 - (3 + 1 + 0 + 5) = 11$
 
-The number of solutions with $Y_i \in \mathbb{N} \cup \{0\} = {14 \choose 3}$
+The number of solutions with $Y_i \in \mathbb{N} \cup \set{0} = {14 \choose 3}$
 
 
 

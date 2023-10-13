@@ -16,7 +16,7 @@ $K_n \not \to (K_s,K_t)$ is the assertion that there exists a coloring of the ed
 
 <span style="color:#28a745">Notation</span> **Off-diagonal Ramsey numbers:** 
 
-Let $s,t \in \{1,2,3,\ldots\}$. The Ramsey number $R(s,t)$ is the smallest value of $n$ such that $K_n \to (K_s,K_t)$.
+Let $s,t \in \set{1,2,3,\ldots}$. The Ramsey number $R(s,t)$ is the smallest value of $n$ such that $K_n \to (K_s,K_t)$.
 
 $R(s, t) = \operatorname{min}\set{n : \forall c : E(K_n) \to \set{\text{red, blue}}, \exists \text{ red } K_s \text{ or blue }K_t}$
 
@@ -44,7 +44,7 @@ For all $s, t \in \mathbb{N}$, we have $R(s, t) \leq R(s-1, t) + R(s, t-1)$.
 
 <span style="color:#eb861c">Proof</span>
 
-Suppose you have a complete graph $K_n, n = R(s-1, t) + R(s, t-1)$. Now, fix the coloring $c : E(K_n) \to \{\text{red, blue}\}$.
+Suppose you have a complete graph $K_n, n = R(s-1, t) + R(s, t-1)$. Now, fix the coloring $c : E(K_n) \to \set{\text{red, blue}}$.
 
 Goal: to show that $\exists $ red $K_s$ or blue $K_t$.
 
@@ -104,7 +104,7 @@ $$
 
 ### Ramsey for many colors on normal graph
 
-$K_n \to (K_{t_1},K_{t_2},\ldots,K_{t_k})$ is the assertion that for any coloring $c:E(K_n)\to \{1,2,\ldots,k\}$ of the edges of $K_n$, there exists an $i$ so that we have a $i$-colored copy of $K_{t_i}$ under $c$.
+$K_n \to (K_{t_1},K_{t_2},\ldots,K_{t_k})$ is the assertion that for any coloring $c:E(K_n)\to \set{1,2,\ldots,k}$ of the edges of $K_n$, there exists an $i$ so that we have a $i$-colored copy of $K_{t_i}$ under $c$.
 
 > Reminder: $E$ here is the notation for edges
 
@@ -129,7 +129,7 @@ We want to prove the first inequality as the second one is trivial by definition
 
 Let $n \geq (R(R(t_1, t_2), t_3))$
 
-Let $c : E(K_n) \to \{\text{red, blue, green}\}$ by any coloring. First, identify the red and blue color as black. 
+Let $c : E(K_n) \to \set{\text{red, blue, green}}$ by any coloring. First, identify the red and blue color as black. 
 
 Goal: to find red $K_{t_1}$ or blue $K_{t_2}$ or green $K_{t_3}$.
 
@@ -165,7 +165,7 @@ Let $r \in \mathbb{N}$. We say that a hypergraph $\mathcal{H}=(V,E)$ is $r$-unif
 
 Let $\mathcal{H} = (V, E)$ be an $r$-uniform hypergraph on $n$ vertices. We say that $\mathcal{H}$ is a complete hypergraph if every subset of $V$ of size $r$ is a hypergraph of $\mathcal{H}$. That is: 
 $$
-E = \{A : A \subseteq V \text{ and } |A| = r\}
+E = \set{A : A \subseteq V \text{ and } |A| = r}
 $$
 Observe: $|E(\mathcal{H})| = {{n} \choose {r}}$
 
@@ -175,7 +175,7 @@ Observe: $|E(\mathcal{H})| = {{n} \choose {r}}$
 
 <span style="color:#28a745">Notation</span> Ramsey for hypergraphs
 
-$K_n^r \to (K_{t_1}^r,K_{t_2}^r,\ldots,K_{t_k}^r)$ is the assertion that for any coloring $c:E(K_n)\to \{1,2,\ldots,k\}$ of the hyperedges of $K_n^r$, there exists an $i$ so that we have a $i$-colored copy of $K^r_{t_i}$ under $c$.
+$K_n^r \to (K_{t_1}^r,K_{t_2}^r,\ldots,K_{t_k}^r)$ is the assertion that for any coloring $c:E(K_n)\to \set{1,2,\ldots,k}$ of the hyperedges of $K_n^r$, there exists an $i$ so that we have a $i$-colored copy of $K^r_{t_i}$ under $c$.
 
 <span style="color:#28a745">Notation</span> Ramsey numbers for hypergraphs
 
@@ -213,7 +213,7 @@ R_r(t_1,t_2, t_3) &\leq R_{r-1}(R(t_1-1, t_2, t_3)) \\
 `
 Call the right side $n$. 
 
-Fix any coloring $c : E(K_n^r) \to \{\text{red, blue, green}\}$
+Fix any coloring $c : E(K_n^r) \to \set{\text{red, blue, green}}$
 
 Goal: to find red $K_{t_1}^r$ or blue $K_{t_2}^r$ or green $K_{t_3}^r$
 
@@ -221,7 +221,7 @@ By pigeonhole principle:
 
 Let's define the coloring: 
 
-$c' : E(K_{n-1}^{r-1}) \to \{\text{red, blue, green}\}$ as follows:
+$c' : E(K_{n-1}^{r-1}) \to \set{\text{red, blue, green}}$ as follows:
 
 - $c'(e) = $ $c(v \cup e)$
 

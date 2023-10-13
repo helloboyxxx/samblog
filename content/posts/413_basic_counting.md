@@ -44,9 +44,9 @@ $$
 
 Let $S$ be a finite set of $p$-tuples $a = (a_1, ..., a_p)$ and let $t_1, ..., t_p$ be some positive numbers.
 
-Suppose that for every $a = (a_1, ..., a_p) \in S$, and every $i \in \{1, ..., p\}$, we have
+Suppose that for every $a = (a_1, ..., a_p) \in S$, and every $i \in \set{1, ..., p}$, we have
 $$
-|\{b \in S:b_j = a_j, \forall j \neq i\}| = t_i
+|\set{b \in S:b_j = a_j, \forall j \neq i}| = t_i
 $$
 Then, 
 $$
@@ -64,9 +64,9 @@ This number can be written as:
 $2^{a}\cdot 7^b \cdot 13^c$.
 Then just consider the number of choices for $a, b, c$:
 
-$a \in \{0, 1, ... 10\}$
-$b \in \{0, 1\}$
-$c \in \{0, 1, 2, 3\}$
+$a \in \set{0, 1, ... 10}$
+$b \in \set{0, 1}$
+$c \in \set{0, 1, 2, 3}$
 
 In total, $11 \cdot 2 \cdot 4 = 88$
 
@@ -90,7 +90,7 @@ How many two-digit numbers have distinct and nonzero digits?
 
 Let $A$ be a set and let $U$ be a larger set containing $A$. Let 
 $$
-\bar{A} = U \setminus A = \{x \in U : x \notin A\}
+\bar{A} = U \setminus A = \set{x \in U : x \notin A}
 $$
 
 
@@ -116,7 +116,7 @@ k = \frac{|S|}{|S_i|}
 $$
 A multiset is a modification of the concept of a set that, unlike a set, allows for multiple instances for each of its elements. 
 
-Ex: $\{a, a, b\}$ the element a has multiplicity 2, and b has multiplicity 1. 
+Ex: $\set{a, a, b}$ the element a has multiplicity 2, and b has multiplicity 1. 
 
 
 
