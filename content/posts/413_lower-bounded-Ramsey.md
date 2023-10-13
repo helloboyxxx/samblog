@@ -87,14 +87,14 @@ Use the binomial theorem
 
 Since we have the fact: $1+x \leq e^x$, when $x = \frac{k}{n}$, we have:
 `
+$$
 \begin{align*}
-
 \left( e^{k/n} \right)^n = e^k \geq \left( 1 + \frac{k}{n} \right)^k
 &\geq \left( \frac{k}{n} \right)^k \cdot \binom{n}{k} \\
 \iff 
 \left( \frac{en}{k} \right)^k &\geq \binom{n}{k}
-
 \end{align*}
+$$
 `
 
 
