@@ -1,11 +1,12 @@
 ---
-title: "413_Unimodality of binomial coefficients"
+title: "413_Unimodality of binomial coef & Sperner's theorem"
 date: 2023-10-10T22:55:46-05:00
-draft: true
+draft: false
 math: true
 tags: ["Combinatorics"]
 ---
 
+# Unimodality of Binomial Coefficients and Sperner's Theorem 
 
 If we examine the binomial coefficients in a row of Pascal's triangle, we notice that the numbers increase for a while and then decrease. A sequence of numbers with this property is called **unimodal**. 
 
@@ -41,7 +42,7 @@ and also ${{n} \choose {k}} > {{n} \choose {k-1}} \iff k < {\lceil n / 2\rceil}$
 
 Note that: ${{n} \choose {k}} = {{} \choose {}}$
 
-
+==TBC==
 
 
 
@@ -87,7 +88,7 @@ Fix $\mathcal{F}$ antichain in $[n]$
 
 $\mathcal{C} = \{A \subset S : |A| = {\lfloor n/2\rfloor}\}$
 
-$\mathcal{P} = \{(\mathcal{C}, A): A \in \mathcal{F} \cap \mathcal{C} \text{ and  } \mathcal{C} \text{ is the maximal chain in }S\}$
+$\mathcal{P} = \{(\mathcal{C}, A): A \in \mathcal{F} \cap \mathcal{C} \text{ and  } \mathcal{C} \text{ is the maximal chain in }S\}$. 🧐 This is CRITICAL
 
 We want to proof this theorem by double conting this $\mathcal{P}$.  Our goal is to bound $|\mathcal{F}|$ using $\mathcal{P}$. 
 
@@ -99,31 +100,35 @@ We want to proof this theorem by double conting this $\mathcal{P}$.  Our goal is
 >
 > Question 2: Given a maximal chain $\mathcal{C}$, $|\mathcal{F} \cap \mathcal{C}| \leq ?$ Ans: 1
 
-By Q1 and Q2, we can give an upper bound $|\mathcal{P}| \leq n!$. 
+By Q1 and Q2, we can give an upper bound $|\mathcal{P}| \leq n!$.
 
 > Question 3: Fix a set $A \in \mathcal{F}$. What is the number of maximal chain $\mathcal{C}$ have $A \in \mathcal{C}$?
 >
-> Answer: $|A|!$ to permutate the first half. $|n-|A||!$ to permutate the second half. So we have $|A|! \cdot |n-|A||!$ such maximal chains. 
+> Answer: $|A|!$ to permutate the first half. $(n-|A|)!$ to permutate the second half. So we have $|A|! \cdot (n-|A|)!$ such maximal chains. 
 
 By Q1, Q2, Q3, we have
 `
 \begin{align*}
-\sum_{A \in \mathcal{F}}|A|! \cdot |n-|A||! = |\mathcal{P}| \leq n!\\
+\sum_{A \in \mathcal{F}}|A|! \cdot (n-|A|)! = |\mathcal{P}| \leq n!\\
 \implies
-\sum_{A \in \mathcal{F}}\binom{n}{|A|} \leq 1 && \text{divide both side by }n!
+\sum_{A \in \mathcal{F}}\frac{1}{\binom{n}{|A|}} \leq 1 && \text{divide both side by }n!
 \end{align*}
 `
 As we have the unimodel theorem above, 
-$$
-\binom{n}{\lfloor n/2 \rfloor} \geq \binom{n}{|A|}, \forall A
-$$
+`
+\begin{align*}
+\binom{n}{\lfloor n/2 \rfloor} &\geq \binom{n}{|A|}, \forall A\\
+\frac{1}{\binom{n}{\lfloor n/2 \rfloor}} &\leq \frac{1}{\binom{n}{|A|}}
+\end{align*}
+`
 Then we continue: 
 `
 \begin{align*}
-\frac{|\mathcal{F}|}{\binom{n}{\lfloor n/2 \rfloor}} \leq \sum_{A \in \mathcal{F}}\binom{n}{|A|} \leq 1 
+\frac{|\mathcal{F}|}{\binom{n}{\lfloor n/2 \rfloor}} &\leq \sum_{A \in \mathcal{F}}\frac{1}{\binom{n}{|A|}} \leq 1\\
+|\mathcal{F}| &\leq \binom{n}{\lfloor n/2 \rfloor}
 \end{align*}
 `
-Done. 
+$\blacksquare$
 
 
 
@@ -170,6 +175,6 @@ $$
 $$
 Further simplification: 
 $$
-\binom{n}{\lfloor n/2\rfloor} \sim \Theta(\frac{2^n}{\sqrt n})
+\binom{n}{\lfloor n/2\rfloor} \sim \Theta\left(\frac{2^n}{\sqrt n}\right)
 $$
-Cancelling the $2^n$ gives us the statement of the theorem.
+Cancelling the $2^n$ gives us the statement of the theorem. $\blacksquare$
