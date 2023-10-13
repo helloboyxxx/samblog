@@ -6,17 +6,7 @@
     <description>Recent content in Posts on Sam&#39;s Meanderings</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Oct 2023 22:55:46 -0500</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>413_Unimodality of binomial coefficients</title>
-      <link>https://ohuro.me/posts/413_unimodality/</link>
-      <pubDate>Tue, 10 Oct 2023 22:55:46 -0500</pubDate>
-      
-      <guid>https://ohuro.me/posts/413_unimodality/</guid>
-      <description>If we examine the binomial coefficients in a row of Pascal&amp;rsquo;s triangle, we notice that the numbers increase for a while and then decrease. A sequence of numbers with this property is called unimodal.
-Theorem Let $n$ be a positive integer. The sequence of binomial coefficients $$ {{n} \choose {0}}, {{n} \choose {1}}, \ldots, {{n} \choose {n}} $$ is a unimodal sequence. Mor precisely, $$ {{n} \choose {0}} &amp;lt; {{n} \choose {1}} &amp;lt; \ldots &amp;lt; {{n} \choose {\lfloor n/2\rfloor}} $$ and $$ {{n} \choose {\lceil n/2 \rceil}} &amp;gt; \ldots {{n} \choose {n-1}} &amp;gt; {{n} \choose {n}} $$</description>
-    </item>
-    
+    <lastBuildDate>Wed, 04 Oct 2023 17:28:53 -0500</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>413_lower bounded Ramsey</title>
       <link>https://ohuro.me/posts/413_lower-bounded-ramsey/</link>
