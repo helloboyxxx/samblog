@@ -110,7 +110,7 @@ Otherwise, putting $m$ pigeons into $m-1$ pigeonholes gives us a fact that $\exi
 
 A chess master who has 11 weeks to prepare for a turnament decies to play at least one game everday. But to avoid tiring himself, he decides not to play more than 12 games during any calendar week. Show that there exists a succession of days during which the chess master will have played exactly 21 games. 
 
-**Solution: **
+**Solution:**
 
 $77 \leq \text{number of games} \leq 132$
 
@@ -161,11 +161,13 @@ $$
 Suppose, by contradiction, that $\exists i< j, p, q, \in \mathbb{Z}, \text{and } r \in \set{0, ..., n-1}$ such that: 
 
 $im + a = pn + r$ and $jm + a = qn + r$. This gives us:
-$$
+`
+\begin{align*}
 (j - i)m = n(q-p)\\
 \implies n \mid (j - i)m\\
 \implies n \mid (j-i)
-$$
+\end{align*}
+`
 As $i, j \leq n - 1 \implies 0 \leq j-i \leq n-1 \implies j-i = 0$, giving us a contradiction
 
 Then the claim is true. 
