@@ -93,7 +93,7 @@ $\mathcal{C_2} = $ subsets of $S$ with even size
 
 First, select any subset $A \subseteq \set{1, ..., n - 1}$:
 
-- If $|A|$ is even, then $A \in \mathcal{C_2}$, and $A \cup \set{set} \in \mathcal{C_1}$
+- If $|A|$ is even, then $A \in \mathcal{C_2}$, and $A \cup \set{n} \in \mathcal{C_1}$
 - If $|A|$ is odd, then $A \in \mathcal{C_1}$, and $A \cup \set{n} \in \mathcal{C_2}$
 
 As this constructs a bijection, $|\mathcal{C_1}| = |\mathcal{C_2}| = 2^{n-1}$
