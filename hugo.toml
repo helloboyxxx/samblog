@@ -1,7 +1,7 @@
 baseURL = 'https://ohuro.me/'
 
 languageCode = 'en-us'
-title = "Sam's Meanderings"
+title = "Sam's Notes"
 theme = 'PaperMod'
 
 
