@@ -6,7 +6,21 @@
     <description>Recent content in Combinatorics on Sam&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Oct 2023 22:55:46 -0500</lastBuildDate><atom:link href="https://ohuro.me/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Oct 2023 10:30:51 -0500</lastBuildDate><atom:link href="https://ohuro.me/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_Multinomial Coefficient</title>
+      <link>https://ohuro.me/posts/413_multinomial/</link>
+      <pubDate>Mon, 30 Oct 2023 10:30:51 -0500</pubDate>
+      
+      <guid>https://ohuro.me/posts/413_multinomial/</guid>
+      <description>Definition A multinomial coefficient is:
+$$ \binom{n}{n_1 n_2 \cdots n_t} =\frac{n !}{n_{1} ! n_{2} ! \cdots n_{t} !} $$
+Here, $n_1, n_2, \ldots, n_t$ are nonnegative integers with $$ n_1+n_2+\cdots+n_t=n $$
+Pascal&amp;rsquo;s theorem for multinomial coefficients Pascal&amp;rsquo;s theorem for Let $n, k \in \mathbb{N}$ and $(n)_{i=1}^k$ be natural numbers so that $$ n_1+\cdots+n_k=n $$ Then,
+$$ \binom{n}{n_1, n_2, \ldots, n_k} = \binom{n-1}{n_1-1, n_2, \ldots, n_k}
+\ldots + \binom{n-1}{n_1, n_2, \ldots, n_k-1} $$ Proof</description>
+    </item>
+    
     <item>
       <title>413_Unimodality of binomial coef &amp; Sperner&#39;s theorem</title>
       <link>https://ohuro.me/posts/413_unimodality/</link>

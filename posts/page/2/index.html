@@ -148,6 +148,83 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>445_texture
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Texture Synthesis &amp; Hole Filling Texture Texture depicts spacially repeating patterns.
+Texture Synthesis Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.
+The challenge:
+Need to model the whole spectrum: from repeated to stochastic texture.
+One idea:
+Compute statistics of input texture Generate a new texture that keeps those same statistics. But it is hard to model those probabilities distributions.
+Another idea: ==Efros &amp; Leung algorithm==...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-17 15:24:34 -0500 -0500'>September 17, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to 445_texture" href="https://ohuro.me/posts/445_texture/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>413_Pigeonhole Principle
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Pigeonhole Principle If $n&#43;1$ objects are distributed into $n$ boxes, then at least one box contains two or more of the objects.
+Proof
+For each $i\in \set{1, …, n}$, let $a_i = $ number of objects in box $i$. Then, $a_1 &#43; … &#43; a_n = n&#43;1$ Let $a_j = \text{max } a_i$. Then, \begin{align*} n&#43;1 &amp;\leq n\cdot a_j \\ \frac{n&#43;1}{n} &amp;\leq a_j \\ 1 &lt; \frac{n&#43;1}{n} &amp;\leq a_j\\ 1 &amp;&lt; a_j \end{align*} Note that this conclusion doesn’t hole if you have $n$ objects or less....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-15 17:28:11 -0500 -0500'>September 15, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to 413_Pigeonhole Principle" href="https://ohuro.me/posts/413_pigeonhole/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>413_binomial
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Binomial Coefficient and Binomial Identity Pascal’s Triangle \begin{matrix} {0 \choose 0}\\ {1 \choose 0} &amp; {1 \choose 1}\\ {2 \choose 0} &amp; {2 \choose 1} &amp; {2 \choose 2}\\ {3 \choose 0} &amp; {3 \choose 1} &amp; {3 \choose 2} &amp; {3 \choose 3}\\ {4 \choose 0} &amp; {4 \choose 1} &amp; {4 \choose 2} &amp; {4 \choose 3} &amp; {4 \choose 4}\\ .\\ .\\ . \end{matrix}
+Pascal’s Formula For all integers $n$ and $k$ with $1 \leq k \leq n - 1$, we have: $$ {n \choose k} = {{n-1} \choose k} &#43; {{n-1} \choose {k-1}} $$...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-12 17:35:33 -0500 -0500'>September 12, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to 413_binomial" href="https://ohuro.me/posts/413_binomial/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>413_combinations
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Definition
+A combination of a set $S$ is a term usually used to denote an unordered selection of the element of $S$. It is simply a selection of a subset of $S$.
+$r$-combination = $r$-subset. $n\choose r$ is the number of $r$-subset in the set of size $n$. Theorem For $0 \leq r \leq n$, we have: $$ P(n, r) = r! {n \choose r} \text{ and } {n \choose r} = \frac{n!...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-08 13:23:54 -0500 -0500'>September 8, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to 413_combinations" href="https://ohuro.me/posts/413_combinations/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Interesting DFA
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Deterministic Finite Automaition Definition: $(Q, s, A, \delta)$
+$Q$: A set of all the possible state.
+$s \in Q$ : starting state. The state to start the machine.
+$A \subseteq Q$: The set of states we accept. Return “good” when we end there.
+$\delta$: A function $Q \times \Sigma \rightarrow Q$. The set of all transition functions.
+There is an interesting DFA design question. The question is as follows:
+Given a bit-string (a string that contains only 0s and 1s), design a DFA that accepts the string if and only if the number represented by the string is divisible by 5....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-08-30 13:10:06 -0500 -0500'>August 30, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to Interesting DFA" href="https://ohuro.me/posts/interesting_dfa/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>413_chessboard
     </h2>
   </header>

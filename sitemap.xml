@@ -2,19 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ohuro.me/posts/413_unimodality/</loc>
-    <lastmod>2023-10-10T22:55:46-05:00</lastmod>
+    <loc>https://ohuro.me/posts/445_camera/</loc>
+    <lastmod>2023-10-30T10:36:20-05:00</lastmod>
   </url><url>
-    <loc>https://ohuro.me/tags/combinatorics/</loc>
-    <lastmod>2023-10-10T22:55:46-05:00</lastmod>
+    <loc>https://ohuro.me/tags/computational-photography/</loc>
+    <lastmod>2023-10-30T10:36:20-05:00</lastmod>
   </url><url>
     <loc>https://ohuro.me/posts/</loc>
-    <lastmod>2023-10-10T22:55:46-05:00</lastmod>
+    <lastmod>2023-10-30T10:36:20-05:00</lastmod>
   </url><url>
     <loc>https://ohuro.me/</loc>
-    <lastmod>2023-10-10T22:55:46-05:00</lastmod>
+    <lastmod>2023-10-30T10:36:20-05:00</lastmod>
   </url><url>
     <loc>https://ohuro.me/tags/</loc>
+    <lastmod>2023-10-30T10:36:20-05:00</lastmod>
+  </url><url>
+    <loc>https://ohuro.me/posts/445_blending-warping/</loc>
+    <lastmod>2023-10-30T10:34:53-05:00</lastmod>
+  </url><url>
+    <loc>https://ohuro.me/posts/445_synthesizing-cutting/</loc>
+    <lastmod>2023-10-30T10:33:26-05:00</lastmod>
+  </url><url>
+    <loc>https://ohuro.me/posts/445_color_basics/</loc>
+    <lastmod>2023-10-30T10:32:37-05:00</lastmod>
+  </url><url>
+    <loc>https://ohuro.me/posts/413_multinomial/</loc>
+    <lastmod>2023-10-30T10:30:51-05:00</lastmod>
+  </url><url>
+    <loc>https://ohuro.me/tags/combinatorics/</loc>
+    <lastmod>2023-10-30T10:30:51-05:00</lastmod>
+  </url><url>
+    <loc>https://ohuro.me/posts/413_unimodality/</loc>
     <lastmod>2023-10-10T22:55:46-05:00</lastmod>
   </url><url>
     <loc>https://ohuro.me/posts/413_lower-bounded-ramsey/</loc>
