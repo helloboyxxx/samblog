@@ -17,8 +17,7 @@
 $$ \binom{n}{n_1 n_2 \cdots n_t} =\frac{n !}{n_{1} ! n_{2} ! \cdots n_{t} !} $$
 Here, $n_1, n_2, \ldots, n_t$ are nonnegative integers with $$ n_1+n_2+\cdots+n_t=n $$
 Pascal&amp;rsquo;s theorem for multinomial coefficients Pascal&amp;rsquo;s theorem for Let $n, k \in \mathbb{N}$ and $(n)_{i=1}^k$ be natural numbers so that $$ n_1+\cdots+n_k=n $$ Then,
-$$ \binom{n}{n_1, n_2, \ldots, n_k} = \binom{n-1}{n_1-1, n_2, \ldots, n_k}
-\ldots + \binom{n-1}{n_1, n_2, \ldots, n_k-1} $$ Proof</description>
+$$ \binom{n}{n_1, n_2, \ldots, n_k} = \binom{n-1}{n_1-1, n_2, \ldots, n_k} + \ldots + \binom{n-1}{n_1, n_2, \ldots, n_k-1} $$</description>
     </item>
     
     <item>
