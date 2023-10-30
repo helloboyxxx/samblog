@@ -3,7 +3,7 @@ title: "445_texture"
 date: 2023-09-17T15:24:34-05:00
 draft: false
 math: true
-tags: []
+tags: ["Computational Photography"]
 ---
 
 # Texture Synthesis & Hole Filling
