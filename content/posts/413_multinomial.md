@@ -30,8 +30,7 @@ Then,
 
 $$
 \binom{n}{n_1, n_2, \ldots, n_k} = 
-\binom{n-1}{n_1-1, n_2, \ldots, n_k}
-+ \ldots + 
+\binom{n-1}{n_1-1, n_2, \ldots, n_k} + \ldots + 
 \binom{n-1}{n_1, n_2, \ldots, n_k-1}
 $$
 
