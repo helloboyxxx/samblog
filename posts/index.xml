@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Sam&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Oct 2023 10:36:20 -0500</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Nov 2023 22:48:35 -0500</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_generating Functions</title>
+      <link>https://ohuro.me/posts/413_generating-functions/</link>
+      <pubDate>Wed, 01 Nov 2023 22:48:35 -0500</pubDate>
+      
+      <guid>https://ohuro.me/posts/413_generating-functions/</guid>
+      <description>Generating Functions Generating functions can be regarded as algebraic objects whose formal manipulation allows us to count the number of possibilities for a problem by means of algebra.
+Definition
+Let $h_0, h_1, h_2, h_3, \ldots$ be an infinite sequence of numbers. Its generating function is defined to be the infinite series: $$ g(x) = h_0 + h_1x + h_2x^2 + \cdots + h_nx^n + \cdots $$
+Example 1 The generating function of the infinite sequence $1, 1, 1, \ldots$ is: $$ g(x) = 1 + x + x^2 + x^3 + \cdots $$ for $|x| &amp;lt; 1$.</description>
+    </item>
+    
     <item>
       <title>445_camera</title>
       <link>https://ohuro.me/posts/445_camera/</link>
