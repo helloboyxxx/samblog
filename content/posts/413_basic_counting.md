@@ -26,12 +26,12 @@ The idea is to break this problem into smaller problems. Addition principle guar
 Think of the final step we need to take. It must be either an up or a right. This makes the problem to become a similar but smaller problem that has $2 \times 3$ size. Mark it $n_{2\times 3}$
 
 Using the same idea, we have: 
-$$
+`
 \begin{align*}
 n_{3 \times 3} = 2 * n_{2 \times 3}
 = 2 * (n_{2 \times 2} + n_{3 \times 1})\\
 \end{align*}
-$$
+`
 
 ### **Multiplication principle**
 
