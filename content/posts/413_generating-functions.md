@@ -9,8 +9,6 @@ tags: ["Combinatorics"]
 
 Generating functions can be regarded as algebraic objects whose formal manipulation allows us to count the number of possibilities for a problem by means of algebra. 
 
-
-
 <span style="color:#28a745">Definition</span>
 
 Let $h_0, h_1, h_2, h_3, \ldots$ be an infinite sequence of numbers. Its generating function is defined to be the infinite series: 
@@ -32,14 +30,18 @@ $$
 
 $|x| < 1$,
 `
+`
+$$
 \begin{align*}
 (1-x)(1 + x + x^2 + x^3 + \cdots + x^n) &= 1 - x^{n+1}\\
 \Rightarrow\\
 \lim_{n \to \infty}(1-x)(1 + x + x^2 + x^3 + \cdots + x^n)
 &= \lim_{n \to \infty}(1 - x^{n+1}) = 1\\
 \Rightarrow\\
-\sum_{j=0}^{\infty}x^j = \frac{1}{x-1}
+\sum_{j=0}^{\infty}x^j = \frac{1}{1-x}
 \end{align*}
+$$
+`
 `
 #### <span style="color:#04c2b2">Example 2</span>
 
@@ -71,9 +73,11 @@ The goal is to convince ourself that expanding the function $g(x) = \frac{1}{(1-
 
 Since we know that $\frac{1}{(1-x)} = 1 + x + x^2 + \ldots$, the expansion becomes: 
 `
+$$
 \begin{align*}
 \frac{1}{(1-x)^k} = \underbrace{(1 + x + x^2 + \ldots) \cdot (1 + x + x^2 + \ldots) \cdots (1 + x + x^2 + \ldots)}_{k}
 \end{align*}
+$$
 `
 Note that there are $k$ pairs of parenthesis, and from each pair of parentheis, we can choose a $x^i$, for some $i \geq 0$. Multiplying these $x_i$'s, say $x^{i_1} \cdot x^{i_2}\cdots x^{i_k}$, which is equivalent to $x^{i_1 + i_2 + \ldots + i_k} = x^n$ for some $n$. Now, given a fixed $n$, we can think about the coefficients of the term $x^n$... Well, MAGIC !!! This is same as the number of nonnegative integral solutions of $x_1 + x_2 + \ldots + x_k = n$. Just in different notation!
 
@@ -168,7 +172,8 @@ To calculate $h_n$ from this, we can use Taylor expansion:
 
 ⚠️ Calc review: 
 `
-\begin{align*}
+$$
+\begin{aligned}
 & f \in \mathcal{C}^{\infty}, 0 \in \operatorname{Domain}(f) \\
 & f(x)=f(0)+\frac{f^{\prime}(0)}{1 !} \cdot x+\frac{f^{\prime \prime}(0)}{2 !} \cdot x^2+\ldots \\
 & f(x)=\frac{1}{(1-x)^2} \\
@@ -177,15 +182,18 @@ To calculate $h_n$ from this, we can use Taylor expansion:
 & f^{(n)}(x)=\frac{2 \cdot 3 \cdots(n+1)}{(1-x)^{n+2}}\\
 & f^{(n+1)}(x)=\frac{2 \cdot 3 \cdot(n+1)(n+2)}{(1-x)^{n+3}} \\
 &
-\end{align*}
+\end{aligned}
+$$
 `
 For $n \in \mathbb{N}:$
 `
-\begin{align*}
+$$
+\begin{aligned}
 & f^{(n)}(0)=(n+1) ! \\
 & f(x)=1+\frac{2 !}{1 !} x+\frac{3 !}{2 !} x^2+\cdots \\
 & =1+\sum_{n \geqslant 1} \frac{f^{(n)}(0) x^n}{n !}=1+\sum_{n \geqslant 1}^1(n+1) x^n
-\end{align*}
+\end{aligned}
+$$
 `
 Then our answer is simply $h_n = n+1$. $\blacksquare$
 
@@ -193,10 +201,12 @@ Then our answer is simply $h_n = n+1$. $\blacksquare$
 
 We can solve this in another way:
 `
+$$
 \begin{align*}
 \left(\frac{1}{1-x}\right)^\prime &= (1 + x + x^2 + \ldots)^\prime\\
 \frac{1}{(1-x)^2} &= 0 + 1 + 2x + 3x^2 + \ldots
 \end{align*}
+$$
 `
 Then we find out that $h_n = n+1$. $\blacksquare$
 
@@ -208,7 +218,7 @@ So far, we defined the generating function for a sequence $\left(h_n\right)_{n \
 
 This is particularly suited to some sequences involving **combinations and binomial coefficients**.
 
-However, for sequences whose terms count permutations, it is more useful to consider a generating function with respect to the monomials
+However, for sequences whose terms count **permutations**, it is more useful to consider a generating function with respect to the monomials
 $$
 1, x, \frac{x^2}{2 !}, \frac{x^3}{3 !}, \ldots
 $$
@@ -219,8 +229,7 @@ $$
 e^x=\sum_{n=0}^{\infty} \frac{x^n}{n !}=1+x+\frac{x^2}{2 !}+\frac{x^3}{3 !}+\cdots
 $$
 
-The exponential generating function for the sequence $\left(h_n\right)_{n \geq 0}$ is defined to be:
-
+The exponential generating function for the sequence $\left(h_n\right)_{n \geq 0}$ is defined to be
 $$
 g^{(e)}(x)=\sum_{n=0}^{\infty} h_n \frac{x^n}{n !}=h_0+h_1 x+h_2 \frac{x^2}{2 !}+h_3 \frac{x^3}{3 !}+\cdots
 $$
@@ -256,7 +265,6 @@ $$
 Let $S$ be the multiset $\{n_1 \cdot a_1, n_2 \cdot a_2, \ldots ,n_k \cdot a_k\}$, where $n_1, n_2, \ldots ,n_k$ are nonnegative integers. 
 
 Let $h_n$ be the number of $n$-permutations of $S$. Then, the exponential generating function $g^{(e)}$ for the sequence $(h_n)_{n \ge 0}$ is given by
-
 $$
 g^{(e)}(x) = f_{n_1}(x)f_{n_2}(x)\cdots f_{n_k}(x).
 $$
@@ -285,21 +293,25 @@ $$
 $$
 
 `
+$$
 \begin{align*}
 \implies P_n = \sum_{(j_1, \ldots,j_k): \text{restriction}}\frac{n!}{j_1! \cdots j_k!}
 \end{align*}
+$$
 `
 Consider the function: 
 $$
 g(x) = \left( \sum_{j_1 = 0}^{n_1} \frac{x^{j_1}}{j_1} \right) \cdots 
 \left( \sum_{j_k = 0}^{n_k} \frac{x^{j_k}}{j_k} \right)
 $$
-Goal: to show that the coef of $x_n$ in $g$ is equal to $P_n / n!$
+Goal: to show that the coef of $x^n$ in $g$ is equal to $P_n / n!$
 `
+$$
 \begin{align*}
 g(x) &= \sum_{0\leq j_i \leq n_i}\frac{x^{j_1}}{j_1!} \cdots\frac{x^{j_k}}{j_k!}\\
 &=\sum_{n=0}^{n_1+\ldots + n_k} \left( \sum_{(j_1,\ldots,j_k):\text{restriction}} \frac{1}{j_1! \cdots j_k!}\right)\cdot x^n
 \end{align*}
+$$
 `
 This whole thing gives us:
 $$
@@ -312,11 +324,13 @@ Let $h_n$ denote the number of $n$-digit numbers with digits 1,2, or 3 , where t
 
 **Solution**
 `
+$$
 \begin{align*}
 g^{(e)}(x) &= \left( 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \ldots \right) && \text{choice of num of 1's}\\
 &\cdot \left( \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!} + \ldots \right) && \text{choice of num of 2's}\\
-&\cdot \left( 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots \right)&& \text{choice of num of 3's}
+&\cdot \left( 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} \right)&& \text{choice of num of 3's}
 \end{align*}
+$$
 `
 The expansion becomes:
 $$
@@ -350,7 +364,7 @@ Determine the number of ways to color the squares of a 1-by-$n$ chessboard, usin
 
 **Solution**
 $$
-g^{(e)}(x) = e^x \cdot e^x \cdot \left( \frac{e^x + x^{-x}}{2} \right) = \frac{x^{3x}}{2}
+g^{(e)}(x) = e^x \cdot e^x \cdot \left( \frac{e^x + e^{-x}}{2} \right) = \frac{e^{3x} + e^x}{2}
 $$
 Using a same logic.
 
@@ -374,11 +388,13 @@ Where the first term correspondes to choices for number of 5's,7's, and 9's. Sin
 
 Simplify this we get:
 `
+$$
 \begin{align*}
 g^{(e)}(x) &= \left( \frac{e^{-x}+e^x}{2} \right)^2 \cdot e^{3x}\\
 &= \frac{1}{2}e^{3x} + \frac{e^x + e^{5x}}{4}\\
 &= \frac{1}{4} \cdot \left( 2e^{3x} + e^x + e^{5x} \right)
 \end{align*}
+$$
 `
 Now, want to find the coefficients of each term in the Taylor's Expansion.
 
@@ -418,7 +434,7 @@ TBC
 
 Solve the recurrence relation: 
 $$
-h_n = 5h_{n-1} = 6h_{n-2} \quad (n \geq 2)
+h_n = 5h_{n-1} - 6h_{n-2} \quad (n \geq 2)
 $$
 with initial values $h_0 = 1, h_1 = -2$
 
@@ -428,12 +444,14 @@ g(x) = \frac{5}{1-2x} - \frac{4}{1-3x}
 $$
 Now, use the fact that $\frac{1}{1-x} = 1 + x + x^2 + x^3 + \ldots$, we have: 
 `
+$$
 \begin{align*}
 g(x) &= 5 \sum_{n \geq 0} (2x)^n - 4 \sum_{n \geq 0}(3x)^n\\
 &= \sum_{n \geq 0}(5 \cdot 2^n - 4 \cdot 3^n)x^n\\
 &\implies\\
 h_n &= 5 \cdot 2^n - 4 \cdot 3^n
 \end{align*}
+$$
 `
 $\blacksquare$
 
@@ -449,11 +467,13 @@ Note that this recurrence relation is non-homegeneous. (Definition below)
 
 Now, back to the solution. Define the following generating functions based on the expression $h_n - 2h_{n-1}-1 = 0$.
 `
+$$
 \begin{align*}
 g_1(x) &= h_0 + h_1x + h_2x^2 + h_3x^3 + \ldots && \text{As usual}\\
 g_2(x) &= -2h_{-1} -2h_0x - 2h_1x^2 - 2h_2x^3 + \ldots && \text{using } h_{-1} = 0\\
 g_3(x) &= 0 -1x - 1x^2 - 1x^3 + \ldots && \text{using } a_0 = 0, a_i = -1,\forall i \geq 1
 \end{align*}
+$$
 `
 
 
@@ -461,6 +481,7 @@ Sum them up, we get a zero function: $(g_1 + g_2 + g_3)(x) = 0, \forall x \geq 0
 
 Now, express $g_2, g_3$ in terms of $g_1$: 
 `
+$$
 \begin{align*}
 g_2(x) &= g(x) \cdot (-2x)\\
 g_3(x) &= -x - x^2 - x^3 - \ldots = \frac{-x}{1-x}\\
@@ -469,12 +490,15 @@ g_1(x) &\cdot (1-2x) + g_3(x) = 0\\
 &\implies\\
 g_1(x) &= \frac{x}{(1-x)(1-2x)}
 \end{align*}
+$$
 `
 We want to find Taylor series of this thing. The starting point of breaking this to parts is to construct linear terms: 
 `
+$$
 \begin{align*}
 g_1(x) &= \frac{x}{(1-x)(1-2x)} = \frac{c_1}{1-x} + \frac{c_2}{1-2x}
 \end{align*}
+$$
 `
 Solving for $c_1$ and $c_2$ we get: 
 $$
@@ -482,12 +506,14 @@ g_1(x) = \frac{-1}{1-x} + \frac{1}{1-2x}
 $$
 As we have $\frac{1}{1-x} = 1 + x + x^2 + \ldots$, we conclude: 
 `
+$$
 \begin{align*}
 g_1(x) &= -\sum_{n \geq 0} x^n + \sum_{n \geq 0} (2x)^n\\
 g_1(x) &= \sum_{n \geq 0}(2^n - 1)x^n\\
 \implies \\
 h_n &= 2^n - 1
 \end{align*}
+$$
 `
 Now we get THE function for Hanoi's Tower. 
 
@@ -501,10 +527,12 @@ Where $k$ and $a_i$'s are constants.
 
 <span style="color:#28a745">Definition</span> The characteristic polynomial of the homogeneous linear recurrence:
 `
+$$
 \begin{align*}
 \frac{P(x)}{x^{n-k}} &= \frac{x^n - (a_1 x^{n-1} + a_2 x^{n-2} + \ldots + a_k x^{n-k})}{x^{n-k}}\\
 r(x) &= x^k - (a_1x^{k-1} + a_2x^{k-2} + \ldots + a_kx)
 \end{align*}
+$$
 `
 $r(x)$ is the characteristic polynomial of the homogeneous linear recurrence.
 
@@ -512,23 +540,32 @@ $r(x)$ is the characteristic polynomial of the homogeneous linear recurrence.
 
 ### <span style="color:#3c66b5">Theorem</span>
 
-==...== lecture 30
-
-Then the generating function of $(h_i)_{i \geq 0}$ is given by $g(x) = p(x) / q(x)$, where $q(x) = x^kr(1/x)$ and
+Let $(h_i)_{i\ge0}$ be a sequence of numbers defined by the **homogeneous** recurrence relation
 
 $$
-p(x) = ...
+h_n + a_1h_{n-1}+\cdots+a_kh_{n-k}=0, \, (n \ge k)
 $$
+
+of order $k$ and with initial values for $h_0, h_1,\ldots,h_{k-1}$.
+
+Let $r(x) = x^k +a_1 x^{k-1}+a_2x^{k-2}+\cdots+a_k$ be the characteristic polynomial of this recurrence relation. 
+
+Then, the generating function of $(h_i)_{i\ge0}$ is given by $g(x) = p(x)/q(x)$, where $q(x) = x^k r(1/x)$ and
+
+$$
+p(x) = h_0 + (h_1+a_1h_0)x+(h_2+a_1h_1+a_2h_0)x^2+\cdots+(h_{k-1}+a_1h_{k-2}+\cdots+a_{k-1}h_0)x^{k-1}
+$$
+
 $p(x)$ in another form:
+
 $$
 p(x) = \sum_{i = 0}^{k - 1}\left( \sum_{j = 0}^{i} a_jh_{i-j}\right)x^i
 $$
-where we define $a_0 = 1$.
 
+where we define $a_0 = 1$.
 
 
 > Note that this is slightly different from the previous definition, but this is still a homogeneous recurrence relations. 
 
 <span style="color:#eb861c">Proof</span> is not given... I think just understanding this theorem's statement what matters.
-
 
