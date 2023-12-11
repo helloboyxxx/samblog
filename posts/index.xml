@@ -6,7 +6,20 @@
     <description>Recent content in Posts on Sam&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Nov 2023 22:48:35 -0500</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Dec 2023 14:59:52 -0600</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_None Homogeneous Recurrence Relation</title>
+      <link>https://ohuro.me/posts/413_nhrr/</link>
+      <pubDate>Mon, 11 Dec 2023 14:59:52 -0600</pubDate>
+      
+      <guid>https://ohuro.me/posts/413_nhrr/</guid>
+      <description>Example sums of cubes
+Solve $h_n=h_{n-1}+n^3,(n \geq 1)$ and $h_0=0$.
+Solution
+Note that this is not a homegenous recurrence relation.
+Unrolling gives us: $$ \begin{align*} h_{n-1} &amp;amp;= (n-1)^3 + h_{n-2}\\ \implies h_n &amp;amp;= n^3 + (n-1)^3 + h_{n-2} \end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 + (n-1)^3 + \ldots + 2^3 + 1 $$ To formally prove this, we can use induction!</description>
+    </item>
+    
     <item>
       <title>413_generating Functions</title>
       <link>https://ohuro.me/posts/413_generating-functions/</link>
