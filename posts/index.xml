@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Sam&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Dec 2023 14:59:52 -0600</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Dec 2023 16:01:49 -0600</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>413_difference Sequence</title>
+      <link>https://ohuro.me/posts/413_difference-sequence/</link>
+      <pubDate>Mon, 11 Dec 2023 16:01:49 -0600</pubDate>
+      
+      <guid>https://ohuro.me/posts/413_difference-sequence/</guid>
+      <description>⚠️THIS NOTE IS NOT FINISHED YET TODO: stirling number definitions stirling number of the first and the second type bell number Question Can you find a closed formula for the sum of the $p$-th powers of the first $n$ positive integers? That is, we need a closed formulat for the sequence:
+$$ h_n=a_p n^p+a_{p-1} n^{p-1}+\cdots+a_1 n+a_0, \quad(n \geq 0) $$
+Solution
+The method is to use difference sequences. We already know the following:</description>
+    </item>
+    
     <item>
       <title>413_None Homogeneous Recurrence Relation</title>
       <link>https://ohuro.me/posts/413_nhrr/</link>
