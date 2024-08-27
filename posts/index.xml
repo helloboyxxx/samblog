@@ -247,6 +247,7 @@ If we lable the close path we chose in the beginning from 1 to 64 in the order w
       <guid>https://ohuro.me/posts/latex_test/</guid>
       <description>Consider a $n \times m$ chessboard&amp;hellip;
 $$ \int{f(x)dx} $$
+Anthony&amp;rsquo;s test: $\mathcal{F}_k \subseteq \mathcal{F}_{k+1}$
 Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in\set{1, 2, 3, 4}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$.</description>
     </item>
     
