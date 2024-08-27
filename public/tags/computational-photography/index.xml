@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Computational Photography on Sam&#39;s Notes</title>
+    <link>http://localhost:1313/tags/computational-photography/</link>
+    <description>Recent content in Computational Photography on Sam&#39;s Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Oct 2023 10:36:20 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/computational-photography/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>445_camera</title>
+      <link>http://localhost:1313/posts/445_camera/</link>
+      <pubDate>Mon, 30 Oct 2023 10:36:20 -0500</pubDate>
+      
+      <guid>http://localhost:1313/posts/445_camera/</guid>
+      <description>World Coordinates and Image coordinates Pinhole Camera Model $$ x = K \left[ \begin{array}{ll} R &amp;amp; t \end{array} \right] x $$
+x: Image Coordinates: $(u, v, 1)$ K: Intrinsic Matrix $(3 \times 3)$ R: Rotation $(3 \times 3)$ t: Translation $(3 \times 1)$ X: World Coordinates: $(X, Y, Z, 1)$
+Basically, from the right side to the leftside, it is transforming a point (1) from the world coordinates to camera coordinates, and then project the point (2) from camera coordinates down to the image plane.</description>
+    </item>
+    
+    <item>
+      <title>445_Blending</title>
+      <link>http://localhost:1313/posts/445_blending-warping/</link>
+      <pubDate>Mon, 30 Oct 2023 10:34:53 -0500</pubDate>
+      
+      <guid>http://localhost:1313/posts/445_blending-warping/</guid>
+      <description>Pasting Images Method 1 — Cut and paste the images. Feathering
+Gives a smoother transition. But that&amp;rsquo;s all&amp;hellip; Alpha composting
+Output = foreground $\times$ mask + background $\times$ (1 $-$ mask). We can also use alpha compositing together with the feathering — simply bluring the mask will give us a good feathering. This method is also good for multilayer processing, which allwos the compositing to be more complicated. Method 2 — Pyramid Blending At low frequencies, blend slowly At high frequencies, blend quickly Burt and Adelson 1983 Implementation: Build Laplacian pyramids for each image Build a Gaussian pyramid of region mask Blend each level of pyramid using region mask from the same level $$ L_{12}^i=L_1^i \cdot R^i+L_2^i \cdot\left(1-R^i\right) $$</description>
+    </item>
+    
+    <item>
+      <title>445_Synthesizing and Cutting</title>
+      <link>http://localhost:1313/posts/445_synthesizing-cutting/</link>
+      <pubDate>Mon, 30 Oct 2023 10:33:26 -0500</pubDate>
+      
+      <guid>http://localhost:1313/posts/445_synthesizing-cutting/</guid>
+      <description>Texture Synthesis and Hole-Filling How do we cut something out of an image, and fill the hole naturally?
+Definition Texture depicts spacially repeating patterns.
+Texture Synthesis Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.
+The challenge:
+Need to model the whole spectrum: from repeated to stochastic texture.
+One idea:
+Compute statistics of input texture Generate a new texture that keeps those same statistics. But it is hard to model those probabilities distributions.</description>
+    </item>
+    
+    <item>
+      <title>445_color_basics</title>
+      <link>http://localhost:1313/posts/445_color_basics/</link>
+      <pubDate>Mon, 30 Oct 2023 10:32:37 -0500</pubDate>
+      
+      <guid>http://localhost:1313/posts/445_color_basics/</guid>
+      <description>How do you view the world Cones: cone-shaped, less sensitive, operate in high light, color vision
+Rods: rod-shaped, highly sensitive, operate at night, gray-scale vision, slower to respond
+Observation In a clear night, there are more stars off-center. This is because you have more rods in the middle, while more cones elsewhere.
+How to express colors? Basically, the most intuitive expression is the RGB color space. But it is not a linear color space.</description>
+    </item>
+    
+    <item>
+      <title>445_texture</title>
+      <link>http://localhost:1313/posts/445_texture/</link>
+      <pubDate>Sun, 17 Sep 2023 15:24:34 -0500</pubDate>
+      
+      <guid>http://localhost:1313/posts/445_texture/</guid>
+      <description>Texture Synthesis &amp;amp; Hole Filling Texture Texture depicts spacially repeating patterns.
+Texture Synthesis Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.
+The challenge:
+Need to model the whole spectrum: from repeated to stochastic texture.
+One idea:
+Compute statistics of input texture Generate a new texture that keeps those same statistics. But it is hard to model those probabilities distributions.
+Another idea: ==Efros &amp;amp; Leung algorithm==</description>
+    </item>
+    
+  </channel>
+</rss>
