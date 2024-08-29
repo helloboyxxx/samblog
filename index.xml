@@ -6,7 +6,19 @@
     <description>Recent content on Yue&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Dec 2023 16:01:49 -0600</lastBuildDate><atom:link href="https://ohuro.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Aug 2024 15:30:07 -0500</lastBuildDate><atom:link href="https://ohuro.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fast Fourier Transform</title>
+      <link>https://ohuro.me/posts/473_fft/</link>
+      <pubDate>Thu, 29 Aug 2024 15:30:07 -0500</pubDate>
+      
+      <guid>https://ohuro.me/posts/473_fft/</guid>
+      <description>I know this name for a long time. But never learnt it. Now it&amp;rsquo;s time.
+Recap Previously, Karatsuba&amp;rsquo;s algorithm for integer multiplication. It computes the result in $O(n^{\log_2 3})$ where $n$ is the number of digits.
+Another recap: polynomial representation: $$ p(x) = \sum_{i = 0}^{n}p_ix^i $$ And we can represent this polynomial using an array of size $n$.
+Evaluations and additions of polynomials are straightforward computation. Can be done in $O(n)$ time.</description>
+    </item>
+    
     <item>
       <title>413_difference Sequence</title>
       <link>https://ohuro.me/posts/413_difference-sequence/</link>
