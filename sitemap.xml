@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ohuro.me/posts/convex_hull/</loc>
+    <lastmod>2024-08-29T17:02:49-05:00</lastmod>
+  </url><url>
+    <loc>https://ohuro.me/posts/</loc>
+    <lastmod>2024-08-29T17:02:49-05:00</lastmod>
+  </url><url>
+    <loc>https://ohuro.me/</loc>
+    <lastmod>2024-08-29T17:02:49-05:00</lastmod>
+  </url><url>
     <loc>https://ohuro.me/tags/algorithm/</loc>
     <lastmod>2024-08-29T15:30:07-05:00</lastmod>
   </url><url>
     <loc>https://ohuro.me/posts/473_fft/</loc>
     <lastmod>2024-08-29T15:30:07-05:00</lastmod>
   </url><url>
-    <loc>https://ohuro.me/posts/</loc>
-    <lastmod>2024-08-29T15:30:07-05:00</lastmod>
-  </url><url>
     <loc>https://ohuro.me/tags/</loc>
-    <lastmod>2024-08-29T15:30:07-05:00</lastmod>
-  </url><url>
-    <loc>https://ohuro.me/</loc>
     <lastmod>2024-08-29T15:30:07-05:00</lastmod>
   </url><url>
     <loc>https://ohuro.me/posts/413_difference-sequence/</loc>

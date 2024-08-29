@@ -6,7 +6,20 @@
     <description>Recent content in Posts on Yue&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Aug 2024 15:30:07 -0500</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Aug 2024 17:02:49 -0500</lastBuildDate><atom:link href="https://ohuro.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convex Hull in 2D</title>
+      <link>https://ohuro.me/posts/convex_hull/</link>
+      <pubDate>Thu, 29 Aug 2024 17:02:49 -0500</pubDate>
+      
+      <guid>https://ohuro.me/posts/convex_hull/</guid>
+      <description>Definition Problem: Given $n$ points $P = \set{p_1, \ldots, p_n} \subset \mathbb{R}^2$, compute $\text{CH}(P) = $ smallest convex set contining $P$.
+Input: a list of points all the points in $P$.
+Output: a list of points in $P$ that belongs to this convex set in CCW, starting from the left most point.
+Applications Given a huge point cloud, convex hull helps find the &amp;ldquo;shape&amp;rdquo;.
+Bounding volume. Makes ray shooting tasks faster.</description>
+    </item>
+    
     <item>
       <title>Fast Fourier Transform</title>
       <link>https://ohuro.me/posts/473_fft/</link>
