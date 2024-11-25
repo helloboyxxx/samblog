@@ -9,16 +9,16 @@
 <meta name="keywords" content="">
 <meta name="description" content="Posts - Yue&#39;s Notes">
 <meta name="author" content="">
-<link rel="canonical" href="https://ohuro.me/posts/">
+<link rel="canonical" href="https://ofuro.me/posts/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css" integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U&#43;6hYRq/Ez/nm5vg=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://ohuro.me/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ohuro.me/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ohuro.me/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ohuro.me/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ohuro.me/safari-pinned-tab.svg">
+<link rel="icon" href="https://ofuro.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ofuro.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ofuro.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ofuro.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ofuro.me/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://ohuro.me/posts/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://ofuro.me/posts/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,7 +58,7 @@
 </noscript><meta property="og:title" content="Posts" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://ohuro.me/posts/" />
+<meta property="og:url" content="https://ofuro.me/posts/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -74,7 +74,7 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://ohuro.me/posts/"
+      "item": "https://ofuro.me/posts/"
     }
   ]
 }
@@ -96,7 +96,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://ohuro.me/" accesskey="h" title="Yue&#39;s Notes (Alt + H)">Yue&#39;s Notes</a>
+            <a href="https://ofuro.me/" accesskey="h" title="Yue&#39;s Notes (Alt + H)">Yue&#39;s Notes</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -122,22 +122,22 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ohuro.me/about" title="About Me">
+                <a href="https://ofuro.me/about" title="About Me">
                     <span>About Me</span>
                 </a>
             </li>
             <li>
-                <a href="https://ohuro.me/archives" title="Archive">
+                <a href="https://ofuro.me/archives" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://ohuro.me/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://ofuro.me/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="https://ohuro.me/tags/" title="Tags">
+                <a href="https://ofuro.me/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
@@ -153,6 +153,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>413_Multinomial Coefficient
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Definition A multinomial coefficient is:
+$$ \binom{n}{n_1 n_2 \cdots n_t} =\frac{n !}{n_{1} ! n_{2} ! \cdots n_{t} !} $$
+Here, $n_1, n_2, \ldots, n_t$ are nonnegative integers with $$ n_1&#43;n_2&#43;\cdots&#43;n_t=n $$
+Pascal’s theorem for multinomial coefficients Pascal’s theorem for Let $n, k \in \mathbb{N}$ and $(n)_{i=1}^k$ be natural numbers so that $$ n_1&#43;\cdots&#43;n_k=n $$ Then,
+$$ \binom{n}{n_1, n_2, \ldots, n_k} = \binom{n-1}{n_1-1, n_2, \ldots, n_k} &#43; \ldots &#43; \binom{n-1}{n_1, n_2, \ldots, n_k-1} $$...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-30 10:30:51 -0500 -0500'>October 30, 2023</span></footer>
+  <a class="entry-link" aria-label="post link to 413_Multinomial Coefficient" href="https://ofuro.me/posts/413_multinomial/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>413_Unimodality of binomial coef &amp; Sperner&#39;s theorem
     </h2>
   </header>
@@ -161,7 +177,7 @@
 Theorem Let $n$ be a positive integer. The sequence of binomial coefficients $$ {{n} \choose {0}}, {{n} \choose {1}}, \ldots, {{n} \choose {n}} $$ is a unimodal sequence. Mor precisely, $$ {{n} \choose {0}} &lt; {{n} \choose {1}} &lt; \ldots &lt; {{n} \choose {\lfloor n/2\rfloor}} $$ and $$ {{n} \choose {\lceil n/2 \rceil}} &gt; \ldots {{n} \choose {n-1}} &gt; {{n} \choose {n}} $$...</p>
   </div>
   <footer class="entry-footer"><span title='2023-10-10 22:55:46 -0500 -0500'>October 10, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to 413_Unimodality of binomial coef &amp; Sperner&#39;s theorem" href="https://ohuro.me/posts/413_unimodality/"></a>
+  <a class="entry-link" aria-label="post link to 413_Unimodality of binomial coef &amp; Sperner&#39;s theorem" href="https://ofuro.me/posts/413_unimodality/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -175,7 +191,7 @@ Before we start the proof, let’s look at 3 ingredients we need:
 The probabilistic method The union bound The binomial estimate The probabilistic method Let $\Omega$ be the set of all possible outcomes of an experiment. Suppose that each outcome is equally likely. Let $A \subseteq \Omega$ be an event. $$ \text{If } \operatorname{Prob}(A) &lt; 1 \text{, then } \operatorname{Prob}(A^c) &gt; 0 $$...</p>
   </div>
   <footer class="entry-footer"><span title='2023-10-04 17:28:53 -0500 -0500'>October 4, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to 413_lower bounded Ramsey" href="https://ohuro.me/posts/413_lower-bounded-ramsey/"></a>
+  <a class="entry-link" aria-label="post link to 413_lower bounded Ramsey" href="https://ofuro.me/posts/413_lower-bounded-ramsey/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -190,7 +206,7 @@ $K_n \not \to (K_s,K_t)$ is the assertion that there exists a coloring of the ed
 Notation Off-diagonal Ramsey numbers:...</p>
   </div>
   <footer class="entry-footer"><span title='2023-10-02 15:00:37 -0500 -0500'>October 2, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to 413_General Ramsey Theories" href="https://ohuro.me/posts/413_general_ramsey-theories/"></a>
+  <a class="entry-link" aria-label="post link to 413_General Ramsey Theories" href="https://ofuro.me/posts/413_general_ramsey-theories/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -205,7 +221,7 @@ Indicies $i_1 &lt; i_2 &lt; …&lt; i_r$ so that $a_{i1} &lt; a_{i2} &lt; …&lt
 Indicies $j_1 &lt; j_2 &lt; …&lt; j_r$ so that $a_{j1} &gt; a_{j2} &gt; … &gt; a_{jr}$ Example: $s = 3, r = 3$, Sequence: $10, 11, 7, 8$ has no such property....</p>
   </div>
   <footer class="entry-footer"><span title='2023-09-27 20:56:13 -0500 -0500'>September 27, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to 413_Erdos-Szekeres Theorem and Ramsey Theory" href="https://ohuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/"></a>
+  <a class="entry-link" aria-label="post link to 413_Erdos-Szekeres Theorem and Ramsey Theory" href="https://ofuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -221,7 +237,7 @@ An $r$-permutation of a set $S$ is a string $a_1, a_2, … a_r$ where $a_i \in S
 Note: $[r] = {1, 2, …, r}$...</p>
   </div>
   <footer class="entry-footer"><span title='2023-09-18 13:45:07 -0500 -0500'>September 18, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to 413_permutation" href="https://ohuro.me/posts/413_permutation/"></a>
+  <a class="entry-link" aria-label="post link to 413_permutation" href="https://ofuro.me/posts/413_permutation/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -239,7 +255,7 @@ Compute statistics of input texture Generate a new texture that keeps those same
 Another idea: ==Efros &amp; Leung algorithm==...</p>
   </div>
   <footer class="entry-footer"><span title='2023-09-17 15:24:34 -0500 -0500'>September 17, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to 445_texture" href="https://ohuro.me/posts/445_texture/"></a>
+  <a class="entry-link" aria-label="post link to 445_texture" href="https://ofuro.me/posts/445_texture/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -253,7 +269,7 @@ Proof
 For each $i\in \set{1, …, n}$, let $a_i = $ number of objects in box $i$. Then, $a_1 &#43; … &#43; a_n = n&#43;1$ Let $a_j = \text{max } a_i$. Then, \begin{align*} n&#43;1 &amp;\leq n\cdot a_j \\ \frac{n&#43;1}{n} &amp;\leq a_j \\ 1 &lt; \frac{n&#43;1}{n} &amp;\leq a_j\\ 1 &amp;&lt; a_j \end{align*} Note that this conclusion doesn’t hole if you have $n$ objects or less....</p>
   </div>
   <footer class="entry-footer"><span title='2023-09-15 17:28:11 -0500 -0500'>September 15, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to 413_Pigeonhole Principle" href="https://ohuro.me/posts/413_pigeonhole/"></a>
+  <a class="entry-link" aria-label="post link to 413_Pigeonhole Principle" href="https://ofuro.me/posts/413_pigeonhole/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -266,7 +282,7 @@ For each $i\in \set{1, …, n}$, let $a_i = $ number of objects in box $i$. Then
 Pascal’s Formula For all integers $n$ and $k$ with $1 \leq k \leq n - 1$, we have: $$ {n \choose k} = {{n-1} \choose k} &#43; {{n-1} \choose {k-1}} $$...</p>
   </div>
   <footer class="entry-footer"><span title='2023-09-12 17:35:33 -0500 -0500'>September 12, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to 413_binomial" href="https://ohuro.me/posts/413_binomial/"></a>
+  <a class="entry-link" aria-label="post link to 413_binomial" href="https://ofuro.me/posts/413_binomial/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -280,39 +296,21 @@ A combination of a set $S$ is a term usually used to denote an unordered selecti
 $r$-combination = $r$-subset. $n\choose r$ is the number of $r$-subset in the set of size $n$. Theorem For $0 \leq r \leq n$, we have: $$ P(n, r) = r! {n \choose r} \text{ and } {n \choose r} = \frac{n!...</p>
   </div>
   <footer class="entry-footer"><span title='2023-09-08 13:23:54 -0500 -0500'>September 8, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to 413_combinations" href="https://ohuro.me/posts/413_combinations/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Interesting DFA
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Deterministic Finite Automaition Definition: $(Q, s, A, \delta)$
-$Q$: A set of all the possible state.
-$s \in Q$ : starting state. The state to start the machine.
-$A \subseteq Q$: The set of states we accept. Return “good” when we end there.
-$\delta$: A function $Q \times \Sigma \rightarrow Q$. The set of all transition functions.
-There is an interesting DFA design question. The question is as follows:
-Given a bit-string (a string that contains only 0s and 1s), design a DFA that accepts the string if and only if the number represented by the string is divisible by 5....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-08-30 13:10:06 -0500 -0500'>August 30, 2023</span></footer>
-  <a class="entry-link" aria-label="post link to Interesting DFA" href="https://ohuro.me/posts/interesting_dfa/"></a>
+  <a class="entry-link" aria-label="post link to 413_combinations" href="https://ofuro.me/posts/413_combinations/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="prev" href="https://ohuro.me/posts/">
+    <a class="prev" href="https://ofuro.me/posts/">
       «&nbsp;Prev&nbsp;
     </a>
-    <a class="next" href="https://ohuro.me/posts/page/3/">Next&nbsp;&nbsp;»
+    <a class="next" href="https://ofuro.me/posts/page/3/">Next&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="https://ohuro.me/">Yue&#39;s Notes</a></span>
+    <span>&copy; 2024 <a href="https://ofuro.me/">Yue&#39;s Notes</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

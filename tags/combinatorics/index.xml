@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Combinatorics on Yue&#39;s Notes</title>
-    <link>https://ohuro.me/tags/combinatorics/</link>
+    <link>https://ofuro.me/tags/combinatorics/</link>
     <description>Recent content in Combinatorics on Yue&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Dec 2023 16:01:49 -0600</lastBuildDate><atom:link href="https://ohuro.me/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Dec 2023 16:01:49 -0600</lastBuildDate><atom:link href="https://ofuro.me/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>413_difference Sequence</title>
-      <link>https://ohuro.me/posts/413_difference-sequence/</link>
+      <link>https://ofuro.me/posts/413_difference-sequence/</link>
       <pubDate>Mon, 11 Dec 2023 16:01:49 -0600</pubDate>
       
-      <guid>https://ohuro.me/posts/413_difference-sequence/</guid>
+      <guid>https://ofuro.me/posts/413_difference-sequence/</guid>
       <description>⚠️THIS NOTE IS NOT FINISHED YET TODO: stirling number definitions stirling number of the first and the second type bell number Question Can you find a closed formula for the sum of the $p$-th powers of the first $n$ positive integers? That is, we need a closed formulat for the sequence:
 $$ h_n=a_p n^p+a_{p-1} n^{p-1}+\cdots+a_1 n+a_0, \quad(n \geq 0) $$
 Solution
@@ -21,10 +21,10 @@ The method is to use difference sequences. We already know the following:</descr
     
     <item>
       <title>413_None Homogeneous Recurrence Relation</title>
-      <link>https://ohuro.me/posts/413_nhrr/</link>
+      <link>https://ofuro.me/posts/413_nhrr/</link>
       <pubDate>Mon, 11 Dec 2023 14:59:52 -0600</pubDate>
       
-      <guid>https://ohuro.me/posts/413_nhrr/</guid>
+      <guid>https://ofuro.me/posts/413_nhrr/</guid>
       <description>Example sums of cubes
 Solve $h_n=h_{n-1}+n^3,(n \geq 1)$ and $h_0=0$.
 Solution
@@ -34,10 +34,10 @@ Unrolling gives us: $$ \begin{align*} h_{n-1} &amp;amp;= (n-1)^3 + h_{n-2}\\ \im
     
     <item>
       <title>413_generating Functions</title>
-      <link>https://ohuro.me/posts/413_generating-functions/</link>
+      <link>https://ofuro.me/posts/413_generating-functions/</link>
       <pubDate>Wed, 01 Nov 2023 22:48:35 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_generating-functions/</guid>
+      <guid>https://ofuro.me/posts/413_generating-functions/</guid>
       <description>Generating Functions Generating functions can be regarded as algebraic objects whose formal manipulation allows us to count the number of possibilities for a problem by means of algebra.
 Definition
 Let $h_0, h_1, h_2, h_3, \ldots$ be an infinite sequence of numbers. Its generating function is defined to be the infinite series: $$ g(x) = h_0 + h_1x + h_2x^2 + \cdots + h_nx^n + \cdots $$
@@ -46,10 +46,10 @@ Example 1 The generating function of the infinite sequence $1, 1, 1, \ldots$ is:
     
     <item>
       <title>413_Multinomial Coefficient</title>
-      <link>https://ohuro.me/posts/413_multinomial/</link>
+      <link>https://ofuro.me/posts/413_multinomial/</link>
       <pubDate>Mon, 30 Oct 2023 10:30:51 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_multinomial/</guid>
+      <guid>https://ofuro.me/posts/413_multinomial/</guid>
       <description>Definition A multinomial coefficient is:
 $$ \binom{n}{n_1 n_2 \cdots n_t} =\frac{n !}{n_{1} ! n_{2} ! \cdots n_{t} !} $$
 Here, $n_1, n_2, \ldots, n_t$ are nonnegative integers with $$ n_1+n_2+\cdots+n_t=n $$
@@ -59,20 +59,20 @@ $$ \binom{n}{n_1, n_2, \ldots, n_k} = \binom{n-1}{n_1-1, n_2, \ldots, n_k} + \ld
     
     <item>
       <title>413_Unimodality of binomial coef &amp; Sperner&#39;s theorem</title>
-      <link>https://ohuro.me/posts/413_unimodality/</link>
+      <link>https://ofuro.me/posts/413_unimodality/</link>
       <pubDate>Tue, 10 Oct 2023 22:55:46 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_unimodality/</guid>
+      <guid>https://ofuro.me/posts/413_unimodality/</guid>
       <description>Unimodality of Binomial Coefficients and Sperner&amp;rsquo;s Theorem If we examine the binomial coefficients in a row of Pascal&amp;rsquo;s triangle, we notice that the numbers increase for a while and then decrease. A sequence of numbers with this property is called unimodal.
 Theorem Let $n$ be a positive integer. The sequence of binomial coefficients $$ {{n} \choose {0}}, {{n} \choose {1}}, \ldots, {{n} \choose {n}} $$ is a unimodal sequence. Mor precisely, $$ {{n} \choose {0}} &amp;lt; {{n} \choose {1}} &amp;lt; \ldots &amp;lt; {{n} \choose {\lfloor n/2\rfloor}} $$ and $$ {{n} \choose {\lceil n/2 \rceil}} &amp;gt; \ldots {{n} \choose {n-1}} &amp;gt; {{n} \choose {n}} $$</description>
     </item>
     
     <item>
       <title>413_lower bounded Ramsey</title>
-      <link>https://ohuro.me/posts/413_lower-bounded-ramsey/</link>
+      <link>https://ofuro.me/posts/413_lower-bounded-ramsey/</link>
       <pubDate>Wed, 04 Oct 2023 17:28:53 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_lower-bounded-ramsey/</guid>
+      <guid>https://ofuro.me/posts/413_lower-bounded-ramsey/</guid>
       <description>Theorem $$ \text{For every } k \in \mathbb{N}, \text{we have } R(k)\ge 2^{k/2} $$
 Before we start the proof, let&amp;rsquo;s look at 3 ingredients we need:
 The probabilistic method The union bound The binomial estimate The probabilistic method Let $\Omega$ be the set of all possible outcomes of an experiment. Suppose that each outcome is equally likely. Let $A \subseteq \Omega$ be an event. $$ \text{If } \operatorname{Prob}(A) &amp;lt; 1 \text{, then } \operatorname{Prob}(A^c) &amp;gt; 0 $$</description>
@@ -80,10 +80,10 @@ The probabilistic method The union bound The binomial estimate The probabilistic
     
     <item>
       <title>413_General Ramsey Theories</title>
-      <link>https://ohuro.me/posts/413_general_ramsey-theories/</link>
+      <link>https://ofuro.me/posts/413_general_ramsey-theories/</link>
       <pubDate>Mon, 02 Oct 2023 15:00:37 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_general_ramsey-theories/</guid>
+      <guid>https://ofuro.me/posts/413_general_ramsey-theories/</guid>
       <description>General Ramsey on normal graph Notation General notation for Ramsey theory:
 $K_n \to (K_s,K_t)$ is the assertion that for any coloring of the edges of $K_n$ with red and blue, we can always find a red $K_s$ or a blue $K_t$.
 $K_n \not \to (K_s,K_t)$ is the assertion that there exists a coloring of the edges of $K_n$ with red and blue with no red $K_s$ nor blue $K_t$.
@@ -92,10 +92,10 @@ Notation Off-diagonal Ramsey numbers:</description>
     
     <item>
       <title>413_Erdos-Szekeres Theorem and Ramsey Theory</title>
-      <link>https://ohuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</link>
+      <link>https://ofuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</link>
       <pubDate>Wed, 27 Sep 2023 20:56:13 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</guid>
+      <guid>https://ofuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</guid>
       <description>Erdos-Szekeres Theorem Given $r, s$ any sequence of distinct real numbers with length at least $(r-1)(s-1)+1$ contains a monotonically increasing subsequence of length $r$ or a monotonically decreasing subsequece of length $s$.
 That is, given the subsequence: $a_1, a_2, &amp;hellip;, a_{(s-1)(r-1)+1}$, we can find:
 Indicies $i_1 &amp;lt; i_2 &amp;lt; &amp;hellip;&amp;lt; i_r$ so that $a_{i1} &amp;lt; a_{i2} &amp;lt; &amp;hellip;&amp;lt; a_{ir}$ OR
@@ -104,10 +104,10 @@ Indicies $j_1 &amp;lt; j_2 &amp;lt; &amp;hellip;&amp;lt; j_r$ so that $a_{j1} &a
     
     <item>
       <title>413_permutation</title>
-      <link>https://ohuro.me/posts/413_permutation/</link>
+      <link>https://ofuro.me/posts/413_permutation/</link>
       <pubDate>Mon, 18 Sep 2023 13:45:07 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_permutation/</guid>
+      <guid>https://ofuro.me/posts/413_permutation/</guid>
       <description>Permutation of Sets Definition permutation A permutation of a set $S$ can be thought of as a listing of the elements $S$ in some order.
 $P(n, r)$ denotes the number of $r$-permutations of an $n$-element set.
 Definition $r$-permutation
@@ -117,10 +117,10 @@ Note: $[r] = {1, 2, &amp;hellip;, r}$</description>
     
     <item>
       <title>413_Pigeonhole Principle</title>
-      <link>https://ohuro.me/posts/413_pigeonhole/</link>
+      <link>https://ofuro.me/posts/413_pigeonhole/</link>
       <pubDate>Fri, 15 Sep 2023 17:28:11 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_pigeonhole/</guid>
+      <guid>https://ofuro.me/posts/413_pigeonhole/</guid>
       <description>Pigeonhole Principle If $n+1$ objects are distributed into $n$ boxes, then at least one box contains two or more of the objects.
 Proof
 For each $i\in \set{1, &amp;hellip;, n}$, let $a_i = $ number of objects in box $i$. Then, $a_1 + &amp;hellip; + a_n = n+1$ Let $a_j = \text{max } a_i$. Then, \begin{align*} n+1 &amp;amp;\leq n\cdot a_j \\ \frac{n+1}{n} &amp;amp;\leq a_j \\ 1 &amp;lt; \frac{n+1}{n} &amp;amp;\leq a_j\\ 1 &amp;amp;&amp;lt; a_j \end{align*} Note that this conclusion doesn&amp;rsquo;t hole if you have $n$ objects or less.</description>
@@ -128,20 +128,20 @@ For each $i\in \set{1, &amp;hellip;, n}$, let $a_i = $ number of objects in box 
     
     <item>
       <title>413_binomial</title>
-      <link>https://ohuro.me/posts/413_binomial/</link>
+      <link>https://ofuro.me/posts/413_binomial/</link>
       <pubDate>Tue, 12 Sep 2023 17:35:33 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_binomial/</guid>
+      <guid>https://ofuro.me/posts/413_binomial/</guid>
       <description>Binomial Coefficient and Binomial Identity Pascal&amp;rsquo;s Triangle \begin{matrix} {0 \choose 0}\\ {1 \choose 0} &amp;amp; {1 \choose 1}\\ {2 \choose 0} &amp;amp; {2 \choose 1} &amp;amp; {2 \choose 2}\\ {3 \choose 0} &amp;amp; {3 \choose 1} &amp;amp; {3 \choose 2} &amp;amp; {3 \choose 3}\\ {4 \choose 0} &amp;amp; {4 \choose 1} &amp;amp; {4 \choose 2} &amp;amp; {4 \choose 3} &amp;amp; {4 \choose 4}\\ .\\ .\\ . \end{matrix}
 Pascal&amp;rsquo;s Formula For all integers $n$ and $k$ with $1 \leq k \leq n - 1$, we have: $$ {n \choose k} = {{n-1} \choose k} + {{n-1} \choose {k-1}} $$</description>
     </item>
     
     <item>
       <title>413_combinations</title>
-      <link>https://ohuro.me/posts/413_combinations/</link>
+      <link>https://ofuro.me/posts/413_combinations/</link>
       <pubDate>Fri, 08 Sep 2023 13:23:54 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_combinations/</guid>
+      <guid>https://ofuro.me/posts/413_combinations/</guid>
       <description>Definition
 A combination of a set $S$ is a term usually used to denote an unordered selection of the element of $S$. It is simply a selection of a subset of $S$.
 $r$-combination = $r$-subset. $n\choose r$ is the number of $r$-subset in the set of size $n$. Theorem For $0 \leq r \leq n$, we have: $$ P(n, r) = r! {n \choose r} \text{ and } {n \choose r} = \frac{n!</description>
@@ -149,10 +149,10 @@ $r$-combination = $r$-subset. $n\choose r$ is the number of $r$-subset in the se
     
     <item>
       <title>413_chessboard</title>
-      <link>https://ohuro.me/posts/413_chessboard/</link>
+      <link>https://ofuro.me/posts/413_chessboard/</link>
       <pubDate>Tue, 29 Aug 2023 17:24:30 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_chessboard/</guid>
+      <guid>https://ofuro.me/posts/413_chessboard/</guid>
       <description>Gomory&amp;rsquo;s Theorem If you move two cells of a $8 \times 8$ chessboard of opposite colors, the remaining cells can be fully domino tiled.
 Proof
 Draw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)
@@ -162,10 +162,10 @@ If we lable the close path we chose in the beginning from 1 to 64 in the order w
     
     <item>
       <title>413_basic counting</title>
-      <link>https://ohuro.me/posts/413_basic_counting/</link>
+      <link>https://ofuro.me/posts/413_basic_counting/</link>
       <pubDate>Mon, 28 Aug 2023 14:35:27 -0500</pubDate>
       
-      <guid>https://ohuro.me/posts/413_basic_counting/</guid>
+      <guid>https://ofuro.me/posts/413_basic_counting/</guid>
       <description>The four basic counting principle Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1, S_2, &amp;hellip;, S_n$.
 Addition principle: $$ |S| = |S_1| + |S_2| + &amp;hellip; + |S_m| $$
 Ex:
