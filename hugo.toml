@@ -1,7 +1,0 @@
-baseURL = ''
-languageCode = 'en-us'
-title = "Sam's Blog"
-theme = 'PaperMod'
-
-[params]
-  katex = true

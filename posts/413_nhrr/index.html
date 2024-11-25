@@ -1,480 +1,124 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>413_None Homogeneous Recurrence Relation | Yue&#39;s Notes</title>
-<meta name="keywords" content="Combinatorics">
-<meta name="description" content="Example sums of cubes
-Solve $h_n=h_{n-1}&#43;n^3,(n \geq 1)$ and $h_0=0$.
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>413_None Homogeneous Recurrence Relation | Yue's Notes</title>
+<meta name=keywords content="Combinatorics"><meta name=description content="Example sums of cubes
+Solve $h_n=h_{n-1}+n^3,(n \geq 1)$ and $h_0=0$.
 Solution
 Note that this is not a homegenous recurrence relation.
-Unrolling gives us: $$ \begin{align*} h_{n-1} &amp;= (n-1)^3 &#43; h_{n-2}\\ \implies h_n &amp;= n^3 &#43; (n-1)^3 &#43; h_{n-2} \end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 &#43; (n-1)^3 &#43; \ldots &#43; 2^3 &#43; 1 $$ To formally prove this, we can use induction!">
-<meta name="author" content="">
-<link rel="canonical" href="https://ofuro.me/posts/413_nhrr/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css" integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U&#43;6hYRq/Ez/nm5vg=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://ofuro.me/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://ofuro.me/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://ofuro.me/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://ofuro.me/apple-touch-icon.png">
-<link rel="mask-icon" href="https://ofuro.me/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+Unrolling gives us:
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-
- 
-
- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
- 
- 
- <script>
-   MathJax = {
-     tex: {
-       inlineMath: [['$', '$'], ['\\(', '\\)']],
-       displayMath: [['$$','$$'], ['\\[', '\\]']],
-       processEscapes: true,
-       processEnvironments: true
-     },
-     options: {
-       skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-     }
-   };
- 
-   window.addEventListener('load', (event) => {
-       document.querySelectorAll("mjx-container").forEach(function(x){
-         x.parentElement.classList += 'has-jax'})
-     });
- 
- </script>
+  
+$$
+\begin{align*}
+h_{n-1} &= (n-1)^3 &#43; h_{n-2}\\
+\implies
+h_n &= n^3 &#43; (n-1)^3 + h_{n-2}
+\end{align*}
+$$
 
 
-<script src="//yihui.org/js/math-code.js" defer></script>
 
-<meta property="og:title" content="413_None Homogeneous Recurrence Relation" />
-<meta property="og:description" content="Example sums of cubes
-Solve $h_n=h_{n-1}&#43;n^3,(n \geq 1)$ and $h_0=0$.
-Solution
-Note that this is not a homegenous recurrence relation.
-Unrolling gives us: $$ \begin{align*} h_{n-1} &amp;= (n-1)^3 &#43; h_{n-2}\\ \implies h_n &amp;= n^3 &#43; (n-1)^3 &#43; h_{n-2} \end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 &#43; (n-1)^3 &#43; \ldots &#43; 2^3 &#43; 1 $$ To formally prove this, we can use induction!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ofuro.me/posts/413_nhrr/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-12-11T14:59:52-06:00" />
-<meta property="article:modified_time" content="2023-12-11T14:59:52-06:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="413_None Homogeneous Recurrence Relation"/>
-<meta name="twitter:description" content="Example sums of cubes
-Solve $h_n=h_{n-1}&#43;n^3,(n \geq 1)$ and $h_0=0$.
-Solution
-Note that this is not a homegenous recurrence relation.
-Unrolling gives us: $$ \begin{align*} h_{n-1} &amp;= (n-1)^3 &#43; h_{n-2}\\ \implies h_n &amp;= n^3 &#43; (n-1)^3 &#43; h_{n-2} \end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 &#43; (n-1)^3 &#43; \ldots &#43; 2^3 &#43; 1 $$ To formally prove this, we can use induction!"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://ofuro.me/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "413_None Homogeneous Recurrence Relation",
-      "item": "https://ofuro.me/posts/413_nhrr/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "413_None Homogeneous Recurrence Relation",
-  "name": "413_None Homogeneous Recurrence Relation",
-  "description": "Example sums of cubes\nSolve $h_n=h_{n-1}+n^3,(n \\geq 1)$ and $h_0=0$.\nSolution\nNote that this is not a homegenous recurrence relation.\nUnrolling gives us: $$ \\begin{align*} h_{n-1} \u0026amp;= (n-1)^3 + h_{n-2}\\\\ \\implies h_n \u0026amp;= n^3 + (n-1)^3 + h_{n-2} \\end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 + (n-1)^3 + \\ldots + 2^3 + 1 $$ To formally prove this, we can use induction!",
-  "keywords": [
-    "Combinatorics"
-  ],
-  "articleBody": "Example sums of cubes\nSolve $h_n=h_{n-1}+n^3,(n \\geq 1)$ and $h_0=0$.\nSolution\nNote that this is not a homegenous recurrence relation.\nUnrolling gives us: $$ \\begin{align*} h_{n-1} \u0026= (n-1)^3 + h_{n-2}\\\\ \\implies h_n \u0026= n^3 + (n-1)^3 + h_{n-2} \\end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 + (n-1)^3 + \\ldots + 2^3 + 1 $$ To formally prove this, we can use induction! Assume it holds for some $n \\geq 1$, we want to show that $h_{n+1} = h_n + (n+1)^3 = 1 + 2^3 + \\ldots + (n+1)^3$.\nAfter proving this formula, we are now trying to come up with a nice and clean formula for finding the sum of cubes. Think of adding up cubes that length of their edges are $1, 2, \\ldots, n$.\nLemma\n$$ 1^3 + 2^3 + \\ldots + n^3 = (1 + 2 + \\ldots + n)^2 $$\nProof by induction\nThis is obviously true for $n = 1$. Then assume this identity is true for some $n \\in \\mathbb{N}$. Let’s prove $n+1$ case. $$ \\begin{align*} 1 + 2^3 + \\ldots + n^3 + (n+1)^3 \u0026\\overset{I.H.}{=} (1 + \\ldots + n)^2 + (n+1)^3\\\\ \u0026\\overset{?}{=}(1 + 2 + \\ldots + n + (n+1))^2\\\\ \\implies (1 + 2 + \\ldots + n + (n+1))^2 \u0026= (1 + 2 + \\ldots + n)^2 + (n+1)^2 + 2(1 + \\ldots + n)\\cdot (n+1)\\\\ \\text{Need to check: }\\\\ (n+1)^3 \u0026\\overset{?}{=} (n+1)^2 + 2(1 + \\ldots + n)\\cdot (n+1) \\end{align*} $$ Start from the right side: $$ \\begin{align*} (n+1)^2 + 2(1 + \\ldots + n)\\cdot (n+1) \u0026= (n+1)(2(1+\\ldots+n) + (n+1))\\\\ \u0026= (n+1)\\left( 2\\binom{n+1}{2} + (n+1) \\right)\\\\ \u0026= (n+1)\\left( n(n+1)+(n+1) \\right)\\\\ \u0026= (n+1)^3 \\end{align*} $$ $\\blacksquare$\nI have learnt an interesting way of thinking the meaning of $(1+2+\\ldots + n)$ from this proof.\nSay we have a complete graph $K_n$. We need to count the number of edges. Pick one vetex and count all the edges connected to it, which has $n$. Then we throw this vertex away, we are left with a complete graph $K_{n-1}$. Repeating this method for $n$ times, can count all the edges. We also know that the number of edges in $K_n$ is $\\binom{n}{2}$, so the sum$(1 + 2 + \\ldots + n) = \\binom{n}{2}$.\nExercise $$ h_n = 2h_{n-1} + 1 $$\nExercise\n$\\text { Solve } h_n=3 h_{n-1}-4 n,(n \\geq 1) \\text { and } h_0=2$.\nSolution\nPut all the terms related to $h_n$ to the left side of the equation helps. $$ h_n - 3h_{n-1} = -4n $$\nFor this one, let’s first consider a homogeneous recurrence relation without the $-4n$ term. $$ a_n = 3a_{n-1} \\implies a_n - 3a_{n-1} = 0 $$ It is easy to find out that the closed form for this HRR is $a_n = 3^n$.\nWe then try to guess a particular solution to the NHRR, but we don’t care about the initial condition $h_0$. Since the right side $-4n$ is a degree 1 polynomial, we may guess the particular solution is in the form: $$ b_n = sn + r $$ for some constant $s$ and $r$. Since we hope that $b_n$ satisfies the recurrence relation $b_n = 3b_{n-1}-4n$, we can solve for $s$ and $r$: $$ \\begin{align*} b_n \u0026= 3(s(n-1)+r) - 4n\\\\ \u0026= 3(sn-s+r)-4n\\\\ \u0026= (3s-4)n + 3(r-s) = sn+r\\\\ \u0026\\implies \\begin{cases} s=2\\\\ r=3 \\end{cases} \\end{align*} $$\nSolution to homogeneous recurrence relation: $$ a_n = 3^n $$\nParticular solution:\n$$ b_n = 2n + 3 $$\nCombine them together to get: $$ \\begin{align*} h_n \u0026= c \\cdot a_n + b_n = 3h_{n-1} - 4n\\\\ h_n \u0026= c(3^n) + (2n+3), \\quad h_0 = 2 \\end{align*} $$\nThere is one important thing to learn here. Question: why do we want to combine $a_n$ and $b_n$ together? Why we multiply $a_n$ by a constant $c$ while we don’t do this for $b_n$? The answer is that the\nUsing the initial condition, we solve for $c = -1$. Therefore, the full solution to the initial NHRR is: $$ h_n = 2n+3-3^n $$ $\\blacksquare$\nTips for finding general solutions of non-homogeneous recurrence relation Essentially, to find the general solution of a non-homogeneous recurrence relation, we need to:\n(1) Find the general solution of the associated homogeneous relation\n(2) Find a particular solution of the nonhomogeneous relation.\n(3) Combine the general solution and the particular solution, and determine values of the constants arising in the general solution so that the combined solution satisfies the initial conditions.\nThe main difficulty is finding a particular solution in step (2). For some nonhomogeneous parts, there are certain types of particular solutions to try.\nConsider a nonhomogeneous recurrence relation of the form $$ h_n=a h_{n-1}+b_n $$ These are the guess direction for possible particular solutions of $h_n$:\n(a) If $b_n$ is a polynomial of degree $k$ in $n$, then look for a particular solution $h_n$ that is also a polynomial of degree $k$ in $n$.\n(b) If $b_n$ is an exponential, then look for a particular solution that is also an exponential.\nThere are some common forms that you can try to guess:\n$f(n)$ $a_n$ $c$ $A$ $n$ $A_1n + A_0$ $n^2$ $A_2n^2 + A_1n + A_0$ $r^n$ $Ar^n$ where $c, A, r$ are constants.\n",
-  "wordCount" : "874",
-  "inLanguage": "en",
-  "datePublished": "2023-12-11T14:59:52-06:00",
-  "dateModified": "2023-12-11T14:59:52-06:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://ofuro.me/posts/413_nhrr/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Yue's Notes",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ofuro.me/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://ofuro.me/" accesskey="h" title="Yue&#39;s Notes (Alt + H)">Yue&#39;s Notes</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://ofuro.me/about" title="About Me">
-                    <span>About Me</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ofuro.me/archives" title="Archive">
-                    <span>Archive</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ofuro.me/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ofuro.me/tags/" title="Tags">
-                    <span>Tags</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title">
-      413_None Homogeneous Recurrence Relation
-    </h1>
-    <div class="post-meta"><span title='2023-12-11 14:59:52 -0600 -0600'>December 11, 2023</span>
-
-</div>
-  </header> 
-  <div class="post-content"><p><span style="color:#04c2b2">Example</span> sums of cubes</p>
-<p>Solve $h_n=h_{n-1}+n^3,(n \geq 1)$ and $h_0=0$.</p>
-<p><strong>Solution</strong></p>
-<p>Note that this is not a homegenous recurrence relation.</p>
-<p>Unrolling gives us:
-<code>$$ \begin{align*} h_{n-1} &amp;= (n-1)^3 + h_{n-2}\\ \implies h_n &amp;= n^3 + (n-1)^3 + h_{n-2} \end{align*} $$</code>
 And we can keep doing this. Using this as the intuition, we guess the closed form:
 $$
 h_n = n^3 + (n-1)^3 + \ldots + 2^3 + 1
 $$
-To formally prove this, we can use induction! Assume it holds for some $n \geq 1$, we want to show that $h_{n+1} = h_n + (n+1)^3 = 1 + 2^3 + \ldots + (n+1)^3$.</p>
-<p>After proving this formula, we are now trying to come up with a nice and clean formula for finding the sum of cubes. Think of adding up cubes that length of their edges are $1, 2, \ldots, n$.</p>
-<p><span style="color:#599eff">Lemma</span></p>
-<p>$$
+To formally prove this, we can use induction! Assume it holds for some $n \geq 1$, we want to show that $h_{n+1} = h_n + (n+1)^3 = 1 + 2^3 + \ldots + (n+1)^3$."><meta name=author content><link rel=canonical href=https://ofuro.me/posts/413_nhrr/><link crossorigin=anonymous href=/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css integrity="sha256-1vzSCk+4bvpN+sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as=style><link rel=icon href=https://ofuro.me/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://ofuro.me/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://ofuro.me/favicon-32x32.png><link rel=apple-touch-icon href=https://ofuro.me/apple-touch-icon.png><link rel=mask-icon href=https://ofuro.me/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://ofuro.me/posts/413_nhrr/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:["script","noscript","style","textarea","pre"]}},window.onload=function(){MathJax.typesetPromise().then(()=>{console.log("MathJax rendering complete.")})}</script><script src=//yihui.org/js/math-code.js defer></script><meta property="og:url" content="https://ofuro.me/posts/413_nhrr/"><meta property="og:site_name" content="Yue's Notes"><meta property="og:title" content="413_None Homogeneous Recurrence Relation"><meta property="og:description" content="Example sums of cubes
+Solve $h_n=h_{n-1}+n^3,(n \geq 1)$ and $h_0=0$.
+Solution
+Note that this is not a homegenous recurrence relation.
+Unrolling gives us: $$ \begin{align*} h_{n-1} &= (n-1)^3 + h_{n-2}\\ \implies h_n &= n^3 + (n-1)^3 + h_{n-2} \end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 + (n-1)^3 + \ldots + 2^3 + 1 $$ To formally prove this, we can use induction! Assume it holds for some $n \geq 1$, we want to show that $h_{n+1} = h_n + (n+1)^3 = 1 + 2^3 + \ldots + (n+1)^3$."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-12-11T14:59:52-06:00"><meta property="article:modified_time" content="2023-12-11T14:59:52-06:00"><meta property="article:tag" content="Combinatorics"><meta name=twitter:card content="summary"><meta name=twitter:title content="413_None Homogeneous Recurrence Relation"><meta name=twitter:description content="Example sums of cubes
+Solve $h_n=h_{n-1}+n^3,(n \geq 1)$ and $h_0=0$.
+Solution
+Note that this is not a homegenous recurrence relation.
+Unrolling gives us:
+
+  
+$$
+\begin{align*}
+h_{n-1} &= (n-1)^3 &#43; h_{n-2}\\
+\implies
+h_n &= n^3 &#43; (n-1)^3 + h_{n-2}
+\end{align*}
+$$
+
+
+
+And we can keep doing this. Using this as the intuition, we guess the closed form:
+$$
+h_n = n^3 + (n-1)^3 + \ldots + 2^3 + 1
+$$
+To formally prove this, we can use induction! Assume it holds for some $n \geq 1$, we want to show that $h_{n+1} = h_n + (n+1)^3 = 1 + 2^3 + \ldots + (n+1)^3$."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://ofuro.me/posts/"},{"@type":"ListItem","position":2,"name":"413_None Homogeneous Recurrence Relation","item":"https://ofuro.me/posts/413_nhrr/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"413_None Homogeneous Recurrence Relation","name":"413_None Homogeneous Recurrence Relation","description":"Example sums of cubes\nSolve $h_n=h_{n-1}+n^3,(n \\geq 1)$ and $h_0=0$.\nSolution\nNote that this is not a homegenous recurrence relation.\nUnrolling gives us: $$ \\begin{align*} h_{n-1} \u0026= (n-1)^3 + h_{n-2}\\\\ \\implies h_n \u0026= n^3 + (n-1)^3 + h_{n-2} \\end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 + (n-1)^3 + \\ldots + 2^3 + 1 $$ To formally prove this, we can use induction! Assume it holds for some $n \\geq 1$, we want to show that $h_{n+1} = h_n + (n+1)^3 = 1 + 2^3 + \\ldots + (n+1)^3$.\n","keywords":["Combinatorics"],"articleBody":"Example sums of cubes\nSolve $h_n=h_{n-1}+n^3,(n \\geq 1)$ and $h_0=0$.\nSolution\nNote that this is not a homegenous recurrence relation.\nUnrolling gives us: $$ \\begin{align*} h_{n-1} \u0026= (n-1)^3 + h_{n-2}\\\\ \\implies h_n \u0026= n^3 + (n-1)^3 + h_{n-2} \\end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 + (n-1)^3 + \\ldots + 2^3 + 1 $$ To formally prove this, we can use induction! Assume it holds for some $n \\geq 1$, we want to show that $h_{n+1} = h_n + (n+1)^3 = 1 + 2^3 + \\ldots + (n+1)^3$.\nAfter proving this formula, we are now trying to come up with a nice and clean formula for finding the sum of cubes. Think of adding up cubes that length of their edges are $1, 2, \\ldots, n$.\nLemma\n$$ 1^3 + 2^3 + \\ldots + n^3 = (1 + 2 + \\ldots + n)^2 $$\nProof by induction\nThis is obviously true for $n = 1$. Then assume this identity is true for some $n \\in \\mathbb{N}$. Let’s prove $n+1$ case. $$ \\begin{align*} 1 + 2^3 + \\ldots + n^3 + (n+1)^3 \u0026\\overset{I.H.}{=} (1 + \\ldots + n)^2 + (n+1)^3\\\\ \u0026\\overset{?}{=}(1 + 2 + \\ldots + n + (n+1))^2\\\\ \\implies (1 + 2 + \\ldots + n + (n+1))^2 \u0026= (1 + 2 + \\ldots + n)^2 + (n+1)^2 + 2(1 + \\ldots + n)\\cdot (n+1)\\\\ \\text{Need to check: }\\\\ (n+1)^3 \u0026\\overset{?}{=} (n+1)^2 + 2(1 + \\ldots + n)\\cdot (n+1) \\end{align*} $$ Start from the right side: $$ \\begin{align*} (n+1)^2 + 2(1 + \\ldots + n)\\cdot (n+1) \u0026= (n+1)(2(1+\\ldots+n) + (n+1))\\\\ \u0026= (n+1)\\left( 2\\binom{n+1}{2} + (n+1) \\right)\\\\ \u0026= (n+1)\\left( n(n+1)+(n+1) \\right)\\\\ \u0026= (n+1)^3 \\end{align*} $$ $\\blacksquare$\nI have learnt an interesting way of thinking the meaning of $(1+2+\\ldots + n)$ from this proof.\nSay we have a complete graph $K_n$. We need to count the number of edges. Pick one vetex and count all the edges connected to it, which has $n$. Then we throw this vertex away, we are left with a complete graph $K_{n-1}$. Repeating this method for $n$ times, can count all the edges. We also know that the number of edges in $K_n$ is $\\binom{n}{2}$, so the sum$(1 + 2 + \\ldots + n) = \\binom{n}{2}$.\nExercise $$ h_n = 2h_{n-1} + 1 $$\nExercise\n$\\text { Solve } h_n=3 h_{n-1}-4 n,(n \\geq 1) \\text { and } h_0=2$.\nSolution\nPut all the terms related to $h_n$ to the left side of the equation helps. $$ h_n - 3h_{n-1} = -4n $$\nFor this one, let’s first consider a homogeneous recurrence relation without the $-4n$ term. $$ a_n = 3a_{n-1} \\implies a_n - 3a_{n-1} = 0 $$ It is easy to find out that the closed form for this HRR is $a_n = 3^n$.\nWe then try to guess a particular solution to the NHRR, but we don’t care about the initial condition $h_0$. Since the right side $-4n$ is a degree 1 polynomial, we may guess the particular solution is in the form: $$ b_n = sn + r $$ for some constant $s$ and $r$. Since we hope that $b_n$ satisfies the recurrence relation $b_n = 3b_{n-1}-4n$, we can solve for $s$ and $r$: $$ \\begin{align*} b_n \u0026= 3(s(n-1)+r) - 4n\\\\ \u0026= 3(sn-s+r)-4n\\\\ \u0026= (3s-4)n + 3(r-s) = sn+r\\\\ \u0026\\implies \\begin{cases} s=2\\\\ r=3 \\end{cases} \\end{align*} $$ Solution to homogeneous recurrence relation: $$ a_n = 3^n $$\nParticular solution:\n$$ b_n = 2n + 3 $$\nCombine them together to get: $$ \\begin{align*} h_n \u0026= c \\cdot a_n + b_n = 3h_{n-1} - 4n\\\\ h_n \u0026= c(3^n) + (2n+3), \\quad h_0 = 2 \\end{align*} $$ There is one important thing to learn here. Question: why do we want to combine $a_n$ and $b_n$ together? Why we multiply $a_n$ by a constant $c$ while we don’t do this for $b_n$? The answer is that the\nUsing the initial condition, we solve for $c = -1$. Therefore, the full solution to the initial NHRR is: $$ h_n = 2n+3-3^n $$ $\\blacksquare$\nTips for finding general solutions of non-homogeneous recurrence relation Essentially, to find the general solution of a non-homogeneous recurrence relation, we need to:\n(1) Find the general solution of the associated homogeneous relation\n(2) Find a particular solution of the nonhomogeneous relation.\n(3) Combine the general solution and the particular solution, and determine values of the constants arising in the general solution so that the combined solution satisfies the initial conditions.\nThe main difficulty is finding a particular solution in step (2). For some nonhomogeneous parts, there are certain types of particular solutions to try.\nConsider a nonhomogeneous recurrence relation of the form $$ h_n=a h_{n-1}+b_n $$ These are the guess direction for possible particular solutions of $h_n$:\n(a) If $b_n$ is a polynomial of degree $k$ in $n$, then look for a particular solution $h_n$ that is also a polynomial of degree $k$ in $n$.\n(b) If $b_n$ is an exponential, then look for a particular solution that is also an exponential.\nThere are some common forms that you can try to guess:\n$f(n)$ $a_n$ $c$ $A$ $n$ $A_1n + A_0$ $n^2$ $A_2n^2 + A_1n + A_0$ $r^n$ $Ar^n$ where $c, A, r$ are constants.\n","wordCount":"874","inLanguage":"en","datePublished":"2023-12-11T14:59:52-06:00","dateModified":"2023-12-11T14:59:52-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ofuro.me/posts/413_nhrr/"},"publisher":{"@type":"Organization","name":"Yue's Notes","logo":{"@type":"ImageObject","url":"https://ofuro.me/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://ofuro.me/ accesskey=h title="Yue's Notes (Alt + H)">Yue's Notes</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://ofuro.me/about title="About Me"><span>About Me</span></a></li><li><a href=https://ofuro.me/archives title=Archive><span>Archive</span></a></li><li><a href=https://ofuro.me/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://ofuro.me/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">413_None Homogeneous Recurrence Relation</h1><div class=post-meta><span title='2023-12-11 14:59:52 -0600 -0600'>December 11, 2023</span></div></header><div class=post-content><p><span style=color:#04c2b2>Example</span> sums of cubes</p><p>Solve $h_n=h_{n-1}+n^3,(n \geq 1)$ and $h_0=0$.</p><p><strong>Solution</strong></p><p>Note that this is not a homegenous recurrence relation.</p><p>Unrolling gives us:<div>$$
+\begin{align*}
+h_{n-1} &= (n-1)^3 + h_{n-2}\\
+\implies
+h_n &= n^3 + (n-1)^3 + h_{n-2}
+\end{align*}
+$$</div>And we can keep doing this. Using this as the intuition, we guess the closed form:
+$$
+h_n = n^3 + (n-1)^3 + \ldots + 2^3 + 1
+$$
+To formally prove this, we can use induction! Assume it holds for some $n \geq 1$, we want to show that $h_{n+1} = h_n + (n+1)^3 = 1 + 2^3 + \ldots + (n+1)^3$.</p><p>After proving this formula, we are now trying to come up with a nice and clean formula for finding the sum of cubes. Think of adding up cubes that length of their edges are $1, 2, \ldots, n$.</p><p><span style=color:#599eff>Lemma</span></p><p>$$
 1^3 + 2^3 + \ldots + n^3 = (1 + 2 + \ldots + n)^2
-$$</p>
-<p><span style="color:#eb861c">Proof</span> by induction</p>
-<p>This is obviously true for $n = 1$. Then assume this identity is true for some $n \in \mathbb{N}$. Let&rsquo;s prove $n+1$ case.
-<code>$$ \begin{align*} 1 + 2^3 + \ldots + n^3 + (n+1)^3 &amp;\overset{I.H.}{=} (1 + \ldots + n)^2 + (n+1)^3\\ &amp;\overset{?}{=}(1 + 2 + \ldots + n + (n+1))^2\\ \implies (1 + 2 + \ldots + n + (n+1))^2 &amp;= (1 + 2 + \ldots + n)^2 + (n+1)^2 + 2(1 + \ldots + n)\cdot (n+1)\\ \text{Need to check: }\\ (n+1)^3 &amp;\overset{?}{=} (n+1)^2 + 2(1 + \ldots + n)\cdot (n+1) \end{align*} $$</code>
-Start from the right side:
-<code>$$ \begin{align*} (n+1)^2 + 2(1 + \ldots + n)\cdot (n+1) &amp;= (n+1)(2(1+\ldots+n) + (n+1))\\ &amp;= (n+1)\left( 2\binom{n+1}{2} + (n+1) \right)\\ &amp;= (n+1)\left( n(n+1)+(n+1) \right)\\ &amp;= (n+1)^3 \end{align*} $$</code>
-$\blacksquare$</p>
-<blockquote>
-<p>I have learnt an interesting way of thinking the meaning of $(1+2+\ldots + n)$ from this proof.</p>
-<p>Say we have a complete graph $K_n$. We need to count the number of edges. Pick one vetex and count all the edges connected to it, which has $n$. Then we throw this vertex away, we are left with a complete graph $K_{n-1}$. Repeating this method for $n$ times, can count all the edges. We also know that the number of edges in $K_n$ is $\binom{n}{2}$, so the sum$(1 + 2 + \ldots + n) = \binom{n}{2}$.</p>
-</blockquote>
-<p><span style="color:#04c2b2">Exercise</span>
+$$</p><p><span style=color:#eb861c>Proof</span> by induction</p><p>This is obviously true for $n = 1$. Then assume this identity is true for some $n \in \mathbb{N}$. Let&rsquo;s prove $n+1$ case.<div>$$
+\begin{align*}
+1 + 2^3 + \ldots + n^3 + (n+1)^3 &\overset{I.H.}{=} (1 + \ldots + n)^2 + (n+1)^3\\
+&\overset{?}{=}(1 + 2 + \ldots + n + (n+1))^2\\
+\implies
+(1 + 2 + \ldots + n + (n+1))^2 &= (1 + 2 + \ldots + n)^2 + (n+1)^2 + 2(1 + \ldots + n)\cdot (n+1)\\
+\text{Need to check: }\\
+(n+1)^3 &\overset{?}{=} (n+1)^2 + 2(1 + \ldots + n)\cdot (n+1)
+\end{align*}
+$$</div>Start from the right side:<div>$$
+\begin{align*}
+(n+1)^2 + 2(1 + \ldots + n)\cdot (n+1) &= (n+1)(2(1+\ldots+n) + (n+1))\\
+&= (n+1)\left( 2\binom{n+1}{2} + (n+1) \right)\\
+&= (n+1)\left( n(n+1)+(n+1) \right)\\
+&= (n+1)^3
+\end{align*}
+$$
+</div>$\blacksquare$</p><blockquote><p>I have learnt an interesting way of thinking the meaning of $(1+2+\ldots + n)$ from this proof.</p><p>Say we have a complete graph $K_n$. We need to count the number of edges. Pick one vetex and count all the edges connected to it, which has $n$. Then we throw this vertex away, we are left with a complete graph $K_{n-1}$. Repeating this method for $n$ times, can count all the edges. We also know that the number of edges in $K_n$ is $\binom{n}{2}$, so the sum$(1 + 2 + \ldots + n) = \binom{n}{2}$.</p></blockquote><p><span style=color:#04c2b2>Exercise</span>
 $$
 h_n = 2h_{n-1} + 1
-$$</p>
-<p><span style="color:#04c2b2">Exercise</span></p>
-<p>$\text { Solve } h_n=3 h_{n-1}-4 n,(n \geq 1) \text { and } h_0=2$.</p>
-<p><strong>Solution</strong></p>
-<p>Put all the terms related to $h_n$ to the left side of the equation helps.
+$$</p><p><span style=color:#04c2b2>Exercise</span></p><p>$\text { Solve } h_n=3 h_{n-1}-4 n,(n \geq 1) \text { and } h_0=2$.</p><p><strong>Solution</strong></p><p>Put all the terms related to $h_n$ to the left side of the equation helps.
 $$
 h_n - 3h_{n-1} = -4n
-$$</p>
-<p>For this one, let&rsquo;s first consider a homogeneous recurrence relation without the $-4n$ term.
+$$</p><p>For this one, let&rsquo;s first consider a homogeneous recurrence relation without the $-4n$ term.
 $$
 a_n = 3a_{n-1} \implies a_n - 3a_{n-1} = 0
 $$
-It is easy to find out that the closed form for this HRR is $a_n = 3^n$.</p>
-<p>We then try to guess a <strong>particular solution</strong> to the NHRR, but we don&rsquo;t care about the initial condition $h_0$. Since the right side $-4n$ is a degree 1 polynomial, we may guess the particular solution is in the form:
+It is easy to find out that the closed form for this HRR is $a_n = 3^n$.</p><p>We then try to guess a <strong>particular solution</strong> to the NHRR, but we don&rsquo;t care about the initial condition $h_0$. Since the right side $-4n$ is a degree 1 polynomial, we may guess the particular solution is in the form:
 $$
 b_n = sn + r
 $$
-for some constant $s$ and $r$. Since we hope that $b_n$ satisfies the recurrence relation $b_n = 3b_{n-1}-4n$, we can solve for $s$ and $r$:
-<code>$$ \begin{align*} b_n &amp;= 3(s(n-1)+r) - 4n\\ &amp;= 3(sn-s+r)-4n\\ &amp;= (3s-4)n + 3(r-s) = sn+r\\ &amp;\implies \begin{cases} s=2\\ r=3 \end{cases} \end{align*} $$</code></p>
-<ul>
-<li>
-<p>Solution to homogeneous recurrence relation:
+for some constant $s$ and $r$. Since we hope that $b_n$ satisfies the recurrence relation $b_n = 3b_{n-1}-4n$, we can solve for $s$ and $r$:<div>$$
+\begin{align*}
+b_n &= 3(s(n-1)+r) - 4n\\
+&= 3(sn-s+r)-4n\\
+&= (3s-4)n + 3(r-s) = sn+r\\
+&\implies
+\begin{cases}
+s=2\\
+r=3
+\end{cases}
+\end{align*}
+$$</div></p><ul><li><p>Solution to homogeneous recurrence relation:
 $$
 a_n = 3^n
-$$</p>
-</li>
-<li>
-<p>Particular solution:</p>
-</li>
-</ul>
-<p>$$
+$$</p></li><li><p>Particular solution:</p></li></ul><p>$$
 b_n = 2n + 3
-$$</p>
-<p>Combine them together to get:
-<code>$$ \begin{align*} h_n &amp;= c \cdot a_n + b_n = 3h_{n-1} - 4n\\ h_n &amp;= c(3^n) + (2n+3), \quad h_0 = 2 \end{align*} $$</code></p>
-<p>There is one important thing to learn here. Question: why do we want to combine $a_n$ and $b_n$ together? Why we multiply $a_n$ by a constant $c$ while we don&rsquo;t do this for $b_n$? The answer is that the</p>
-<p>Using the initial condition, we solve for $c = -1$. Therefore, the full solution to the initial NHRR is:
+$$</p><p>Combine them together to get:<div>$$
+\begin{align*}
+h_n &= c \cdot a_n + b_n = 3h_{n-1} - 4n\\
+h_n &= c(3^n) + (2n+3), \quad h_0 = 2
+\end{align*}
+$$</div></p><p>There is one important thing to learn here. Question: why do we want to combine $a_n$ and $b_n$ together? Why we multiply $a_n$ by a constant $c$ while we don&rsquo;t do this for $b_n$? The answer is that the</p><p>Using the initial condition, we solve for $c = -1$. Therefore, the full solution to the initial NHRR is:
 $$
 h_n = 2n+3-3^n
 $$
-$\blacksquare$</p>
-<h3 id="tips-for-finding-general-solutions-of-non-homogeneous-recurrence-relation">Tips for finding general solutions of non-homogeneous recurrence relation<a hidden class="anchor" aria-hidden="true" href="#tips-for-finding-general-solutions-of-non-homogeneous-recurrence-relation">#</a></h3>
-<p>Essentially, to find the general solution of a <strong>non-homogeneous</strong> recurrence relation, we need to:</p>
-<p>(1) Find the general solution of the associated homogeneous relation</p>
-<p>(2) Find a particular solution of the nonhomogeneous relation.</p>
-<p>(3) Combine the general solution and the particular solution, and determine values of the constants arising in the general solution so that the combined solution satisfies the initial conditions.</p>
-<p>The main difficulty is finding a particular solution in step (2). For some nonhomogeneous parts, there are certain types of particular solutions to try.</p>
-<p>Consider a nonhomogeneous recurrence relation of the form
+$\blacksquare$</p><h3 id=tips-for-finding-general-solutions-of-non-homogeneous-recurrence-relation>Tips for finding general solutions of non-homogeneous recurrence relation<a hidden class=anchor aria-hidden=true href=#tips-for-finding-general-solutions-of-non-homogeneous-recurrence-relation>#</a></h3><p>Essentially, to find the general solution of a <strong>non-homogeneous</strong> recurrence relation, we need to:</p><p>(1) Find the general solution of the associated homogeneous relation</p><p>(2) Find a particular solution of the nonhomogeneous relation.</p><p>(3) Combine the general solution and the particular solution, and determine values of the constants arising in the general solution so that the combined solution satisfies the initial conditions.</p><p>The main difficulty is finding a particular solution in step (2). For some nonhomogeneous parts, there are certain types of particular solutions to try.</p><p>Consider a nonhomogeneous recurrence relation of the form
 $$
 h_n=a h_{n-1}+b_n
 $$
-These are the guess direction for possible <strong>particular solutions</strong> of $h_n$:</p>
-<p>(a) If $b_n$ is a <strong>polynomial</strong> of degree $k$ in $n$, then look for a particular solution $h_n$ that is also a polynomial of degree $k$ in $n$.</p>
-<p>(b) If $b_n$ is an <strong>exponential</strong>, then look for a particular solution that is also an exponential.</p>
-<p>There are some common forms that you can try to guess:</p>
-<table>
-<thead>
-<tr>
-<th>$f(n)$</th>
-<th>$a_n$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$c$</td>
-<td>$A$</td>
-</tr>
-<tr>
-<td>$n$</td>
-<td>$A_1n + A_0$</td>
-</tr>
-<tr>
-<td>$n^2$</td>
-<td>$A_2n^2 + A_1n + A_0$</td>
-</tr>
-<tr>
-<td>$r^n$</td>
-<td>$Ar^n$</td>
-</tr>
-</tbody>
-</table>
-<p>where $c, A, r$ are constants.</p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://ofuro.me/tags/combinatorics/">Combinatorics</a></li>
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-    <span>&copy; 2024 <a href="https://ofuro.me/">Yue&#39;s Notes</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
-</body>
-
-</html>
+These are the guess direction for possible <strong>particular solutions</strong> of $h_n$:</p><p>(a) If $b_n$ is a <strong>polynomial</strong> of degree $k$ in $n$, then look for a particular solution $h_n$ that is also a polynomial of degree $k$ in $n$.</p><p>(b) If $b_n$ is an <strong>exponential</strong>, then look for a particular solution that is also an exponential.</p><p>There are some common forms that you can try to guess:</p><table><thead><tr><th>$f(n)$</th><th>$a_n$</th></tr></thead><tbody><tr><td>$c$</td><td>$A$</td></tr><tr><td>$n$</td><td>$A_1n + A_0$</td></tr><tr><td>$n^2$</td><td>$A_2n^2 + A_1n + A_0$</td></tr><tr><td>$r^n$</td><td>$Ar^n$</td></tr></tbody></table><p>where $c, A, r$ are constants.</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://ofuro.me/tags/combinatorics/>Combinatorics</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2024 <a href=https://ofuro.me/>Yue's Notes</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

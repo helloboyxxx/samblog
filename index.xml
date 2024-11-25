@@ -1,323 +1,465 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Yue&#39;s Notes</title>
-    <link>https://ofuro.me/</link>
-    <description>Recent content on Yue&#39;s Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 29 Oct 2024 17:02:49 -0500</lastBuildDate><atom:link href="https://ofuro.me/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>RSA in pure number theory</title>
-      <link>https://ofuro.me/posts/some_rsa/</link>
-      <pubDate>Tue, 29 Oct 2024 17:02:49 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/some_rsa/</guid>
-      <description>Binomial Theorem Given $a, b \in \mathbb{R}, n \in \mathbb{N}$, then $$ (a + b)^n = \sum_{k = 0}^{n} \binom{n}{k}a^k b^{n-k} $$ Proposition Let $p$ be prime. $\forall a, b \in \mathbb{Z}$, we have: $$ (a+b)^p \equiv a^p + b^p \mod p $$ Proof It suffices to show that $\binom{p}{k} \equiv 0 \mod p$ if $0 &amp;lt; k &amp;lt; p$. Observe: $p \mid p!, p \nmid k!, p \nmid (p-k)!$, hence $p \mid \binom{p}{k}$.</description>
-    </item>
-    
-    <item>
-      <title>Convex Hull in 2D</title>
-      <link>https://ofuro.me/posts/convex_hull/</link>
-      <pubDate>Thu, 29 Aug 2024 17:02:49 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/convex_hull/</guid>
-      <description>Definition Problem: Given $n$ points $P = \set{p_1, \ldots, p_n} \subset \mathbb{R}^2$, compute $\text{CH}(P) = $ smallest convex set contining $P$.
-Input: a list of points all the points in $P$.
-Output: a list of points in $P$ that belongs to this convex set in CCW, starting from the left most point.
-Applications Given a huge point cloud, convex hull helps find the &amp;ldquo;shape&amp;rdquo;.
-Bounding volume. Makes ray shooting tasks faster.</description>
-    </item>
-    
-    <item>
-      <title>Fast Fourier Transform</title>
-      <link>https://ofuro.me/posts/473_fft/</link>
-      <pubDate>Thu, 29 Aug 2024 15:30:07 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/473_fft/</guid>
-      <description>I know this name for a long time. But never learnt it. Now it&amp;rsquo;s time.
-Recap Previously, Karatsuba&amp;rsquo;s algorithm for integer multiplication. It computes the result in $O(n^{\log_2 3})$ where $n$ is the number of digits.
-Another recap: polynomial representation: $$ p(x) = \sum_{i = 0}^{n}p_ix^i $$ And we can represent this polynomial using an array of size $n$.
-Evaluations and additions of polynomials are straightforward computation. Can be done in $O(n)$ time.</description>
-    </item>
-    
-    <item>
-      <title>413_difference Sequence</title>
-      <link>https://ofuro.me/posts/413_difference-sequence/</link>
-      <pubDate>Mon, 11 Dec 2023 16:01:49 -0600</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_difference-sequence/</guid>
-      <description>⚠️THIS NOTE IS NOT FINISHED YET TODO: stirling number definitions stirling number of the first and the second type bell number Question Can you find a closed formula for the sum of the $p$-th powers of the first $n$ positive integers? That is, we need a closed formulat for the sequence:
-$$ h_n=a_p n^p+a_{p-1} n^{p-1}+\cdots+a_1 n+a_0, \quad(n \geq 0) $$
-Solution
-The method is to use difference sequences. We already know the following:</description>
-    </item>
-    
-    <item>
-      <title>413_None Homogeneous Recurrence Relation</title>
-      <link>https://ofuro.me/posts/413_nhrr/</link>
-      <pubDate>Mon, 11 Dec 2023 14:59:52 -0600</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_nhrr/</guid>
-      <description>Example sums of cubes
-Solve $h_n=h_{n-1}+n^3,(n \geq 1)$ and $h_0=0$.
-Solution
-Note that this is not a homegenous recurrence relation.
-Unrolling gives us: $$ \begin{align*} h_{n-1} &amp;amp;= (n-1)^3 + h_{n-2}\\ \implies h_n &amp;amp;= n^3 + (n-1)^3 + h_{n-2} \end{align*} $$ And we can keep doing this. Using this as the intuition, we guess the closed form: $$ h_n = n^3 + (n-1)^3 + \ldots + 2^3 + 1 $$ To formally prove this, we can use induction!</description>
-    </item>
-    
-    <item>
-      <title>413_generating Functions</title>
-      <link>https://ofuro.me/posts/413_generating-functions/</link>
-      <pubDate>Wed, 01 Nov 2023 22:48:35 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_generating-functions/</guid>
-      <description>Generating Functions Generating functions can be regarded as algebraic objects whose formal manipulation allows us to count the number of possibilities for a problem by means of algebra.
-Definition
-Let $h_0, h_1, h_2, h_3, \ldots$ be an infinite sequence of numbers. Its generating function is defined to be the infinite series: $$ g(x) = h_0 + h_1x + h_2x^2 + \cdots + h_nx^n + \cdots $$
-Example 1 The generating function of the infinite sequence $1, 1, 1, \ldots$ is: $$ g(x) = 1 + x + x^2 + x^3 + \cdots $$ for $|x| &amp;lt; 1$.</description>
-    </item>
-    
-    <item>
-      <title>445_camera</title>
-      <link>https://ofuro.me/posts/445_camera/</link>
-      <pubDate>Mon, 30 Oct 2023 10:36:20 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/445_camera/</guid>
-      <description>World Coordinates and Image coordinates Pinhole Camera Model $$ x = K \left[ \begin{array}{ll} R &amp;amp; t \end{array} \right] x $$
-x: Image Coordinates: $(u, v, 1)$ K: Intrinsic Matrix $(3 \times 3)$ R: Rotation $(3 \times 3)$ t: Translation $(3 \times 1)$ X: World Coordinates: $(X, Y, Z, 1)$
-Basically, from the right side to the leftside, it is transforming a point (1) from the world coordinates to camera coordinates, and then project the point (2) from camera coordinates down to the image plane.</description>
-    </item>
-    
-    <item>
-      <title>445_Blending</title>
-      <link>https://ofuro.me/posts/445_blending-warping/</link>
-      <pubDate>Mon, 30 Oct 2023 10:34:53 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/445_blending-warping/</guid>
-      <description>Pasting Images Method 1 — Cut and paste the images. Feathering
-Gives a smoother transition. But that&amp;rsquo;s all&amp;hellip; Alpha composting
-Output = foreground $\times$ mask + background $\times$ (1 $-$ mask). We can also use alpha compositing together with the feathering — simply bluring the mask will give us a good feathering. This method is also good for multilayer processing, which allwos the compositing to be more complicated. Method 2 — Pyramid Blending At low frequencies, blend slowly At high frequencies, blend quickly Burt and Adelson 1983 Implementation: Build Laplacian pyramids for each image Build a Gaussian pyramid of region mask Blend each level of pyramid using region mask from the same level $$ L_{12}^i=L_1^i \cdot R^i+L_2^i \cdot\left(1-R^i\right) $$</description>
-    </item>
-    
-    <item>
-      <title>445_Synthesizing and Cutting</title>
-      <link>https://ofuro.me/posts/445_synthesizing-cutting/</link>
-      <pubDate>Mon, 30 Oct 2023 10:33:26 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/445_synthesizing-cutting/</guid>
-      <description>Texture Synthesis and Hole-Filling How do we cut something out of an image, and fill the hole naturally?
-Definition Texture depicts spacially repeating patterns.
-Texture Synthesis Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.
-The challenge:
-Need to model the whole spectrum: from repeated to stochastic texture.
-One idea:
-Compute statistics of input texture Generate a new texture that keeps those same statistics. But it is hard to model those probabilities distributions.</description>
-    </item>
-    
-    <item>
-      <title>445_color_basics</title>
-      <link>https://ofuro.me/posts/445_color_basics/</link>
-      <pubDate>Mon, 30 Oct 2023 10:32:37 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/445_color_basics/</guid>
-      <description>How do you view the world Cones: cone-shaped, less sensitive, operate in high light, color vision
-Rods: rod-shaped, highly sensitive, operate at night, gray-scale vision, slower to respond
-Observation In a clear night, there are more stars off-center. This is because you have more rods in the middle, while more cones elsewhere.
-How to express colors? Basically, the most intuitive expression is the RGB color space. But it is not a linear color space.</description>
-    </item>
-    
-    <item>
-      <title>413_Multinomial Coefficient</title>
-      <link>https://ofuro.me/posts/413_multinomial/</link>
-      <pubDate>Mon, 30 Oct 2023 10:30:51 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_multinomial/</guid>
-      <description>Definition A multinomial coefficient is:
-$$ \binom{n}{n_1 n_2 \cdots n_t} =\frac{n !}{n_{1} ! n_{2} ! \cdots n_{t} !} $$
-Here, $n_1, n_2, \ldots, n_t$ are nonnegative integers with $$ n_1+n_2+\cdots+n_t=n $$
-Pascal&amp;rsquo;s theorem for multinomial coefficients Pascal&amp;rsquo;s theorem for Let $n, k \in \mathbb{N}$ and $(n)_{i=1}^k$ be natural numbers so that $$ n_1+\cdots+n_k=n $$ Then,
-$$ \binom{n}{n_1, n_2, \ldots, n_k} = \binom{n-1}{n_1-1, n_2, \ldots, n_k} + \ldots + \binom{n-1}{n_1, n_2, \ldots, n_k-1} $$</description>
-    </item>
-    
-    <item>
-      <title>413_Unimodality of binomial coef &amp; Sperner&#39;s theorem</title>
-      <link>https://ofuro.me/posts/413_unimodality/</link>
-      <pubDate>Tue, 10 Oct 2023 22:55:46 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_unimodality/</guid>
-      <description>Unimodality of Binomial Coefficients and Sperner&amp;rsquo;s Theorem If we examine the binomial coefficients in a row of Pascal&amp;rsquo;s triangle, we notice that the numbers increase for a while and then decrease. A sequence of numbers with this property is called unimodal.
-Theorem Let $n$ be a positive integer. The sequence of binomial coefficients $$ {{n} \choose {0}}, {{n} \choose {1}}, \ldots, {{n} \choose {n}} $$ is a unimodal sequence. Mor precisely, $$ {{n} \choose {0}} &amp;lt; {{n} \choose {1}} &amp;lt; \ldots &amp;lt; {{n} \choose {\lfloor n/2\rfloor}} $$ and $$ {{n} \choose {\lceil n/2 \rceil}} &amp;gt; \ldots {{n} \choose {n-1}} &amp;gt; {{n} \choose {n}} $$</description>
-    </item>
-    
-    <item>
-      <title>413_lower bounded Ramsey</title>
-      <link>https://ofuro.me/posts/413_lower-bounded-ramsey/</link>
-      <pubDate>Wed, 04 Oct 2023 17:28:53 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_lower-bounded-ramsey/</guid>
-      <description>Theorem $$ \text{For every } k \in \mathbb{N}, \text{we have } R(k)\ge 2^{k/2} $$
-Before we start the proof, let&amp;rsquo;s look at 3 ingredients we need:
-The probabilistic method The union bound The binomial estimate The probabilistic method Let $\Omega$ be the set of all possible outcomes of an experiment. Suppose that each outcome is equally likely. Let $A \subseteq \Omega$ be an event. $$ \text{If } \operatorname{Prob}(A) &amp;lt; 1 \text{, then } \operatorname{Prob}(A^c) &amp;gt; 0 $$</description>
-    </item>
-    
-    <item>
-      <title>413_General Ramsey Theories</title>
-      <link>https://ofuro.me/posts/413_general_ramsey-theories/</link>
-      <pubDate>Mon, 02 Oct 2023 15:00:37 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_general_ramsey-theories/</guid>
-      <description>General Ramsey on normal graph Notation General notation for Ramsey theory:
-$K_n \to (K_s,K_t)$ is the assertion that for any coloring of the edges of $K_n$ with red and blue, we can always find a red $K_s$ or a blue $K_t$.
-$K_n \not \to (K_s,K_t)$ is the assertion that there exists a coloring of the edges of $K_n$ with red and blue with no red $K_s$ nor blue $K_t$.
-Notation Off-diagonal Ramsey numbers:</description>
-    </item>
-    
-    <item>
-      <title>413_Erdos-Szekeres Theorem and Ramsey Theory</title>
-      <link>https://ofuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</link>
-      <pubDate>Wed, 27 Sep 2023 20:56:13 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</guid>
-      <description>Erdos-Szekeres Theorem Given $r, s$ any sequence of distinct real numbers with length at least $(r-1)(s-1)+1$ contains a monotonically increasing subsequence of length $r$ or a monotonically decreasing subsequece of length $s$.
-That is, given the subsequence: $a_1, a_2, &amp;hellip;, a_{(s-1)(r-1)+1}$, we can find:
-Indicies $i_1 &amp;lt; i_2 &amp;lt; &amp;hellip;&amp;lt; i_r$ so that $a_{i1} &amp;lt; a_{i2} &amp;lt; &amp;hellip;&amp;lt; a_{ir}$ OR
-Indicies $j_1 &amp;lt; j_2 &amp;lt; &amp;hellip;&amp;lt; j_r$ so that $a_{j1} &amp;gt; a_{j2} &amp;gt; &amp;hellip; &amp;gt; a_{jr}$ Example: $s = 3, r = 3$, Sequence: $10, 11, 7, 8$ has no such property.</description>
-    </item>
-    
-    <item>
-      <title>413_permutation</title>
-      <link>https://ofuro.me/posts/413_permutation/</link>
-      <pubDate>Mon, 18 Sep 2023 13:45:07 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_permutation/</guid>
-      <description>Permutation of Sets Definition permutation A permutation of a set $S$ can be thought of as a listing of the elements $S$ in some order.
-$P(n, r)$ denotes the number of $r$-permutations of an $n$-element set.
-Definition $r$-permutation
-An $r$-permutation of a set $S$ is a string $a_1, a_2, &amp;hellip; a_r$ where $a_i \in S, \forall i \in [r]$ and $a_i \neq a_j$ for $i \neq j$.
-Note: $[r] = {1, 2, &amp;hellip;, r}$</description>
-    </item>
-    
-    <item>
-      <title>445_texture</title>
-      <link>https://ofuro.me/posts/445_texture/</link>
-      <pubDate>Sun, 17 Sep 2023 15:24:34 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/445_texture/</guid>
-      <description>Texture Synthesis &amp;amp; Hole Filling Texture Texture depicts spacially repeating patterns.
-Texture Synthesis Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.
-The challenge:
-Need to model the whole spectrum: from repeated to stochastic texture.
-One idea:
-Compute statistics of input texture Generate a new texture that keeps those same statistics. But it is hard to model those probabilities distributions.
-Another idea: ==Efros &amp;amp; Leung algorithm==</description>
-    </item>
-    
-    <item>
-      <title>413_Pigeonhole Principle</title>
-      <link>https://ofuro.me/posts/413_pigeonhole/</link>
-      <pubDate>Fri, 15 Sep 2023 17:28:11 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_pigeonhole/</guid>
-      <description>Pigeonhole Principle If $n+1$ objects are distributed into $n$ boxes, then at least one box contains two or more of the objects.
-Proof
-For each $i\in \set{1, &amp;hellip;, n}$, let $a_i = $ number of objects in box $i$. Then, $a_1 + &amp;hellip; + a_n = n+1$ Let $a_j = \text{max } a_i$. Then, \begin{align*} n+1 &amp;amp;\leq n\cdot a_j \\ \frac{n+1}{n} &amp;amp;\leq a_j \\ 1 &amp;lt; \frac{n+1}{n} &amp;amp;\leq a_j\\ 1 &amp;amp;&amp;lt; a_j \end{align*} Note that this conclusion doesn&amp;rsquo;t hole if you have $n$ objects or less.</description>
-    </item>
-    
-    <item>
-      <title>413_binomial</title>
-      <link>https://ofuro.me/posts/413_binomial/</link>
-      <pubDate>Tue, 12 Sep 2023 17:35:33 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_binomial/</guid>
-      <description>Binomial Coefficient and Binomial Identity Pascal&amp;rsquo;s Triangle \begin{matrix} {0 \choose 0}\\ {1 \choose 0} &amp;amp; {1 \choose 1}\\ {2 \choose 0} &amp;amp; {2 \choose 1} &amp;amp; {2 \choose 2}\\ {3 \choose 0} &amp;amp; {3 \choose 1} &amp;amp; {3 \choose 2} &amp;amp; {3 \choose 3}\\ {4 \choose 0} &amp;amp; {4 \choose 1} &amp;amp; {4 \choose 2} &amp;amp; {4 \choose 3} &amp;amp; {4 \choose 4}\\ .\\ .\\ . \end{matrix}
-Pascal&amp;rsquo;s Formula For all integers $n$ and $k$ with $1 \leq k \leq n - 1$, we have: $$ {n \choose k} = {{n-1} \choose k} + {{n-1} \choose {k-1}} $$</description>
-    </item>
-    
-    <item>
-      <title>413_combinations</title>
-      <link>https://ofuro.me/posts/413_combinations/</link>
-      <pubDate>Fri, 08 Sep 2023 13:23:54 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_combinations/</guid>
-      <description>Definition
-A combination of a set $S$ is a term usually used to denote an unordered selection of the element of $S$. It is simply a selection of a subset of $S$.
-$r$-combination = $r$-subset. $n\choose r$ is the number of $r$-subset in the set of size $n$. Theorem For $0 \leq r \leq n$, we have: $$ P(n, r) = r! {n \choose r} \text{ and } {n \choose r} = \frac{n!</description>
-    </item>
-    
-    <item>
-      <title>Interesting DFA</title>
-      <link>https://ofuro.me/posts/interesting_dfa/</link>
-      <pubDate>Wed, 30 Aug 2023 13:10:06 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/interesting_dfa/</guid>
-      <description>Deterministic Finite Automaition Definition: $(Q, s, A, \delta)$
-$Q$: A set of all the possible state.
-$s \in Q$ : starting state. The state to start the machine.
-$A \subseteq Q$: The set of states we accept. Return &amp;ldquo;good&amp;rdquo; when we end there.
-$\delta$: A function $Q \times \Sigma \rightarrow Q$. The set of all transition functions.
-There is an interesting DFA design question. The question is as follows:
-Given a bit-string (a string that contains only 0s and 1s), design a DFA that accepts the string if and only if the number represented by the string is divisible by 5.</description>
-    </item>
-    
-    <item>
-      <title>413_chessboard</title>
-      <link>https://ofuro.me/posts/413_chessboard/</link>
-      <pubDate>Tue, 29 Aug 2023 17:24:30 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_chessboard/</guid>
-      <description>Gomory&amp;rsquo;s Theorem If you move two cells of a $8 \times 8$ chessboard of opposite colors, the remaining cells can be fully domino tiled.
-Proof
-Draw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)
-Choose the two cells to be removed, and the closed path we have will be sperated into two paths.
-If we lable the close path we chose in the beginning from 1 to 64 in the order we drew it, white cells have odd numbers, and black cells have even numbers (or reversed).</description>
-    </item>
-    
-    <item>
-      <title>Some latex tests</title>
-      <link>https://ofuro.me/posts/latex_test/</link>
-      <pubDate>Mon, 28 Aug 2023 22:39:19 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/latex_test/</guid>
-      <description>Consider a $n \times m$ chessboard&amp;hellip;
-$$ \int{f(x)dx} $$
-Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in\set{1, 2, 3, 4}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$.</description>
-    </item>
-    
-    <item>
-      <title>My Math 417 review notes</title>
-      <link>https://ofuro.me/posts/417_review/</link>
-      <pubDate>Mon, 28 Aug 2023 15:50:48 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/417_review/</guid>
-      <description>I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!
-These are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.
-Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
-    </item>
-    
-    <item>
-      <title>413_basic counting</title>
-      <link>https://ofuro.me/posts/413_basic_counting/</link>
-      <pubDate>Mon, 28 Aug 2023 14:35:27 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/413_basic_counting/</guid>
-      <description>The four basic counting principle Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1, S_2, &amp;hellip;, S_n$.
-Addition principle: $$ |S| = |S_1| + |S_2| + &amp;hellip; + |S_m| $$
-Ex:
-Path counting: In a $3 \times 3$ grid, if you can move 1 step upward or 1 step to the right. How many ways do we have to move from bottom-left to top-right corner?
-The idea is to break this problem into smaller problems.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://ofuro.me/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ofuro.me/about/</guid>
-      <description>about</description>
-    </item>
-    
-    
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Yue's Notes</title><link>https://ofuro.me/</link><description>Recent content on Yue's Notes</description><generator>Hugo -- 0.139.2</generator><language>en-us</language><lastBuildDate>Tue, 29 Oct 2024 17:02:49 -0500</lastBuildDate><atom:link href="https://ofuro.me/index.xml" rel="self" type="application/rss+xml"/><item><title>RSA in pure number theory</title><link>https://ofuro.me/posts/some_rsa/</link><pubDate>Tue, 29 Oct 2024 17:02:49 -0500</pubDate><guid>https://ofuro.me/posts/some_rsa/</guid><description>&lt;h3 id="binomial-theorem">Binomial Theorem&lt;/h3>
+&lt;p>Given $a, b \in \mathbb{R}, n \in \mathbb{N}$, then
+$$
+(a + b)^n = \sum_{k = 0}^{n} \binom{n}{k}a^k b^{n-k}
+$$
+&lt;span style="color:#599eff">Proposition&lt;/span> Let $p$ be prime. $\forall a, b \in \mathbb{Z}$, we have:
+$$
+(a+b)^p \equiv a^p + b^p \mod p
+$$
+&lt;span style="color:#eb861c">Proof&lt;/span> It suffices to show that $\binom{p}{k} \equiv 0 \mod p$ if $0 &amp;lt; k &amp;lt; p$. Observe: $p \mid p!, p \nmid k!, p \nmid (p-k)!$, hence $p \mid \binom{p}{k}$. $\blacksquare$&lt;/p></description></item><item><title>Convex Hull in 2D</title><link>https://ofuro.me/posts/convex_hull/</link><pubDate>Thu, 29 Aug 2024 17:02:49 -0500</pubDate><guid>https://ofuro.me/posts/convex_hull/</guid><description>&lt;p>&lt;span style="color:#28a745">Definition&lt;/span> Problem: Given $n$ points $P = \set{p_1, \ldots, p_n} \subset \mathbb{R}^2$, compute $\text{CH}(P) = $ smallest convex set contining $P$.&lt;/p>
+&lt;p>Input: a list of points all the points in $P$.&lt;/p>
+&lt;p>Output: a list of points in $P$ that belongs to this convex set in CCW, starting from the left most point.&lt;/p>
+&lt;h4 id="applications">Applications&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>Given a huge point cloud, convex hull helps find the &amp;ldquo;shape&amp;rdquo;.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Bounding volume. Makes ray shooting tasks faster.&lt;/p></description></item><item><title>Fast Fourier Transform</title><link>https://ofuro.me/posts/473_fft/</link><pubDate>Thu, 29 Aug 2024 15:30:07 -0500</pubDate><guid>https://ofuro.me/posts/473_fft/</guid><description>&lt;blockquote>
+&lt;p>I know this name for a long time. But never learnt it. Now it&amp;rsquo;s time.&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="recap">Recap&lt;/h4>
+&lt;p>Previously, Karatsuba&amp;rsquo;s algorithm for integer multiplication. It computes the result in $O(n^{\log_2 3})$ where $n$ is the number of digits.&lt;/p>
+&lt;p>Another recap: polynomial representation:
+$$
+p(x) = \sum_{i = 0}^{n}p_ix^i
+$$
+And we can represent this polynomial using an array of size $n$.&lt;/p>
+&lt;p>Evaluations and additions of polynomials are straightforward computation. Can be done in $O(n)$ time. Naive multiplication is slow, however. It takes $O(n^2)$ time to compute all the coefficient multiplications. FFT helps us speed up this multiplication.&lt;/p></description></item><item><title>413_difference Sequence</title><link>https://ofuro.me/posts/413_difference-sequence/</link><pubDate>Mon, 11 Dec 2023 16:01:49 -0600</pubDate><guid>https://ofuro.me/posts/413_difference-sequence/</guid><description>&lt;h2 id="span-stylecolorff0000this-note-is-not-finished-yetspan">&lt;span style="color:#ff0000">⚠️THIS NOTE IS NOT FINISHED YET&lt;/span>&lt;/h2>
+&lt;h3 id="todo">TODO:&lt;/h3>
+&lt;ul>
+&lt;li>stirling number definitions&lt;/li>
+&lt;li>stirling number of the first and the second type&lt;/li>
+&lt;li>bell number&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h4 id="question">Question&lt;/h4>
+&lt;p>Can you find a closed formula for the sum of the $p$-th powers of the first $n$ positive integers? That is, we need a closed formulat for the sequence:&lt;/p>
+&lt;p>$$
+h_n=a_p n^p+a_{p-1} n^{p-1}+\cdots+a_1 n+a_0, \quad(n \geq 0)
+$$&lt;/p>
+&lt;p>&lt;strong>Solution&lt;/strong>&lt;/p>
+&lt;p>The method is to use difference sequences. We already know the following:&lt;/p></description></item><item><title>413_None Homogeneous Recurrence Relation</title><link>https://ofuro.me/posts/413_nhrr/</link><pubDate>Mon, 11 Dec 2023 14:59:52 -0600</pubDate><guid>https://ofuro.me/posts/413_nhrr/</guid><description>&lt;p>&lt;span style="color:#04c2b2">Example&lt;/span> sums of cubes&lt;/p>
+&lt;p>Solve $h_n=h_{n-1}+n^3,(n \geq 1)$ and $h_0=0$.&lt;/p>
+&lt;p>&lt;strong>Solution&lt;/strong>&lt;/p>
+&lt;p>Note that this is not a homegenous recurrence relation.&lt;/p>
+&lt;p>Unrolling gives us:
+&lt;div>
+$$
+\begin{align*}
+h_{n-1} &amp;= (n-1)^3 + h_{n-2}\\
+\implies
+h_n &amp;= n^3 + (n-1)^3 + h_{n-2}
+\end{align*}
+$$
+&lt;/div>
+And we can keep doing this. Using this as the intuition, we guess the closed form:
+$$
+h_n = n^3 + (n-1)^3 + \ldots + 2^3 + 1
+$$
+To formally prove this, we can use induction! Assume it holds for some $n \geq 1$, we want to show that $h_{n+1} = h_n + (n+1)^3 = 1 + 2^3 + \ldots + (n+1)^3$.&lt;/p></description></item><item><title>413_generating Functions</title><link>https://ofuro.me/posts/413_generating-functions/</link><pubDate>Wed, 01 Nov 2023 22:48:35 -0500</pubDate><guid>https://ofuro.me/posts/413_generating-functions/</guid><description>&lt;h1 id="generating-functions">Generating Functions&lt;/h1>
+&lt;p>Generating functions can be regarded as algebraic objects whose formal manipulation allows us to count the number of possibilities for a problem by means of algebra.&lt;/p>
+&lt;p>&lt;span style="color:#28a745">Definition&lt;/span>&lt;/p>
+&lt;p>Let $h_0, h_1, h_2, h_3, \ldots$ be an infinite sequence of numbers. Its generating function is defined to be the infinite series:
+$$
+g(x) = h_0 + h_1x + h_2x^2 + \cdots + h_nx^n + \cdots
+$$&lt;/p>
+&lt;h4 id="span-stylecolor04c2b2example-1span">&lt;span style="color:#04c2b2">Example 1&lt;/span>&lt;/h4>
+&lt;p>The generating function of the infinite sequence $1, 1, 1, \ldots$ is:
+$$
+g(x) = 1 + x + x^2 + x^3 + \cdots
+$$
+for $|x| &amp;lt; 1$. This generating function $g(x)$ is the sum of a geometric series with value:
+$$
+g(x) = \frac{1}{1-x}
+$$
+&lt;strong>Solution&lt;/strong>&lt;/p></description></item><item><title>445_camera</title><link>https://ofuro.me/posts/445_camera/</link><pubDate>Mon, 30 Oct 2023 10:36:20 -0500</pubDate><guid>https://ofuro.me/posts/445_camera/</guid><description>&lt;h1 id="world-coordinates-and-image-coordinates">World Coordinates and Image coordinates&lt;/h1>
+&lt;h2 id="pinhole-camera-model">Pinhole Camera Model&lt;/h2>
+&lt;p>$$
+x = K \left[
+\begin{array}{ll}
+R &amp;amp; t
+\end{array}
+\right] x
+$$&lt;/p>
+&lt;p>&lt;strong>x&lt;/strong>: Image Coordinates: $(u, v, 1)$
+&lt;strong>K&lt;/strong>: Intrinsic Matrix $(3 \times 3)$
+&lt;strong>R&lt;/strong>: Rotation $(3 \times 3)$
+&lt;strong>t&lt;/strong>: Translation $(3 \times 1)$
+&lt;strong>X&lt;/strong>: World Coordinates: $(X, Y, Z, 1)$&lt;/p>
+&lt;p>Basically, from the right side to the leftside, it is transforming a point (1) from the world coordinates to camera coordinates, and then project the point (2) from camera coordinates down to the image plane.&lt;/p></description></item><item><title>445_Blending</title><link>https://ofuro.me/posts/445_blending-warping/</link><pubDate>Mon, 30 Oct 2023 10:34:53 -0500</pubDate><guid>https://ofuro.me/posts/445_blending-warping/</guid><description>&lt;h3 id="pasting-images">Pasting Images&lt;/h3>
+&lt;h4 id="method-1--cut-and-paste-the-images">Method 1 — Cut and paste the images.&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>Feathering&lt;/p>
+&lt;ul>
+&lt;li>Gives a smoother transition. But that&amp;rsquo;s all&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Alpha composting&lt;/p>
+&lt;ul>
+&lt;li>Output = foreground $\times$ mask + background $\times$ (1 $-$ mask). We can also use alpha compositing together with the feathering — simply bluring the mask will give us a good feathering. This method is also good for multilayer processing, which allwos the compositing to be more complicated.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="method-2--pyramid-blending">Method 2 — Pyramid Blending&lt;/h4>
+&lt;ul>
+&lt;li>At low frequencies, blend slowly&lt;/li>
+&lt;li>At high frequencies, blend quickly&lt;/li>
+&lt;/ul>
+&lt;center>
+&lt;figure>
+&lt;img src=" https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/image-20231014195402853.png " style="width:25%;" />
+&lt;img src=" https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/image-20231014195459497.png " style="width:25%;" />
+&lt;figcaption> Burt and Adelson 1983 &lt;/figcaption>
+&lt;/figure>
+&lt;/center>
+&lt;h4 id="implementation">Implementation:&lt;/h4>
+&lt;ol>
+&lt;li>Build Laplacian pyramids for each image&lt;/li>
+&lt;li>Build a Gaussian pyramid of region mask&lt;/li>
+&lt;li>Blend each level of pyramid using region mask from the same level&lt;/li>
+&lt;/ol>
+&lt;p>$$
+L_{12}^i=L_1^i \cdot R^i+L_2^i \cdot\left(1-R^i\right)
+$$&lt;/p></description></item><item><title>445_Synthesizing and Cutting</title><link>https://ofuro.me/posts/445_synthesizing-cutting/</link><pubDate>Mon, 30 Oct 2023 10:33:26 -0500</pubDate><guid>https://ofuro.me/posts/445_synthesizing-cutting/</guid><description>&lt;h2 id="texture-synthesis-and-hole-filling">Texture Synthesis and Hole-Filling&lt;/h2>
+&lt;blockquote>
+&lt;p>How do we cut something out of an image, and fill the hole naturally?&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;span style="color:#28a745">Definition&lt;/span> Texture depicts spacially repeating patterns.&lt;/p>
+&lt;h3 id="texture-synthesis">Texture Synthesis&lt;/h3>
+&lt;p>Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.&lt;/p>
+&lt;p>&lt;strong>The challenge:&lt;/strong>&lt;/p>
+&lt;p>Need to model the whole spectrum: from repeated to stochastic texture.&lt;/p>
+&lt;p>One idea:&lt;/p>
+&lt;ol>
+&lt;li>Compute statistics of input texture&lt;/li>
+&lt;li>Generate a new texture that keeps those same statistics.&lt;/li>
+&lt;/ol>
+&lt;p>But it is hard to model those probabilities distributions.&lt;/p></description></item><item><title>445_color_basics</title><link>https://ofuro.me/posts/445_color_basics/</link><pubDate>Mon, 30 Oct 2023 10:32:37 -0500</pubDate><guid>https://ofuro.me/posts/445_color_basics/</guid><description>&lt;h3 id="how-do-you-view-the-world">How do you view the world&lt;/h3>
+&lt;img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/image-20231009180859272.png" alt="image-20231009180859272" style="zoom: 33%;" />
+&lt;p>&lt;strong>Cones:&lt;/strong> cone-shaped, less sensitive, operate in high light, color vision&lt;/p>
+&lt;p>&lt;strong>Rods:&lt;/strong> rod-shaped, highly sensitive, operate at night, gray-scale vision, slower to respond&lt;/p>
+&lt;img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/image-20231009181400266.png" alt="image-20231009181400266" style="zoom:50%;" />
+&lt;p>&lt;span style="color:#9650af">Observation&lt;/span> In a clear night, there are more stars off-center. This is because you have more rods in the middle, while more cones elsewhere.&lt;/p>
+&lt;h3 id="how-to-express-colors">How to express colors?&lt;/h3>
+&lt;p>Basically, the most intuitive expression is the RGB color space. But it is not a linear color space. We perfer expressing using CIE-XYZ color space, which makes the calculation much easier.&lt;/p></description></item><item><title>413_Multinomial Coefficient</title><link>https://ofuro.me/posts/413_multinomial/</link><pubDate>Mon, 30 Oct 2023 10:30:51 -0500</pubDate><guid>https://ofuro.me/posts/413_multinomial/</guid><description>&lt;p>&lt;span style="color:#28a745">Definition&lt;/span> A multinomial coefficient is:&lt;/p>
+&lt;p>$$
+\binom{n}{n_1 n_2 \cdots n_t}
+=\frac{n !}{n_{1} ! n_{2} ! \cdots n_{t} !}
+$$&lt;/p>
+&lt;p>Here, $n_1, n_2, \ldots, n_t$ are nonnegative integers with
+$$
+n_1+n_2+\cdots+n_t=n
+$$&lt;/p>
+&lt;h3 id="span-stylecolor3c66b5pascals-theorem-for-multinomial-coefficientsspan">&lt;span style="color:#3c66b5">Pascal&amp;rsquo;s theorem for multinomial coefficients&lt;/span>&lt;/h3>
+&lt;p>Pascal&amp;rsquo;s theorem for
+Let $n, k \in \mathbb{N}$ and $(n)_{i=1}^k$ be natural numbers so that
+$$
+n_1+\cdots+n_k=n
+$$
+Then,&lt;/p>
+&lt;p>$$
+\binom{n}{n_1, n_2, \ldots, n_k} =
+\binom{n-1}{n_1-1, n_2, \ldots, n_k} + \ldots +
+\binom{n-1}{n_1, n_2, \ldots, n_k-1}
+$$&lt;/p></description></item><item><title>413_Unimodality of binomial coef &amp; Sperner's theorem</title><link>https://ofuro.me/posts/413_unimodality/</link><pubDate>Tue, 10 Oct 2023 22:55:46 -0500</pubDate><guid>https://ofuro.me/posts/413_unimodality/</guid><description>&lt;h1 id="unimodality-of-binomial-coefficients-and-sperners-theorem">Unimodality of Binomial Coefficients and Sperner&amp;rsquo;s Theorem&lt;/h1>
+&lt;p>If we examine the binomial coefficients in a row of Pascal&amp;rsquo;s triangle, we notice that the numbers increase for a while and then decrease. A sequence of numbers with this property is called &lt;strong>unimodal&lt;/strong>.&lt;/p>
+&lt;h3 id="span-stylecolor3c66b5theoremspan">&lt;span style="color:#3c66b5">Theorem&lt;/span>&lt;/h3>
+&lt;p>Let $n$ be a positive integer. The sequence of binomial coefficients
+$$
+{{n} \choose {0}}, {{n} \choose {1}}, \ldots, {{n} \choose {n}}
+$$
+is a unimodal sequence. Mor precisely,
+$$
+{{n} \choose {0}} &amp;lt; {{n} \choose {1}} &amp;lt; \ldots &amp;lt; {{n} \choose {\lfloor n/2\rfloor}}
+$$
+and
+$$
+{{n} \choose {\lceil n/2 \rceil}} &amp;gt; \ldots {{n} \choose {n-1}} &amp;gt; {{n} \choose {n}}
+$$&lt;/p></description></item><item><title>413_lower bounded Ramsey</title><link>https://ofuro.me/posts/413_lower-bounded-ramsey/</link><pubDate>Wed, 04 Oct 2023 17:28:53 -0500</pubDate><guid>https://ofuro.me/posts/413_lower-bounded-ramsey/</guid><description>&lt;h3 id="span-stylecolor3c66b5theoremspan">&lt;span style="color:#3c66b5">Theorem&lt;/span>&lt;/h3>
+&lt;p>$$
+\text{For every } k \in \mathbb{N}, \text{we have } R(k)\ge 2^{k/2}
+$$&lt;/p>
+&lt;p>Before we start the proof, let&amp;rsquo;s look at 3 ingredients we need:&lt;/p>
+&lt;ul>
+&lt;li>The probabilistic method&lt;/li>
+&lt;li>The union bound&lt;/li>
+&lt;li>The binomial estimate&lt;/li>
+&lt;/ul>
+&lt;h4 id="span-stylecolor599effthe-probabilistic-methodspan">&lt;span style="color:#599eff">The probabilistic method&lt;/span>&lt;/h4>
+&lt;p>Let $\Omega$ be the set of all possible outcomes of an experiment. Suppose that each outcome is equally likely. Let $A \subseteq \Omega$ be an event.
+$$
+\text{If } \operatorname{Prob}(A) &amp;lt; 1 \text{, then } \operatorname{Prob}(A^c) &amp;gt; 0
+$$&lt;/p></description></item><item><title>413_General Ramsey Theories</title><link>https://ofuro.me/posts/413_general_ramsey-theories/</link><pubDate>Mon, 02 Oct 2023 15:00:37 -0500</pubDate><guid>https://ofuro.me/posts/413_general_ramsey-theories/</guid><description>&lt;h3 id="general-ramsey-on-normal-graph">General Ramsey on normal graph&lt;/h3>
+&lt;p>&lt;span style="color:#28a745">Notation&lt;/span> &lt;strong>General notation for Ramsey theory:&lt;/strong>&lt;/p>
+&lt;p>$K_n \to (K_s,K_t)$ is the assertion that for any coloring of the edges of $K_n$ with red and blue, we can always find a red $K_s$ or a blue $K_t$.&lt;/p>
+&lt;p>$K_n \not \to (K_s,K_t)$ is the assertion that there exists a coloring of the edges of $K_n$ with red and blue with no red $K_s$ nor blue $K_t$.&lt;/p>
+&lt;p>&lt;span style="color:#28a745">Notation&lt;/span> &lt;strong>Off-diagonal Ramsey numbers:&lt;/strong>&lt;/p></description></item><item><title>413_Erdos-Szekeres Theorem and Ramsey Theory</title><link>https://ofuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</link><pubDate>Wed, 27 Sep 2023 20:56:13 -0500</pubDate><guid>https://ofuro.me/posts/413_erdos-szekeres-theorem-and-ramsey-theory/</guid><description>&lt;h3 id="span-stylecolor3c66b5erdos-szekeres-theoremspan">&lt;span style="color:#3c66b5">Erdos-Szekeres Theorem&lt;/span>&lt;/h3>
+&lt;p>Given $r, s$ any sequence of distinct real numbers with length at least $(r-1)(s-1)+1$ contains a monotonically increasing subsequence of length $r$ or a monotonically decreasing subsequece of length $s$.&lt;/p>
+&lt;p>That is, given the subsequence: $a_1, a_2, &amp;hellip;, a_{(s-1)(r-1)+1}$, we can find:&lt;/p>
+&lt;ul>
+&lt;li>Indicies $i_1 &amp;lt; i_2 &amp;lt; &amp;hellip;&amp;lt; i_r$ so that $a_{i1} &amp;lt; a_{i2} &amp;lt; &amp;hellip;&amp;lt; a_{ir}$&lt;/li>
+&lt;/ul>
+&lt;p>OR&lt;/p>
+&lt;ul>
+&lt;li>Indicies $j_1 &amp;lt; j_2 &amp;lt; &amp;hellip;&amp;lt; j_r$ so that $a_{j1} &amp;gt; a_{j2} &amp;gt; &amp;hellip; &amp;gt; a_{jr}$&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Example:&lt;/strong> $s = 3, r = 3$, Sequence: $10, 11, 7, 8$ has no such property.&lt;/p></description></item><item><title>413_permutation</title><link>https://ofuro.me/posts/413_permutation/</link><pubDate>Mon, 18 Sep 2023 13:45:07 -0500</pubDate><guid>https://ofuro.me/posts/413_permutation/</guid><description>&lt;h1 id="permutation-of-sets">Permutation of Sets&lt;/h1>
+&lt;p>&lt;span style="color:#28a745">Definition&lt;/span> permutation
+A permutation of a set $S$ can be thought of as a listing of the elements $S$ in some order.&lt;/p>
+&lt;p>$P(n, r)$ denotes the number of $r$-permutations of an $n$-element set.&lt;/p>
+&lt;p>&lt;span style="color:#28a745">Definition&lt;/span> $r$-permutation&lt;/p>
+&lt;p>An $r$-permutation of a set $S$ is a string $a_1, a_2, &amp;hellip; a_r$ where $a_i \in S, \forall i \in [r]$ and $a_i \neq a_j$ for $i \neq j$.&lt;/p>
+&lt;p>Note: $[r] = {1, 2, &amp;hellip;, r}$&lt;/p></description></item><item><title>445_texture</title><link>https://ofuro.me/posts/445_texture/</link><pubDate>Sun, 17 Sep 2023 15:24:34 -0500</pubDate><guid>https://ofuro.me/posts/445_texture/</guid><description>&lt;h1 id="texture-synthesis--hole-filling">Texture Synthesis &amp;amp; Hole Filling&lt;/h1>
+&lt;h4 id="texture">Texture&lt;/h4>
+&lt;p>Texture depicts spacially repeating patterns.&lt;/p>
+&lt;h3 id="texture-synthesis">Texture Synthesis&lt;/h3>
+&lt;p>Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.&lt;/p>
+&lt;p>&lt;strong>The challenge:&lt;/strong>&lt;/p>
+&lt;p>Need to model the whole spectrum: from repeated to stochastic texture.&lt;/p>
+&lt;p>One idea:&lt;/p>
+&lt;ol>
+&lt;li>Compute statistics of input texture&lt;/li>
+&lt;li>Generate a new texture that keeps those same statistics.&lt;/li>
+&lt;/ol>
+&lt;p>But it is hard to model those probabilities distributions.&lt;/p>
+&lt;p>Another idea: ==Efros &amp;amp; Leung algorithm==&lt;/p></description></item><item><title>413_Pigeonhole Principle</title><link>https://ofuro.me/posts/413_pigeonhole/</link><pubDate>Fri, 15 Sep 2023 17:28:11 -0500</pubDate><guid>https://ofuro.me/posts/413_pigeonhole/</guid><description>&lt;h1 id="pigeonhole-principle">Pigeonhole Principle&lt;/h1>
+&lt;p>If $n+1$ objects are distributed into $n$ boxes, then at least one box contains two or more of the objects.&lt;/p>
+&lt;p>&lt;span style="color:#eb861c">Proof&lt;/span>&lt;/p>
+&lt;p>For each $i\in \set{1, &amp;hellip;, n}$, let $a_i = $ number of objects in box $i$. Then, $a_1 + &amp;hellip; + a_n = n+1$ Let $a_j = \text{max } a_i$. Then,
+&lt;code>\begin{align*} n+1 &amp;amp;\leq n\cdot a_j \\ \frac{n+1}{n} &amp;amp;\leq a_j \\ 1 &amp;lt; \frac{n+1}{n} &amp;amp;\leq a_j\\ 1 &amp;amp;&amp;lt; a_j \end{align*}&lt;/code>
+Note that this conclusion doesn&amp;rsquo;t hole if you have $n$ objects or less.&lt;/p></description></item><item><title>413_binomial</title><link>https://ofuro.me/posts/413_binomial/</link><pubDate>Tue, 12 Sep 2023 17:35:33 -0500</pubDate><guid>https://ofuro.me/posts/413_binomial/</guid><description>&lt;h1 id="binomial-coefficient-and-binomial-identity">Binomial Coefficient and Binomial Identity&lt;/h1>
+&lt;h3 id="span-stylecolor3c66b5pascals-trianglespan">&lt;span style="color:#3c66b5">Pascal&amp;rsquo;s Triangle&lt;/span>&lt;/h3>
+&lt;p>&lt;code>\begin{matrix} {0 \choose 0}\\ {1 \choose 0} &amp;amp; {1 \choose 1}\\ {2 \choose 0} &amp;amp; {2 \choose 1} &amp;amp; {2 \choose 2}\\ {3 \choose 0} &amp;amp; {3 \choose 1} &amp;amp; {3 \choose 2} &amp;amp; {3 \choose 3}\\ {4 \choose 0} &amp;amp; {4 \choose 1} &amp;amp; {4 \choose 2} &amp;amp; {4 \choose 3} &amp;amp; {4 \choose 4}\\ .\\ .\\ . \end{matrix}&lt;/code>&lt;/p>
+&lt;h3 id="span-stylecolor3c66b5pascals-formulaspan">&lt;span style="color:#3c66b5">Pascal&amp;rsquo;s Formula&lt;/span>&lt;/h3>
+&lt;p>For all integers $n$ and $k$ with $1 \leq k \leq n - 1$, we have:
+$$
+{n \choose k} = {{n-1} \choose k} + {{n-1} \choose {k-1}}
+$$&lt;/p></description></item><item><title>413_combinations</title><link>https://ofuro.me/posts/413_combinations/</link><pubDate>Fri, 08 Sep 2023 13:23:54 -0500</pubDate><guid>https://ofuro.me/posts/413_combinations/</guid><description>&lt;p>&lt;span style="color:#28a745">Definition&lt;/span>&lt;/p>
+&lt;p>A &lt;strong>combination&lt;/strong> of a set $S$ is a term usually used to denote an unordered selection of the element of $S$. It is simply a selection of a subset of $S$.&lt;/p>
+&lt;ul>
+&lt;li>$r$-combination = $r$-subset.&lt;/li>
+&lt;li>$n\choose r$ is the number of $r$-subset in the set of size $n$.&lt;/li>
+&lt;/ul>
+&lt;h3 id="span-stylecolor3c66b5theoremspan">&lt;span style="color:#3c66b5">Theorem&lt;/span>&lt;/h3>
+&lt;p>For $0 \leq r \leq n$, we have:
+$$
+P(n, r) = r! {n \choose r} \text{ and }
+{n \choose r} = \frac{n!}{r!(n-r)!}
+$$
+&lt;span style="color:#eb861c">Proof&lt;/span>&lt;/p></description></item><item><title>Interesting DFA</title><link>https://ofuro.me/posts/interesting_dfa/</link><pubDate>Wed, 30 Aug 2023 13:10:06 -0500</pubDate><guid>https://ofuro.me/posts/interesting_dfa/</guid><description>&lt;h3 id="deterministic-finite-automaition">Deterministic Finite Automaition&lt;/h3>
+&lt;p>Definition: $(Q, s, A, \delta)$&lt;/p>
+&lt;p>$Q$: A set of all the possible state.&lt;/p>
+&lt;p>$s \in Q$ : starting state. The state to start the machine.&lt;/p>
+&lt;p>$A \subseteq Q$: The set of states we accept. Return &amp;ldquo;good&amp;rdquo; when we end there.&lt;/p>
+&lt;p>$\delta$: A function $Q \times \Sigma \rightarrow Q$. The set of all transition functions.&lt;/p>
+&lt;hr>
+&lt;p>There is an interesting DFA design question. The question is as follows:&lt;/p>
+&lt;p>&lt;strong>Given a bit-string (a string that contains only 0s and 1s), design a DFA that accepts the string if and only if the number represented by the string is divisible by 5.&lt;/strong>&lt;/p></description></item><item><title>413_chessboard</title><link>https://ofuro.me/posts/413_chessboard/</link><pubDate>Tue, 29 Aug 2023 17:24:30 -0500</pubDate><guid>https://ofuro.me/posts/413_chessboard/</guid><description>&lt;h3 id="span-stylecolor3c66b5gomorys-theoremspan">&lt;span style="color:#3c66b5">Gomory&amp;rsquo;s Theorem&lt;/span>&lt;/h3>
+&lt;p>&lt;strong>If you move two cells of a $8 \times 8$ chessboard of opposite colors, the remaining cells can be fully domino tiled.&lt;/strong>&lt;/p>
+&lt;p>&lt;span style="color:#eb861c">Proof&lt;/span>&lt;/p>
+&lt;p>Draw a closed path that passes through every square exactly once. (Draw a big C and then draw back and forth horizontally)&lt;/p>
+&lt;center>
+&lt;figure>
+&lt;img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/chessboard-theorem-red.png" alt="chessboard-theorem-red" style="width: 20%;" />
+&lt;/figure>
+&lt;/center>
+&lt;p>Choose the two cells to be removed, and the closed path we have will be sperated into two paths.&lt;/p>
+&lt;p>If we lable the close path we chose in the beginning from 1 to 64 in the order we drew it, white cells have odd numbers, and black cells have even numbers (or reversed).&lt;/p></description></item><item><title>Some latex tests</title><link>https://ofuro.me/posts/latex_test/</link><pubDate>Mon, 28 Aug 2023 22:39:19 -0500</pubDate><guid>https://ofuro.me/posts/latex_test/</guid><description>&lt;p>Consider a $n \times m$ chessboard&amp;hellip;&lt;/p>
+&lt;p>$$
+\int{f(x)dx}
+$$&lt;/p>
+&lt;p>Since $94 = 4 + 5x$ for some $x \in \mathbb{N}$, my claim is that the first player wins when it chooses $4$ in the beginning. Then, whenever the second player choose $a, x \in\set{1, 2, 3, 4}$, the first player just add it to 5. So choose $5-a$. By doing this, the first player always reaches $10x + 9$ or $10x + 4$ for $x \in \mathbb{N}$. Since $94$ is included, the first player must win.&lt;/p></description></item><item><title>My Math 417 review notes</title><link>https://ofuro.me/posts/417_review/</link><pubDate>Mon, 28 Aug 2023 15:50:48 -0500</pubDate><guid>https://ofuro.me/posts/417_review/</guid><description>&lt;p>I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!&lt;/p>
+&lt;p>These are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.&lt;/p>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 10px;
+right: 4px;
+color: #000;
+margin: auto;
+background-color: #eeeeee;
+padding: 0.3em 1em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-9169a613">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-9169a613">
+&lt;div class="pdf-loading" id="pdf-loading-9169a613">&lt;/div>
+&lt;/div>
+&lt;div id="overlayText">
+&lt;a href="../mypdf/417_final_notes.pdf" aria-label="Download" download>
+&lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+&lt;path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
+&lt;/svg>
+&lt;/a>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-9169a613">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-9169a613">
+&lt;button id="pdf-prev-9169a613">Previous&lt;/button>
+&lt;button id="pdf-next-9169a613">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-9169a613">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-9169a613">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-9169a613" href="../mypdf/417_final_notes.pdf">[pdf]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-9169a613" href="../mypdf/417_final_notes.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '..\/mypdf\/417_final_notes.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-9169a613'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-9169a613"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-9169a613');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-9169a613').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-9169a613').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-9169a613').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-9169a613').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script></description></item><item><title>413_basic counting</title><link>https://ofuro.me/posts/413_basic_counting/</link><pubDate>Mon, 28 Aug 2023 14:35:27 -0500</pubDate><guid>https://ofuro.me/posts/413_basic_counting/</guid><description>&lt;h1 id="the-four-basic-counting-principle">The four basic counting principle&lt;/h1>
+&lt;p>Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1, S_2, &amp;hellip;, S_n$.&lt;/p>
+&lt;h3 id="addition-principle">&lt;strong>Addition principle:&lt;/strong>&lt;/h3>
+&lt;p>$$
+|S| = |S_1| + |S_2| + &amp;hellip; + |S_m|
+$$&lt;/p>
+&lt;p>Ex:&lt;/p>
+&lt;p>Path counting: In a $3 \times 3$ grid, if you can move 1 step upward or 1 step to the right. How many ways do we have to move from bottom-left to top-right corner?&lt;/p>
+&lt;p>The idea is to break this problem into smaller problems. Addition principle guarrantees that we can add the numbers together.&lt;/p></description></item><item><title>About Me</title><link>https://ofuro.me/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ofuro.me/about/</guid><description>about</description></item></channel></rss>

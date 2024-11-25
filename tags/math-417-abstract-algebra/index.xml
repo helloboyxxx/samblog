@@ -1,22 +1,183 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>MATH 417 Abstract Algebra on Yue&#39;s Notes</title>
-    <link>https://ofuro.me/tags/math-417-abstract-algebra/</link>
-    <description>Recent content in MATH 417 Abstract Algebra on Yue&#39;s Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 28 Aug 2023 15:50:48 -0500</lastBuildDate><atom:link href="https://ofuro.me/tags/math-417-abstract-algebra/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My Math 417 review notes</title>
-      <link>https://ofuro.me/posts/417_review/</link>
-      <pubDate>Mon, 28 Aug 2023 15:50:48 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/417_review/</guid>
-      <description>I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!
-These are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.
-Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>MATH 417 Abstract Algebra on Yue's Notes</title><link>https://ofuro.me/tags/math-417-abstract-algebra/</link><description>Recent content in MATH 417 Abstract Algebra on Yue's Notes</description><generator>Hugo -- 0.139.2</generator><language>en-us</language><lastBuildDate>Mon, 28 Aug 2023 15:50:48 -0500</lastBuildDate><atom:link href="https://ofuro.me/tags/math-417-abstract-algebra/index.xml" rel="self" type="application/rss+xml"/><item><title>My Math 417 review notes</title><link>https://ofuro.me/posts/417_review/</link><pubDate>Mon, 28 Aug 2023 15:50:48 -0500</pubDate><guid>https://ofuro.me/posts/417_review/</guid><description>&lt;p>I have had a wonderful summer as I have been able to take Math 417 with Professor Chales Rezk. He is a very very good teacher and I have learnt a lot from him. Thanks!&lt;/p>
+&lt;p>These are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.&lt;/p>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 10px;
+right: 4px;
+color: #000;
+margin: auto;
+background-color: #eeeeee;
+padding: 0.3em 1em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-9169a613">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-9169a613">
+&lt;div class="pdf-loading" id="pdf-loading-9169a613">&lt;/div>
+&lt;/div>
+&lt;div id="overlayText">
+&lt;a href="../mypdf/417_final_notes.pdf" aria-label="Download" download>
+&lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+&lt;path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
+&lt;/svg>
+&lt;/a>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-9169a613">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-9169a613">
+&lt;button id="pdf-prev-9169a613">Previous&lt;/button>
+&lt;button id="pdf-next-9169a613">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-9169a613">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-9169a613">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-9169a613" href="../mypdf/417_final_notes.pdf">[pdf]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-9169a613" href="../mypdf/417_final_notes.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '..\/mypdf\/417_final_notes.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-9169a613'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-9169a613"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-9169a613');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-9169a613').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-9169a613').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-9169a613').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-9169a613').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script></description></item></channel></rss>

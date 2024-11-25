@@ -1,20 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>cryptography on Yue&#39;s Notes</title>
-    <link>https://ofuro.me/tags/cryptography/</link>
-    <description>Recent content in cryptography on Yue&#39;s Notes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 29 Oct 2024 17:02:49 -0500</lastBuildDate><atom:link href="https://ofuro.me/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>RSA in pure number theory</title>
-      <link>https://ofuro.me/posts/some_rsa/</link>
-      <pubDate>Tue, 29 Oct 2024 17:02:49 -0500</pubDate>
-      
-      <guid>https://ofuro.me/posts/some_rsa/</guid>
-      <description>Binomial Theorem Given $a, b \in \mathbb{R}, n \in \mathbb{N}$, then $$ (a + b)^n = \sum_{k = 0}^{n} \binom{n}{k}a^k b^{n-k} $$ Proposition Let $p$ be prime. $\forall a, b \in \mathbb{Z}$, we have: $$ (a+b)^p \equiv a^p + b^p \mod p $$ Proof It suffices to show that $\binom{p}{k} \equiv 0 \mod p$ if $0 &amp;lt; k &amp;lt; p$. Observe: $p \mid p!, p \nmid k!, p \nmid (p-k)!$, hence $p \mid \binom{p}{k}$.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cryptography on Yue's Notes</title><link>https://ofuro.me/tags/cryptography/</link><description>Recent content in Cryptography on Yue's Notes</description><generator>Hugo -- 0.139.2</generator><language>en-us</language><lastBuildDate>Tue, 29 Oct 2024 17:02:49 -0500</lastBuildDate><atom:link href="https://ofuro.me/tags/cryptography/index.xml" rel="self" type="application/rss+xml"/><item><title>RSA in pure number theory</title><link>https://ofuro.me/posts/some_rsa/</link><pubDate>Tue, 29 Oct 2024 17:02:49 -0500</pubDate><guid>https://ofuro.me/posts/some_rsa/</guid><description>&lt;h3 id="binomial-theorem">Binomial Theorem&lt;/h3>
+&lt;p>Given $a, b \in \mathbb{R}, n \in \mathbb{N}$, then
+$$
+(a + b)^n = \sum_{k = 0}^{n} \binom{n}{k}a^k b^{n-k}
+$$
+&lt;span style="color:#599eff">Proposition&lt;/span> Let $p$ be prime. $\forall a, b \in \mathbb{Z}$, we have:
+$$
+(a+b)^p \equiv a^p + b^p \mod p
+$$
+&lt;span style="color:#eb861c">Proof&lt;/span> It suffices to show that $\binom{p}{k} \equiv 0 \mod p$ if $0 &amp;lt; k &amp;lt; p$. Observe: $p \mid p!, p \nmid k!, p \nmid (p-k)!$, hence $p \mid \binom{p}{k}$. $\blacksquare$&lt;/p></description></item></channel></rss>
