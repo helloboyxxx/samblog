@@ -1,12 +1,10 @@
 ---
-title: "Fermat's Little Theorem"
+title: "RSA in pure number theory"
 date: 2024-10-29T17:02:49-05:00
 draft: false
 math: true
 tags: ["cryptography"]
 ---
-
-# RSA in pure number theory
 
 ### Binomial Theorem
 
