@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Oct 2024 17:02:49 -0500</lastBuildDate><atom:link href="https://ofuro.me/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fermat&#39;s Little Theorem</title>
-      <link>https://ofuro.me/posts/fermat_little/</link>
+      <title>RSA in pure number theory</title>
+      <link>https://ofuro.me/posts/some_rsa/</link>
       <pubDate>Tue, 29 Oct 2024 17:02:49 -0500</pubDate>
       
-      <guid>https://ofuro.me/posts/fermat_little/</guid>
-      <description>RSA in pure number theory Binomial Theorem Given $a, b \in \mathbb{R}, n \in \mathbb{N}$, then $$ (a + b)^n = \sum_{k = 0}^{n} \binom{n}{k}a^k b^{n-k} $$ Proposition Let $p$ be prime. $\forall a, b \in \mathbb{Z}$, we have: $$ (a+b)^p \equiv a^p + b^p \mod p $$ Proof It suffices to show that $\binom{p}{k} \equiv 0 \mod p$ if $0 &amp;lt; k &amp;lt; p$. Observe: $p \mid p!, p \nmid k!</description>
+      <guid>https://ofuro.me/posts/some_rsa/</guid>
+      <description>Binomial Theorem Given $a, b \in \mathbb{R}, n \in \mathbb{N}$, then $$ (a + b)^n = \sum_{k = 0}^{n} \binom{n}{k}a^k b^{n-k} $$ Proposition Let $p$ be prime. $\forall a, b \in \mathbb{Z}$, we have: $$ (a+b)^p \equiv a^p + b^p \mod p $$ Proof It suffices to show that $\binom{p}{k} \equiv 0 \mod p$ if $0 &amp;lt; k &amp;lt; p$. Observe: $p \mid p!, p \nmid k!, p \nmid (p-k)!$, hence $p \mid \binom{p}{k}$.</description>
     </item>
     
   </channel>
