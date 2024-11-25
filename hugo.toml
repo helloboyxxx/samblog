@@ -2,7 +2,7 @@ baseURL = 'https://ofuro.me/'
 
 languageCode = 'en-us'
 title = "Yue's Notes"
-theme = 'PaperMod'
+theme = 'hugo-PaperMod'
 
 
 [params.homeInfoParams]
