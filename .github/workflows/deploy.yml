@@ -6,14 +6,21 @@ on:
       - main  # or your default branch
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          submodules: true  # If using themes as submodules
+          submodules: true
+
+      - name: Checkout destination
+        uses: actions/checkout@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          ref: gh-pages
+          path: built-site
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
