@@ -7,7 +7,7 @@ theme = 'hugo-PaperMod'
 
 [params.homeInfoParams]
 Title = "Stay 😎. Be 😊. Keep 📚"
-Content = 'おふろ🛁 => Bathing in the ocean of knowledge'
+Content = 'おふろ🛁 => Bathe in the sea of knowledge.'
 
 [[params.socialIcons]]
 name = "github"
