@@ -1,18 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Yue's Notes</title><link>https://ofuro.me/posts/</link><description>Recent content in Posts on Yue's Notes</description><generator>Hugo -- 0.139.2</generator><language>en-us</language><lastBuildDate>Mon, 25 Nov 2024 18:29:54 -0600</lastBuildDate><atom:link href="https://ofuro.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Comparisons on Keyword Support Methods</title><link>https://ofuro.me/posts/keyword-support-methods/</link><pubDate>Mon, 25 Nov 2024 18:29:54 -0600</pubDate><guid>https://ofuro.me/posts/keyword-support-methods/</guid><description>&lt;p>The goal is to compare three methods for supporting keyword feature in PIR: Key-value filter in ChalametPIR, Sparse PIR, and the Cuckoo hashing method. In the beginning, we don&amp;rsquo;t want to start by comparing the detailed experimental performances, but we want to list their properties. What they are good / bad at.&lt;/p>
-&lt;h3 id="metrics">Metrics&lt;/h3>
-&lt;ul>
-&lt;li>Client storage&lt;/li>
-&lt;li>Client computation&lt;/li>
-&lt;li>Online communication&lt;/li>
-&lt;li>Download size&lt;/li>
-&lt;li>Offline communication (if any)&lt;/li>
-&lt;li>Server storage&lt;/li>
-&lt;li>Server computation&lt;/li>
-&lt;li>Ability to support multiple clients&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h3 id="notations">Notations:&lt;/h3>
-&lt;p>$m$: the number of key-value pairs.&lt;/p></description></item><item><title>RSA in pure number theory</title><link>https://ofuro.me/posts/some_rsa/</link><pubDate>Tue, 29 Oct 2024 17:02:49 -0500</pubDate><guid>https://ofuro.me/posts/some_rsa/</guid><description>&lt;h3 id="binomial-theorem">Binomial Theorem&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Yue's Notes</title><link>https://ofuro.me/posts/</link><description>Recent content in Posts on Yue's Notes</description><generator>Hugo -- 0.139.2</generator><language>en-us</language><lastBuildDate>Mon, 25 Nov 2024 21:56:04 -0600</lastBuildDate><atom:link href="https://ofuro.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding GSW</title><link>https://ofuro.me/posts/understanding-gsw/</link><pubDate>Mon, 25 Nov 2024 21:56:04 -0600</pubDate><guid>https://ofuro.me/posts/understanding-gsw/</guid><description>&lt;p>The goal of this file is to help understand the GSW scheme and the implementation of &lt;code>GSWCiphertext&lt;/code>in OnionPIR code. Let&amp;rsquo;s start with my understanding of GSW scheme.&lt;/p>
+&lt;h3 id="from-tgsw-to-rgsw">From TGSW to RGSW&lt;/h3>
+&lt;p>RGSW is a ring variation of &lt;a href="https://eprint.iacr.org/2013/340">GSW scheme&lt;/a>. I do not see any formal paper defining RGSW. However, I do find this particular paper helpful: &lt;a href="https:/print.iacr.org/2016/870">Faster Fully Homomorphic Encryption: Bootstrapping in less than 0.1 Seconds&lt;/a>. This paper defines TLWE and TGSW.&lt;/p></description></item><item><title>RSA in pure number theory</title><link>https://ofuro.me/posts/some_rsa/</link><pubDate>Tue, 29 Oct 2024 17:02:49 -0500</pubDate><guid>https://ofuro.me/posts/some_rsa/</guid><description>&lt;h3 id="binomial-theorem">Binomial Theorem&lt;/h3>
 &lt;p>Given $a, b \in \mathbb{R}, n \in \mathbb{N}$, then
 $$
 (a + b)^n = \sum_{k = 0}^{n} \binom{n}{k}a^k b^{n-k}
@@ -58,7 +46,21 @@ $$
 p(x) = \sum_{i = 0}^{n}p_ix^i
 $$
 And we can represent this polynomial using an array of size $n$.&lt;/p>
-&lt;p>Evaluations and additions of polynomials are straightforward computation. Can be done in $O(n)$ time. Naive multiplication is slow, however. It takes $O(n^2)$ time to compute all the coefficient multiplications. FFT helps us speed up this multiplication.&lt;/p></description></item><item><title>413_difference Sequence</title><link>https://ofuro.me/posts/413_difference-sequence/</link><pubDate>Mon, 11 Dec 2023 16:01:49 -0600</pubDate><guid>https://ofuro.me/posts/413_difference-sequence/</guid><description>&lt;h2 id="span-stylecolorff0000this-note-is-not-finished-yetspan">&lt;span style="color:#ff0000">⚠️THIS NOTE IS NOT FINISHED YET&lt;/span>&lt;/h2>
+&lt;p>Evaluations and additions of polynomials are straightforward computation. Can be done in $O(n)$ time. Naive multiplication is slow, however. It takes $O(n^2)$ time to compute all the coefficient multiplications. FFT helps us speed up this multiplication.&lt;/p></description></item><item><title>Comparisons on Keyword Support Methods</title><link>https://ofuro.me/posts/keyword-support-methods/</link><pubDate>Wed, 03 Jul 2024 18:29:54 -0600</pubDate><guid>https://ofuro.me/posts/keyword-support-methods/</guid><description>&lt;p>The goal is to compare three methods for supporting keyword feature in PIR: Key-value filter in ChalametPIR, Sparse PIR, and the Cuckoo hashing method. In the beginning, we don&amp;rsquo;t want to start by comparing the detailed experimental performances, but we want to list their properties. What they are good / bad at.&lt;/p>
+&lt;h3 id="metrics">Metrics&lt;/h3>
+&lt;ul>
+&lt;li>Client storage&lt;/li>
+&lt;li>Client computation&lt;/li>
+&lt;li>Online communication&lt;/li>
+&lt;li>Download size&lt;/li>
+&lt;li>Offline communication (if any)&lt;/li>
+&lt;li>Server storage&lt;/li>
+&lt;li>Server computation&lt;/li>
+&lt;li>Ability to support multiple clients&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="notations">Notations:&lt;/h3>
+&lt;p>$m$: the number of key-value pairs.&lt;/p></description></item><item><title>413_difference Sequence</title><link>https://ofuro.me/posts/413_difference-sequence/</link><pubDate>Mon, 11 Dec 2023 16:01:49 -0600</pubDate><guid>https://ofuro.me/posts/413_difference-sequence/</guid><description>&lt;h2 id="span-stylecolorff0000this-note-is-not-finished-yetspan">&lt;span style="color:#ff0000">⚠️THIS NOTE IS NOT FINISHED YET&lt;/span>&lt;/h2>
 &lt;h3 id="todo">TODO:&lt;/h3>
 &lt;ul>
 &lt;li>stirling number definitions&lt;/li>
