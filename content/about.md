@@ -7,7 +7,7 @@ summary: "about"
 
 <p style="float: right; margin-left: 20px;">
   <!-- <img src="https://raw.githubusercontent.com/helloboyxxx/images-for-notes/master/uPic/me.jpeg" alt="Photo of Yue" style="width: 200px; height: auto;"> -->
-  <img src="posts/myimg/photography/myhead.jpg" alt="Photo of Yue" style="width: 200px; height: auto;">
+  <img src="/myimg/photography/myhead.jpg" alt="Photo of Yue" style="width: 250px; height: auto;">
 </p>
 
 ### Me as a student

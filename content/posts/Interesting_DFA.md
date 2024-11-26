@@ -28,7 +28,7 @@ There is an interesting DFA design question. The question is as follows:
 
 Initially, I was thinking of the trailing bits of the binary representation. However, there are too many states to consider. A better way of constructing the states of this machine is to consider the reminders. By doing this, it only uses 5 states --- it worth a try. So, I tried to write out the binary numbers and tried to design the transition functions for simple cases. It turns out that the result works well.
 
-![dfa machine](../myimg/dfa/dfa.png)
+![dfa machine](/myimg/dfa/dfa.png)
 
 I also wrote a short python script for verifying this:
 
