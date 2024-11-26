@@ -3,7 +3,7 @@ title: "Taste of Fully Homomorphic Encryption"
 date: 2024-09-18T17:56:58-06:00
 draft: false
 math: true
-tags: []
+tags: ["cryptography"]
 ---
 
 > The following is a note for my talk during Ling's group meeting.

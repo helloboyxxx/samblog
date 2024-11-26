@@ -1,9 +1,9 @@
 ---
 title: "Comparisons on Keyword Support Methods"
-date: 2024-11-25T18:29:54-06:00
+date: 2024-07-03T18:29:54-06:00
 draft: false
 math: true
-tags: []
+tags: ["cryptography"]
 ---
 
 The goal is to compare three methods for supporting keyword feature in PIR: Key-value filter in ChalametPIR, Sparse PIR, and the Cuckoo hashing method. In the beginning, we don't want to start by comparing the detailed experimental performances, but we want to list their properties. What they are good / bad at.
