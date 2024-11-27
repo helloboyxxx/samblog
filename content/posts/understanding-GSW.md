@@ -1,6 +1,6 @@
 ---
 title: "Understanding GSW"
-date: 2024-10-01T21:56:04-06:00
+date: 2024-08-23T21:56:04-06:00
 draft: false
 math: true
 tags: ["cryptography"]
