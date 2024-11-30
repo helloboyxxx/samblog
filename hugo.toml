@@ -18,6 +18,11 @@ name = "email"
 url = "mailto:yuec12@illinois.edu"
 
 [[menu.main]]
+name = "Notes"
+url = "/"
+weight = 6
+
+[[menu.main]]
 name = "About Me"
 url = "about"
 weight = 7
