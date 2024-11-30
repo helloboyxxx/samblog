@@ -6,12 +6,12 @@ math: true
 tags: ["Combinatorics"]
 ---
 
-## <span style="color:#ff0000">⚠️THIS NOTE IS NOT FINISHED YET</span>
+<!-- ## <span style="color:#ff0000">⚠️THIS NOTE IS NOT FINISHED YET</span>
 ### TODO: 
 - stirling number definitions
 - stirling number of the first and the second type
 - bell number
----
+--- -->
 
 
 #### Question
