@@ -11,4 +11,4 @@ I have had a wonderful summer as I have been able to take Math 417 with Professo
 
 These are the notes I have taken during the course. It includes the greate Theorems, Lemmas and Propositions that we have learnt in the course.
 
-{{< embed-pdf url="../mypdf/417_final_notes.pdf" >}}
+{{< embed-pdf url="/mypdfs/417_final_notes.pdf" >}}
