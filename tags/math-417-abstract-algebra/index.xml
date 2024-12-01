@@ -68,33 +68,33 @@ to { -webkit-transform: rotate(360deg); }
 @-webkit-keyframes spin {
 to { -webkit-transform: rotate(360deg); }
 }
-&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-9169a613">
-&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-9169a613">
-&lt;div class="pdf-loading" id="pdf-loading-9169a613">&lt;/div>
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-f4e7dda1">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-f4e7dda1">
+&lt;div class="pdf-loading" id="pdf-loading-f4e7dda1">&lt;/div>
 &lt;/div>
 &lt;div id="overlayText">
-&lt;a href="../mypdf/417_final_notes.pdf" aria-label="Download" download>
+&lt;a href="https://ofuro.me/mypdfs/417_final_notes.pdf" aria-label="Download" download>
 &lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
 &lt;path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
 &lt;/svg>
 &lt;/a>
 &lt;/div>
-&lt;canvas class="pdf-canvas" id="pdf-canvas-9169a613">&lt;/canvas>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-f4e7dda1">&lt;/canvas>
 &lt;/div>
-&lt;div class="pdf-paginator" id="pdf-paginator-9169a613">
-&lt;button id="pdf-prev-9169a613">Previous&lt;/button>
-&lt;button id="pdf-next-9169a613">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;div class="pdf-paginator" id="pdf-paginator-f4e7dda1">
+&lt;button id="pdf-prev-f4e7dda1">Previous&lt;/button>
+&lt;button id="pdf-next-f4e7dda1">Next&lt;/button> &amp;nbsp; &amp;nbsp;
 &lt;span>
-&lt;span class="pdf-pagenum" id="pdf-pagenum-9169a613">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-9169a613">&lt;/span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-f4e7dda1">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-f4e7dda1">&lt;/span>
 &lt;/span>
-&lt;a class="pdf-source" id="pdf-source-9169a613" href="../mypdf/417_final_notes.pdf">[pdf]&lt;/a>
+&lt;a class="pdf-source" id="pdf-source-f4e7dda1" href="https://ofuro.me/mypdfs/417_final_notes.pdf">[pdf]&lt;/a>
 &lt;/div>
 &lt;noscript>
-View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-9169a613" href="../mypdf/417_final_notes.pdf">here&lt;/a>.
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-f4e7dda1" href="https://ofuro.me/mypdfs/417_final_notes.pdf">here&lt;/a>.
 &lt;/noscript>
 &lt;script type="text/javascript">
 (function(){
-var url = '..\/mypdf\/417_final_notes.pdf';
+var url = '\/mypdfs\/417_final_notes.pdf';
 var hidePaginator = "" === "true";
 var hideLoader = "" === "true";
 var selectedPageNum = parseInt("") || 1;
@@ -106,10 +106,10 @@ pageNum = selectedPageNum,
 pageRendering = false,
 pageNumPending = null,
 scale = 3,
-canvas = document.getElementById('pdf-canvas-9169a613'),
+canvas = document.getElementById('pdf-canvas-f4e7dda1'),
 ctx = canvas.getContext('2d'),
-paginator = document.getElementById("pdf-paginator-9169a613"),
-loadingWrapper = document.getElementById('pdf-loadingWrapper-9169a613');
+paginator = document.getElementById("pdf-paginator-f4e7dda1"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-f4e7dda1');
 showPaginator();
 showLoader();
 function renderPage(num) {
@@ -132,7 +132,7 @@ pageNumPending = null;
 }
 });
 });
-document.getElementById('pdf-pagenum-9169a613').textContent = num;
+document.getElementById('pdf-pagenum-f4e7dda1').textContent = num;
 }
 function showContent() {
 loadingWrapper.style.display = 'none';
@@ -161,7 +161,7 @@ return;
 pageNum--;
 queueRenderPage(pageNum);
 }
-document.getElementById('pdf-prev-9169a613').addEventListener('click', onPrevPage);
+document.getElementById('pdf-prev-f4e7dda1').addEventListener('click', onPrevPage);
 function onNextPage() {
 if (pageNum >= pdfDoc.numPages) {
 return;
@@ -169,11 +169,11 @@ return;
 pageNum++;
 queueRenderPage(pageNum);
 }
-document.getElementById('pdf-next-9169a613').addEventListener('click', onNextPage);
+document.getElementById('pdf-next-f4e7dda1').addEventListener('click', onNextPage);
 pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 pdfDoc = pdfDoc_;
 var numPages = pdfDoc.numPages;
-document.getElementById('pdf-pagecount-9169a613').textContent = numPages;
+document.getElementById('pdf-pagecount-f4e7dda1').textContent = numPages;
 if(pageNum > numPages) {
 pageNum = numPages
 }
