@@ -22,7 +22,7 @@ My academic journey has led me to develop a deep interest in cryptography. In Sp
 ---
 ### Me as an enthusiastic amateur photographer
 
-When taking pictures, I don't want to take it too serious. I don't want my photos to look too professional. Instead, I want them to look warm, peaceful, full of vitality. 
+When taking pictures, I don't want to take it too serious. I don't want my photos to look too professional. Instead, I want them to look warm, peaceful, full of vitality.
 
 <div style="overflow-x: auto; white-space: nowrap; padding: 10px 0;">
   <img src="/myimg/photography/kodak_bird.jpg" style="width: auto; height: auto; max-height: 400px; display: inline-block; margin-right: 10px;">
@@ -42,5 +42,4 @@ When taking pictures, I don't want to take it too serious. I don't want my photo
   <img src="/myimg/photography/roof.JPG" style="width: auto; height: auto; max-height: 400px; display: inline-block; margin-right: 10px;">
   <img src="/myimg/photography/studying_girl.JPG" style="width: auto; height: auto; max-height: 400px; display: inline-block; margin-right: 10px;">
 </div>
-
-
+<p style="text-align:center; color:#b3b3b3">⬆️ Scroll right for more ⬆️</p>
