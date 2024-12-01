@@ -329,6 +329,14 @@ width: 100%;
 height: auto;
 display: none;
 }
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
 .pdf-loadingWrapper {
 display: none;
 justify-content: center;
@@ -353,12 +361,12 @@ justify-content: end;
 }
 #overlayText a {
 position: relative;
-top: 10px;
-right: 4px;
+top: 1px;
+right: 1px;
 color: #000;
 margin: auto;
-background-color: #eeeeee;
-padding: 0.3em 1em;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
 border: solid 2px;
 border-radius: 12px;
 border-color: #00000030;
@@ -378,22 +386,15 @@ to { -webkit-transform: rotate(360deg); }
 &lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-f4e7dda1">
 &lt;div class="pdf-loading" id="pdf-loading-f4e7dda1">&lt;/div>
 &lt;/div>
-&lt;div id="overlayText">
-&lt;a href="https://ofuro.me/mypdfs/417_final_notes.pdf" aria-label="Download" download>
-&lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-&lt;path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
-&lt;/svg>
-&lt;/a>
-&lt;/div>
 &lt;canvas class="pdf-canvas" id="pdf-canvas-f4e7dda1">&lt;/canvas>
 &lt;/div>
 &lt;div class="pdf-paginator" id="pdf-paginator-f4e7dda1">
-&lt;button id="pdf-prev-f4e7dda1">Previous&lt;/button>
-&lt;button id="pdf-next-f4e7dda1">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;button id="pdf-prev-f4e7dda1" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-f4e7dda1" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
 &lt;span>
 &lt;span class="pdf-pagenum" id="pdf-pagenum-f4e7dda1">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-f4e7dda1">&lt;/span>
 &lt;/span>
-&lt;a class="pdf-source" id="pdf-source-f4e7dda1" href="https://ofuro.me/mypdfs/417_final_notes.pdf">[pdf]&lt;/a>
+&lt;a class="pdf-source" id="pdf-source-f4e7dda1" href="https://ofuro.me/mypdfs/417_final_notes.pdf"> [Downlaod]&lt;/a>
 &lt;/div>
 &lt;noscript>
 View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-f4e7dda1" href="https://ofuro.me/mypdfs/417_final_notes.pdf">here&lt;/a>.
@@ -494,4 +495,4819 @@ renderPage(pageNum);
 $$&lt;/p>
 &lt;p>Ex:&lt;/p>
 &lt;p>Path counting: In a $3 \times 3$ grid, if you can move 1 step upward or 1 step to the right. How many ways do we have to move from bottom-left to top-right corner?&lt;/p>
-&lt;p>The idea is to break this problem into smaller problems. Addition principle guarrantees that we can add the numbers together.&lt;/p></description></item></channel></rss>
+&lt;p>The idea is to break this problem into smaller problems. Addition principle guarrantees that we can add the numbers together.&lt;/p></description></item><item><title>341 Networking Epoll</title><link>https://ofuro.me/posts/341-33-networking-epoll/</link><pubDate>Fri, 21 Apr 2023 19:35:39 -0600</pubDate><guid>https://ofuro.me/posts/341-33-networking-epoll/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-834afb2e">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-834afb2e">
+&lt;div class="pdf-loading" id="pdf-loading-834afb2e">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-834afb2e">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-834afb2e">
+&lt;button id="pdf-prev-834afb2e" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-834afb2e" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-834afb2e">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-834afb2e">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-834afb2e" href="https://ofuro.me/mypdfs/341_notes/CS341-33-NetworkingEpoll.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-834afb2e" href="https://ofuro.me/mypdfs/341_notes/CS341-33-NetworkingEpoll.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-33-NetworkingEpoll.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-834afb2e'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-834afb2e"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-834afb2e');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-834afb2e').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-834afb2e').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-834afb2e').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-834afb2e').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Scheduling</title><link>https://ofuro.me/posts/341-32-scheduling/</link><pubDate>Thu, 20 Apr 2023 19:35:33 -0600</pubDate><guid>https://ofuro.me/posts/341-32-scheduling/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-e7584dc2">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-e7584dc2">
+&lt;div class="pdf-loading" id="pdf-loading-e7584dc2">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-e7584dc2">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-e7584dc2">
+&lt;button id="pdf-prev-e7584dc2" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-e7584dc2" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-e7584dc2">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-e7584dc2">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-e7584dc2" href="https://ofuro.me/mypdfs/341_notes/CS341-32-Scheduling.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-e7584dc2" href="https://ofuro.me/mypdfs/341_notes/CS341-32-Scheduling.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-32-Scheduling.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-e7584dc2'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-e7584dc2"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-e7584dc2');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-e7584dc2').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-e7584dc2').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-e7584dc2').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-e7584dc2').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Files 1 to 5</title><link>https://ofuro.me/posts/341-files-1-to-5/</link><pubDate>Fri, 31 Mar 2023 19:35:05 -0600</pubDate><guid>https://ofuro.me/posts/341-files-1-to-5/</guid><description>&lt;p>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-56163446">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-56163446">
+&lt;div class="pdf-loading" id="pdf-loading-56163446">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-56163446">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-56163446">
+&lt;button id="pdf-prev-56163446" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-56163446" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-56163446">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-56163446">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-56163446" href="https://ofuro.me/mypdfs/341_notes/CS341-27-Files-1.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-56163446" href="https://ofuro.me/mypdfs/341_notes/CS341-27-Files-1.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-27-Files-1.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-56163446'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-56163446"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-56163446');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-56163446').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-56163446').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-56163446').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-56163446').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;div class="embed-pdf-container" id="embed-pdf-container-4a6e299f">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-4a6e299f">
+&lt;div class="pdf-loading" id="pdf-loading-4a6e299f">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-4a6e299f">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-4a6e299f">
+&lt;button id="pdf-prev-4a6e299f" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-4a6e299f" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-4a6e299f">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-4a6e299f">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-4a6e299f" href="https://ofuro.me/mypdfs/341_notes/CS341-28-Files-2.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-4a6e299f" href="https://ofuro.me/mypdfs/341_notes/CS341-28-Files-2.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-28-Files-2.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-4a6e299f'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-4a6e299f"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-4a6e299f');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-4a6e299f').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-4a6e299f').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-4a6e299f').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-4a6e299f').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;div class="embed-pdf-container" id="embed-pdf-container-001cd031">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-001cd031">
+&lt;div class="pdf-loading" id="pdf-loading-001cd031">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-001cd031">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-001cd031">
+&lt;button id="pdf-prev-001cd031" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-001cd031" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-001cd031">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-001cd031">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-001cd031" href="https://ofuro.me/mypdfs/341_notes/CS341-29-Files-3.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-001cd031" href="https://ofuro.me/mypdfs/341_notes/CS341-29-Files-3.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-29-Files-3.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-001cd031'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-001cd031"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-001cd031');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-001cd031').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-001cd031').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-001cd031').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-001cd031').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;div class="embed-pdf-container" id="embed-pdf-container-890d1f4f">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-890d1f4f">
+&lt;div class="pdf-loading" id="pdf-loading-890d1f4f">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-890d1f4f">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-890d1f4f">
+&lt;button id="pdf-prev-890d1f4f" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-890d1f4f" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-890d1f4f">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-890d1f4f">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-890d1f4f" href="https://ofuro.me/mypdfs/341_notes/CS341-30-Files-4.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-890d1f4f" href="https://ofuro.me/mypdfs/341_notes/CS341-30-Files-4.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-30-Files-4.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-890d1f4f'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-890d1f4f"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-890d1f4f');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-890d1f4f').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-890d1f4f').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-890d1f4f').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-890d1f4f').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;div class="embed-pdf-container" id="embed-pdf-container-d01f92cd">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-d01f92cd">
+&lt;div class="pdf-loading" id="pdf-loading-d01f92cd">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-d01f92cd">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-d01f92cd">
+&lt;button id="pdf-prev-d01f92cd" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-d01f92cd" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-d01f92cd">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-d01f92cd">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-d01f92cd" href="https://ofuro.me/mypdfs/341_notes/CS341-31-Files-5.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-d01f92cd" href="https://ofuro.me/mypdfs/341_notes/CS341-31-Files-5.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-31-Files-5.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-d01f92cd'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-d01f92cd"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-d01f92cd');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-d01f92cd').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-d01f92cd').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-d01f92cd').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-d01f92cd').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;/p></description></item><item><title>341 TCP Server</title><link>https://ofuro.me/posts/341-26-tcp-server/</link><pubDate>Wed, 29 Mar 2023 19:34:04 -0600</pubDate><guid>https://ofuro.me/posts/341-26-tcp-server/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-d9451fd1">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-d9451fd1">
+&lt;div class="pdf-loading" id="pdf-loading-d9451fd1">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-d9451fd1">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-d9451fd1">
+&lt;button id="pdf-prev-d9451fd1" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-d9451fd1" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-d9451fd1">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-d9451fd1">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-d9451fd1" href="https://ofuro.me/mypdfs/341_notes/CS341-26-TCPServer.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-d9451fd1" href="https://ofuro.me/mypdfs/341_notes/CS341-26-TCPServer.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-26-TCPServer.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-d9451fd1'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-d9451fd1"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-d9451fd1');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-d9451fd1').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-d9451fd1').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-d9451fd1').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-d9451fd1').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 TCP Client Http</title><link>https://ofuro.me/posts/341-25-tcp-client-http/</link><pubDate>Mon, 27 Mar 2023 19:33:53 -0600</pubDate><guid>https://ofuro.me/posts/341-25-tcp-client-http/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-7b3bc579">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-7b3bc579">
+&lt;div class="pdf-loading" id="pdf-loading-7b3bc579">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-7b3bc579">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-7b3bc579">
+&lt;button id="pdf-prev-7b3bc579" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-7b3bc579" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-7b3bc579">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-7b3bc579">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-7b3bc579" href="https://ofuro.me/mypdfs/341_notes/CS341-25-TCPClientHttp.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-7b3bc579" href="https://ofuro.me/mypdfs/341_notes/CS341-25-TCPClientHttp.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-25-TCPClientHttp.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-7b3bc579'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-7b3bc579"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-7b3bc579');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-7b3bc579').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-7b3bc579').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-7b3bc579').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-7b3bc579').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Errors Packets UDP TCP</title><link>https://ofuro.me/posts/341-24-errors-packets-udp-tcp/</link><pubDate>Sun, 26 Mar 2023 19:33:34 -0600</pubDate><guid>https://ofuro.me/posts/341-24-errors-packets-udp-tcp/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-cc78658b">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-cc78658b">
+&lt;div class="pdf-loading" id="pdf-loading-cc78658b">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-cc78658b">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-cc78658b">
+&lt;button id="pdf-prev-cc78658b" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-cc78658b" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-cc78658b">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-cc78658b">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-cc78658b" href="https://ofuro.me/mypdfs/341_notes/CS341-24-ErrorsPacketsUDPTCP.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-cc78658b" href="https://ofuro.me/mypdfs/341_notes/CS341-24-ErrorsPacketsUDPTCP.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-24-ErrorsPacketsUDPTCP.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-cc78658b'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-cc78658b"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-cc78658b');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-cc78658b').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-cc78658b').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-cc78658b').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-cc78658b').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 C Files Pipes Seeks</title><link>https://ofuro.me/posts/341-23-c-files-pipes-seeks/</link><pubDate>Wed, 22 Mar 2023 19:33:21 -0600</pubDate><guid>https://ofuro.me/posts/341-23-c-files-pipes-seeks/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-4aa5efb6">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-4aa5efb6">
+&lt;div class="pdf-loading" id="pdf-loading-4aa5efb6">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-4aa5efb6">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-4aa5efb6">
+&lt;button id="pdf-prev-4aa5efb6" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-4aa5efb6" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-4aa5efb6">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-4aa5efb6">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-4aa5efb6" href="https://ofuro.me/mypdfs/341_notes/CS341-23-CFilesPipesSeeks%202.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-4aa5efb6" href="https://ofuro.me/mypdfs/341_notes/CS341-23-CFilesPipesSeeks%202.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-23-CFilesPipesSeeks 2.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-4aa5efb6'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-4aa5efb6"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-4aa5efb6');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-4aa5efb6').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-4aa5efb6').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-4aa5efb6').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-4aa5efb6').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Pipes and Seeks</title><link>https://ofuro.me/posts/341-22-pipes-and-seeks/</link><pubDate>Mon, 20 Mar 2023 19:31:59 -0600</pubDate><guid>https://ofuro.me/posts/341-22-pipes-and-seeks/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-5c73fc21">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-5c73fc21">
+&lt;div class="pdf-loading" id="pdf-loading-5c73fc21">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-5c73fc21">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-5c73fc21">
+&lt;button id="pdf-prev-5c73fc21" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-5c73fc21" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-5c73fc21">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-5c73fc21">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-5c73fc21" href="https://ofuro.me/mypdfs/341_notes/CS341-22-PipesAndSeeks%202.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-5c73fc21" href="https://ofuro.me/mypdfs/341_notes/CS341-22-PipesAndSeeks%202.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-22-PipesAndSeeks 2.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-5c73fc21'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-5c73fc21"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-5c73fc21');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-5c73fc21').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-5c73fc21').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-5c73fc21').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-5c73fc21').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Page Tables and IPC</title><link>https://ofuro.me/posts/341-21-page-tables-and-ipc/</link><pubDate>Mon, 13 Mar 2023 19:31:45 -0600</pubDate><guid>https://ofuro.me/posts/341-21-page-tables-and-ipc/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-8971aaaf">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-8971aaaf">
+&lt;div class="pdf-loading" id="pdf-loading-8971aaaf">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-8971aaaf">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-8971aaaf">
+&lt;button id="pdf-prev-8971aaaf" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-8971aaaf" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-8971aaaf">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-8971aaaf">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-8971aaaf" href="https://ofuro.me/mypdfs/341_notes/CS341-21-PageTablesAndIPC.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-8971aaaf" href="https://ofuro.me/mypdfs/341_notes/CS341-21-PageTablesAndIPC.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-21-PageTablesAndIPC.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-8971aaaf'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-8971aaaf"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-8971aaaf');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-8971aaaf').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-8971aaaf').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-8971aaaf').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-8971aaaf').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Dining Philosophers</title><link>https://ofuro.me/posts/341-20-dining-philosophers/</link><pubDate>Sat, 11 Mar 2023 19:31:35 -0600</pubDate><guid>https://ofuro.me/posts/341-20-dining-philosophers/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-7b98d40f">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-7b98d40f">
+&lt;div class="pdf-loading" id="pdf-loading-7b98d40f">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-7b98d40f">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-7b98d40f">
+&lt;button id="pdf-prev-7b98d40f" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-7b98d40f" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-7b98d40f">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-7b98d40f">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-7b98d40f" href="https://ofuro.me/mypdfs/341_notes/CS341-20-DiningPhilosophers.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-7b98d40f" href="https://ofuro.me/mypdfs/341_notes/CS341-20-DiningPhilosophers.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-20-DiningPhilosophers.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-7b98d40f'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-7b98d40f"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-7b98d40f');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-7b98d40f').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-7b98d40f').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-7b98d40f').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-7b98d40f').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Reader Writer Deadlock II</title><link>https://ofuro.me/posts/341-19-reader-writer-deadlock-ii/</link><pubDate>Wed, 08 Mar 2023 19:26:37 -0600</pubDate><guid>https://ofuro.me/posts/341-19-reader-writer-deadlock-ii/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-04284029">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-04284029">
+&lt;div class="pdf-loading" id="pdf-loading-04284029">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-04284029">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-04284029">
+&lt;button id="pdf-prev-04284029" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-04284029" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-04284029">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-04284029">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-04284029" href="https://ofuro.me/mypdfs/341_notes/CS341-19-ReaderWriterDeadlock-part2.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-04284029" href="https://ofuro.me/mypdfs/341_notes/CS341-19-ReaderWriterDeadlock-part2.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-19-ReaderWriterDeadlock-part2.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-04284029'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-04284029"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-04284029');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-04284029').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-04284029').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-04284029').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-04284029').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Reader Writer Deadlock</title><link>https://ofuro.me/posts/341-18-reader-writer-deadlock/</link><pubDate>Tue, 07 Mar 2023 19:26:21 -0600</pubDate><guid>https://ofuro.me/posts/341-18-reader-writer-deadlock/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-f948a313">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-f948a313">
+&lt;div class="pdf-loading" id="pdf-loading-f948a313">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-f948a313">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-f948a313">
+&lt;button id="pdf-prev-f948a313" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-f948a313" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-f948a313">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-f948a313">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-f948a313" href="https://ofuro.me/mypdfs/341_notes/CS341-18-ReaderWriterDeadlock.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-f948a313" href="https://ofuro.me/mypdfs/341_notes/CS341-18-ReaderWriterDeadlock.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-18-ReaderWriterDeadlock.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-f948a313'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-f948a313"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-f948a313');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-f948a313').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-f948a313').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-f948a313').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-f948a313').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Producer Consumer Barrier</title><link>https://ofuro.me/posts/341-17-producer-consumer-barrier/</link><pubDate>Mon, 27 Feb 2023 19:26:08 -0600</pubDate><guid>https://ofuro.me/posts/341-17-producer-consumer-barrier/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-d532528f">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-d532528f">
+&lt;div class="pdf-loading" id="pdf-loading-d532528f">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-d532528f">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-d532528f">
+&lt;button id="pdf-prev-d532528f" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-d532528f" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-d532528f">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-d532528f">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-d532528f" href="https://ofuro.me/mypdfs/341_notes/CS341-17-ProducerConsumerBarrierV2.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-d532528f" href="https://ofuro.me/mypdfs/341_notes/CS341-17-ProducerConsumerBarrierV2.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-17-ProducerConsumerBarrierV2.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-d532528f'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-d532528f"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-d532528f');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-d532528f').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-d532528f').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-d532528f').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-d532528f').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Counting Semaphores</title><link>https://ofuro.me/posts/341-16-counting-semaphores/</link><pubDate>Fri, 24 Feb 2023 19:25:46 -0600</pubDate><guid>https://ofuro.me/posts/341-16-counting-semaphores/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-a70ae9fe">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-a70ae9fe">
+&lt;div class="pdf-loading" id="pdf-loading-a70ae9fe">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-a70ae9fe">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-a70ae9fe">
+&lt;button id="pdf-prev-a70ae9fe" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-a70ae9fe" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-a70ae9fe">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-a70ae9fe">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-a70ae9fe" href="https://ofuro.me/mypdfs/341_notes/CS341-16-CountingSemaphores.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-a70ae9fe" href="https://ofuro.me/mypdfs/341_notes/CS341-16-CountingSemaphores.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-16-CountingSemaphores.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-a70ae9fe'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-a70ae9fe"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-a70ae9fe');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-a70ae9fe').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-a70ae9fe').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-a70ae9fe').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-a70ae9fe').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Cond Variables</title><link>https://ofuro.me/posts/341-15-cond-variables/</link><pubDate>Wed, 22 Feb 2023 19:25:30 -0600</pubDate><guid>https://ofuro.me/posts/341-15-cond-variables/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-fd69abe6">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-fd69abe6">
+&lt;div class="pdf-loading" id="pdf-loading-fd69abe6">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-fd69abe6">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-fd69abe6">
+&lt;button id="pdf-prev-fd69abe6" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-fd69abe6" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-fd69abe6">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-fd69abe6">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-fd69abe6" href="https://ofuro.me/mypdfs/341_notes/CS341-15-CondVariables.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-fd69abe6" href="https://ofuro.me/mypdfs/341_notes/CS341-15-CondVariables.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-15-CondVariables.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-fd69abe6'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-fd69abe6"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-fd69abe6');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-fd69abe6').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-fd69abe6').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-fd69abe6').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-fd69abe6').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 PTreads and Locks</title><link>https://ofuro.me/posts/341-14-ptreads-and-locks/</link><pubDate>Tue, 21 Feb 2023 19:25:14 -0600</pubDate><guid>https://ofuro.me/posts/341-14-ptreads-and-locks/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-7fc6f8da">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-7fc6f8da">
+&lt;div class="pdf-loading" id="pdf-loading-7fc6f8da">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-7fc6f8da">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-7fc6f8da">
+&lt;button id="pdf-prev-7fc6f8da" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-7fc6f8da" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-7fc6f8da">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-7fc6f8da">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-7fc6f8da" href="https://ofuro.me/mypdfs/341_notes/CS341-14-PThreadsAndLocks.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-7fc6f8da" href="https://ofuro.me/mypdfs/341_notes/CS341-14-PThreadsAndLocks.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-14-PThreadsAndLocks.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-7fc6f8da'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-7fc6f8da"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-7fc6f8da');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-7fc6f8da').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-7fc6f8da').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-7fc6f8da').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-7fc6f8da').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 PTreads</title><link>https://ofuro.me/posts/341-13-ptreads/</link><pubDate>Sun, 19 Feb 2023 19:25:02 -0600</pubDate><guid>https://ofuro.me/posts/341-13-ptreads/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-ea761e45">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-ea761e45">
+&lt;div class="pdf-loading" id="pdf-loading-ea761e45">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-ea761e45">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-ea761e45">
+&lt;button id="pdf-prev-ea761e45" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-ea761e45" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-ea761e45">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-ea761e45">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-ea761e45" href="https://ofuro.me/mypdfs/341_notes/CS341-13-PThreads.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-ea761e45" href="https://ofuro.me/mypdfs/341_notes/CS341-13-PThreads.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-13-PThreads.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-ea761e45'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-ea761e45"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-ea761e45');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-ea761e45').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-ea761e45').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-ea761e45').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-ea761e45').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Treads Memory</title><link>https://ofuro.me/posts/341-12-treads-memory/</link><pubDate>Sat, 18 Feb 2023 19:24:48 -0600</pubDate><guid>https://ofuro.me/posts/341-12-treads-memory/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-5c00530a">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-5c00530a">
+&lt;div class="pdf-loading" id="pdf-loading-5c00530a">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-5c00530a">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-5c00530a">
+&lt;button id="pdf-prev-5c00530a" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-5c00530a" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-5c00530a">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-5c00530a">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-5c00530a" href="https://ofuro.me/mypdfs/341_notes/CS341-12-ThreadsMemory.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-5c00530a" href="https://ofuro.me/mypdfs/341_notes/CS341-12-ThreadsMemory.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-12-ThreadsMemory.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-5c00530a'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-5c00530a"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-5c00530a');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-5c00530a').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-5c00530a').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-5c00530a').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-5c00530a').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Treads</title><link>https://ofuro.me/posts/341-11-treads/</link><pubDate>Sat, 18 Feb 2023 19:24:38 -0600</pubDate><guid>https://ofuro.me/posts/341-11-treads/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-73d99cf9">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-73d99cf9">
+&lt;div class="pdf-loading" id="pdf-loading-73d99cf9">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-73d99cf9">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-73d99cf9">
+&lt;button id="pdf-prev-73d99cf9" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-73d99cf9" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-73d99cf9">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-73d99cf9">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-73d99cf9" href="https://ofuro.me/mypdfs/341_notes/CS341-11-Threads.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-73d99cf9" href="https://ofuro.me/mypdfs/341_notes/CS341-11-Threads.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-11-Threads.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-73d99cf9'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-73d99cf9"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-73d99cf9');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-73d99cf9').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-73d99cf9').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-73d99cf9').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-73d99cf9').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Allocator II</title><link>https://ofuro.me/posts/341-10-allocator-ii/</link><pubDate>Wed, 15 Feb 2023 19:24:31 -0600</pubDate><guid>https://ofuro.me/posts/341-10-allocator-ii/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-8a3b5e9a">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-8a3b5e9a">
+&lt;div class="pdf-loading" id="pdf-loading-8a3b5e9a">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-8a3b5e9a">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-8a3b5e9a">
+&lt;button id="pdf-prev-8a3b5e9a" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-8a3b5e9a" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-8a3b5e9a">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-8a3b5e9a">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-8a3b5e9a" href="https://ofuro.me/mypdfs/341_notes/CS341-10-allocatorII.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-8a3b5e9a" href="https://ofuro.me/mypdfs/341_notes/CS341-10-allocatorII.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-10-allocatorII.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-8a3b5e9a'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-8a3b5e9a"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-8a3b5e9a');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-8a3b5e9a').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-8a3b5e9a').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-8a3b5e9a').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-8a3b5e9a').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Allocator</title><link>https://ofuro.me/posts/341-09-allocator/</link><pubDate>Mon, 13 Feb 2023 19:24:14 -0600</pubDate><guid>https://ofuro.me/posts/341-09-allocator/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-0bb3b56a">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-0bb3b56a">
+&lt;div class="pdf-loading" id="pdf-loading-0bb3b56a">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-0bb3b56a">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-0bb3b56a">
+&lt;button id="pdf-prev-0bb3b56a" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-0bb3b56a" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-0bb3b56a">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-0bb3b56a">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-0bb3b56a" href="https://ofuro.me/mypdfs/341_notes/CS341-09-allocator.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-0bb3b56a" href="https://ofuro.me/mypdfs/341_notes/CS341-09-allocator.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-09-allocator.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-0bb3b56a'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-0bb3b56a"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-0bb3b56a');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-0bb3b56a').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-0bb3b56a').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-0bb3b56a').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-0bb3b56a').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Heap</title><link>https://ofuro.me/posts/341-08-heap/</link><pubDate>Mon, 06 Feb 2023 19:24:09 -0600</pubDate><guid>https://ofuro.me/posts/341-08-heap/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-4a8e4ddc">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-4a8e4ddc">
+&lt;div class="pdf-loading" id="pdf-loading-4a8e4ddc">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-4a8e4ddc">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-4a8e4ddc">
+&lt;button id="pdf-prev-4a8e4ddc" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-4a8e4ddc" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-4a8e4ddc">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-4a8e4ddc">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-4a8e4ddc" href="https://ofuro.me/mypdfs/341_notes/CS341-08-heap.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-4a8e4ddc" href="https://ofuro.me/mypdfs/341_notes/CS341-08-heap.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-08-heap.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-4a8e4ddc'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-4a8e4ddc"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-4a8e4ddc');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-4a8e4ddc').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-4a8e4ddc').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-4a8e4ddc').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-4a8e4ddc').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Signals</title><link>https://ofuro.me/posts/341-07-signals/</link><pubDate>Sat, 04 Feb 2023 19:46:03 -0600</pubDate><guid>https://ofuro.me/posts/341-07-signals/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-fe882648">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-fe882648">
+&lt;div class="pdf-loading" id="pdf-loading-fe882648">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-fe882648">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-fe882648">
+&lt;button id="pdf-prev-fe882648" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-fe882648" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-fe882648">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-fe882648">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-fe882648" href="https://ofuro.me/mypdfs/341_notes/CS341-07-signals.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-fe882648" href="https://ofuro.me/mypdfs/341_notes/CS341-07-signals.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-07-signals.pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-fe882648'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-fe882648"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-fe882648');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-fe882648').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-fe882648').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-fe882648').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-fe882648').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item><item><title>341 Forkexecwait</title><link>https://ofuro.me/posts/341-06-forkexecwait/</link><pubDate>Mon, 30 Jan 2023 19:23:11 -0600</pubDate><guid>https://ofuro.me/posts/341-06-forkexecwait/</guid><description>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js" integrity="sha512-i+UmpoqoJqHkpXQ3mQfaIF8UZ2RAGoyqJvMzAKTadhBVhRk883EHluxdPsMf7c5/43D5tVpwIE8KLE1kQa0uCg==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.worker.min.js" integrity="sha512-NuVK4+sDE809oDhbdAABRO1nTe80t56vXda8dg1UQ+RcQ8x7WakwTzKE7LOosoNCKi7EH7FXo7mritFNWpZiLQ==" crossorigin="anonymous" referrerpolicy="no-referrer">&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 1px;
+right: 1px;
+color: #000;
+margin: auto;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-fd5b8bd6">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-fd5b8bd6">
+&lt;div class="pdf-loading" id="pdf-loading-fd5b8bd6">&lt;/div>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-fd5b8bd6">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-fd5b8bd6">
+&lt;button id="pdf-prev-fd5b8bd6" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-fd5b8bd6" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-fd5b8bd6">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-fd5b8bd6">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-fd5b8bd6" href="https://ofuro.me/mypdfs/341_notes/CS341-06-forkexecwait%20%282%29.pdf"> [Downlaod]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-fd5b8bd6" href="https://ofuro.me/mypdfs/341_notes/CS341-06-forkexecwait%20%282%29.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '\/mypdfs\/341_notes\/CS341-06-forkexecwait (2).pdf';
+var hidePaginator = "" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/ofuro.me\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-fd5b8bd6'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-fd5b8bd6"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-fd5b8bd6');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-fd5b8bd6').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-fd5b8bd6').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-fd5b8bd6').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-fd5b8bd6').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;p>UIUC CS341 System Programming Spring 2023 taught by Prof. &lt;a href="https://siebelschool.illinois.edu/about/people/faculty/angrave">Lawrence Angrave&lt;/a>&lt;/p></description></item></channel></rss>

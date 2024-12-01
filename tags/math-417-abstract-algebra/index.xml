@@ -23,6 +23,14 @@ width: 100%;
 height: auto;
 display: none;
 }
+.prevNext {
+margin: 3px;
+border: solid 1px;
+border-radius: 5px;
+border-color: #383838;
+background-color: #f0f0f08e;
+padding: 5px;
+}
 .pdf-loadingWrapper {
 display: none;
 justify-content: center;
@@ -47,12 +55,12 @@ justify-content: end;
 }
 #overlayText a {
 position: relative;
-top: 10px;
-right: 4px;
+top: 1px;
+right: 1px;
 color: #000;
 margin: auto;
-background-color: #eeeeee;
-padding: 0.3em 1em;
+background-color: #f0f0f08e;
+padding: 0.1em 0.6em;
 border: solid 2px;
 border-radius: 12px;
 border-color: #00000030;
@@ -72,22 +80,15 @@ to { -webkit-transform: rotate(360deg); }
 &lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-f4e7dda1">
 &lt;div class="pdf-loading" id="pdf-loading-f4e7dda1">&lt;/div>
 &lt;/div>
-&lt;div id="overlayText">
-&lt;a href="https://ofuro.me/mypdfs/417_final_notes.pdf" aria-label="Download" download>
-&lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-&lt;path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
-&lt;/svg>
-&lt;/a>
-&lt;/div>
 &lt;canvas class="pdf-canvas" id="pdf-canvas-f4e7dda1">&lt;/canvas>
 &lt;/div>
 &lt;div class="pdf-paginator" id="pdf-paginator-f4e7dda1">
-&lt;button id="pdf-prev-f4e7dda1">Previous&lt;/button>
-&lt;button id="pdf-next-f4e7dda1">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;button id="pdf-prev-f4e7dda1" class="prevNext">Previous&lt;/button>
+&lt;button id="pdf-next-f4e7dda1" class="prevNext">Next&lt;/button> &amp;nbsp; &amp;nbsp;
 &lt;span>
 &lt;span class="pdf-pagenum" id="pdf-pagenum-f4e7dda1">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-f4e7dda1">&lt;/span>
 &lt;/span>
-&lt;a class="pdf-source" id="pdf-source-f4e7dda1" href="https://ofuro.me/mypdfs/417_final_notes.pdf">[pdf]&lt;/a>
+&lt;a class="pdf-source" id="pdf-source-f4e7dda1" href="https://ofuro.me/mypdfs/417_final_notes.pdf"> [Downlaod]&lt;/a>
 &lt;/div>
 &lt;noscript>
 View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-f4e7dda1" href="https://ofuro.me/mypdfs/417_final_notes.pdf">here&lt;/a>.
