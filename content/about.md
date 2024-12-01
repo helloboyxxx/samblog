@@ -9,7 +9,7 @@ summary: "about"
 {{< imageRight src="/myimg/photography/myhead.jpg" alt="Photo of Yue" caption="credit:Snüte " width="30%" >}}
 
 
-Greetings! This is Yue. I'm currently an undergrad at UIUC majoring in Computer Science. I have a broad interest in CS. The courses I have taken can be as practical as implementing malloc, as theoretical as [analyzing randomized algorithms](/mypdfs/closest_pair.pdf), or as entertaining as ["drawing" smilely face on images](/myimg/photography/smile.jpg) ;) 
+Greetings! This is Yue. I'm currently an undergrad at UIUC majoring in Computer Science. I have a broad interest in CS. The courses I have taken can be as practical as implementing malloc, as theoretical as [analyzing randomized algorithms](/mypdfs/473_notes/473%20L15.pdf), or as entertaining as ["drawing" smilely face on images](/myimg/photography/smile.jpg) ;) 
 
 Mathematics has also been a significant part of my college life. I was once lost in [hard proofs](/mypdfs/math417_lec24.pdf), unable to figure out why I wanted to read abstract things. But those challenges equipped me with the ability to approach rigorous definitions and theorems without hesitation or fear. Although I am probably not the person who can talk about the beauty of mathematics, I genuinely enjoyed my journey through it.
 
