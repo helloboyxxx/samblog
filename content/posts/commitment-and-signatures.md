@@ -72,7 +72,7 @@ This is using the randomness given by random oracle.
 - $\sigma=\operatorname{sign}_{s k}(m)$
 - $\{0,1\} \leftarrow \operatorname{Verify}_{\mathrm{pk}}(\sigma, m)$
 
-**Correctness**: Verify ${ }_{\mathbf{p k}}(\sigma, m)=1$ for $(p k, s k) \leftarrow \operatorname{Gen}\left(1^n\right)$, any message $m \in \mathcal{M}, \sigma=\operatorname{sign}_{s k}(m)$
+**Correctness**: $\text{Verify}\_{\mathbf{p k}}(\sigma, m)=1$ for $(p k, s k) \leftarrow \operatorname{Gen}\left(1^n\right)$, any message $m \in \mathcal{M}, \sigma=\operatorname{sign}_{s k}(m)$
 
 **Security**
 Experiment Sig_forge $_{A, \Pi}(n)$ :
