@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Yue's Notes</title><link>https://ofuro.me/posts/</link><description>Recent content in Posts on Yue's Notes</description><generator>Hugo -- 0.139.4</generator><language>en-us</language><lastBuildDate>Fri, 13 Dec 2024 00:03:24 -0600</lastBuildDate><atom:link href="https://ofuro.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Commitment and Signatures</title><link>https://ofuro.me/posts/commitment-and-signatures/</link><pubDate>Fri, 13 Dec 2024 00:03:24 -0600</pubDate><guid>https://ofuro.me/posts/commitment-and-signatures/</guid><description>&lt;h3 id="span-stylecolor28a745definitionspan-commitment">&lt;span style="color:#28a745">Definition&lt;/span> Commitment&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Yue's Notes</title><link>https://ofuro.me/posts/</link><description>Recent content in Posts on Yue's Notes</description><generator>Hugo -- 0.143.1</generator><language>en-us</language><lastBuildDate>Fri, 13 Dec 2024 00:03:24 -0600</lastBuildDate><atom:link href="https://ofuro.me/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Commitment and Signatures</title><link>https://ofuro.me/posts/commitment-and-signatures/</link><pubDate>Fri, 13 Dec 2024 00:03:24 -0600</pubDate><guid>https://ofuro.me/posts/commitment-and-signatures/</guid><description>&lt;h3 id="span-stylecolor28a745definitionspan-commitment">&lt;span style="color:#28a745">Definition&lt;/span> Commitment&lt;/h3>
 &lt;ul>
 &lt;li>Parameters $\mathsf{pp} \gets \mathsf{Gen}(1^n)$.&lt;/li>
 &lt;li>$\mathsf{com} \gets \mathsf{Commit}(m, r)$&lt;/li>
@@ -7,8 +7,7 @@
 &lt;p>&lt;strong>Binding:&lt;/strong> an adversary can’t open the commitment to a different message $m&amp;rsquo;$.&lt;/p>
 &lt;p>&lt;strong>Hiding:&lt;/strong> $\mathsf{com}$ does not reveal any information about the message $m$.&lt;/p>
 &lt;blockquote>
-&lt;p>One naive approach is to use hash. However, hash is not hiding.&lt;/p>
-&lt;/blockquote>
+&lt;p>One naive approach is to use hash. However, hash is not hiding.&lt;/p>&lt;/blockquote>
 &lt;h3 id="pedersen-commitment">Pedersen commitment&lt;/h3>
 &lt;ul>
 &lt;li>$\mathsf{Gen}(1^n)$: group $\mathbb{G}$ with order $q$ and random generators $g, h$.&lt;/li>
@@ -25,8 +24,7 @@ $$
 (a+b)^p \equiv a^p + b^p \mod p
 $$
 &lt;span style="color:#eb861c">Proof&lt;/span> It suffices to show that $\binom{p}{k} \equiv 0 \mod p$ if $0 &amp;lt; k &amp;lt; p$. Observe: $p \mid p!, p \nmid k!, p \nmid (p-k)!$, hence $p \mid \binom{p}{k}$. $\blacksquare$&lt;/p></description></item><item><title>Taste of Fully Homomorphic Encryption</title><link>https://ofuro.me/posts/taste_of_fhe/</link><pubDate>Wed, 18 Sep 2024 17:56:58 -0600</pubDate><guid>https://ofuro.me/posts/taste_of_fhe/</guid><description>&lt;blockquote>
-&lt;p>The following is a note for my talk during Ling&amp;rsquo;s group meeting.&lt;/p>
-&lt;/blockquote>
+&lt;p>The following is a note for my talk during Ling&amp;rsquo;s group meeting.&lt;/p>&lt;/blockquote>
 &lt;h3 id="what-is-fhe">What is FHE?&lt;/h3>
 &lt;p>Homomorphic encryption allows some computation (addition, scalar multiplication, ct-ct multiplication) directly on ciphertexts without first having to decrypt it.&lt;/p>
 &lt;p>Partially Homomorphic Encryption support only one of those possible operation. RSA is an example:
@@ -52,8 +50,7 @@ Fancy! And it exsists!&lt;/p></description></item><item><title>Convex Hull in 2D
 &lt;/li>
 &lt;li>
 &lt;p>Bounding volume. Makes ray shooting tasks faster.&lt;/p></description></item><item><title>Fast Fourier Transform</title><link>https://ofuro.me/posts/473_fft/</link><pubDate>Thu, 29 Aug 2024 15:30:07 -0500</pubDate><guid>https://ofuro.me/posts/473_fft/</guid><description>&lt;blockquote>
-&lt;p>I know this name for a long time. But never learnt it. Now it&amp;rsquo;s time.&lt;/p>
-&lt;/blockquote>
+&lt;p>I know this name for a long time. But never learnt it. Now it&amp;rsquo;s time.&lt;/p>&lt;/blockquote>
 &lt;h4 id="recap">Recap&lt;/h4>
 &lt;p>Previously, Karatsuba&amp;rsquo;s algorithm for integer multiplication. It computes the result in $O(n^{\log_2 3})$ where $n$ is the number of digits.&lt;/p>
 &lt;p>Another recap: polynomial representation:
@@ -3469,8 +3466,7 @@ $$&lt;/p>
 L_{12}^i=L_1^i \cdot R^i+L_2^i \cdot\left(1-R^i\right)
 $$&lt;/p></description></item><item><title>445_Synthesizing and Cutting</title><link>https://ofuro.me/posts/445_synthesizing-cutting/</link><pubDate>Mon, 30 Oct 2023 10:33:26 -0500</pubDate><guid>https://ofuro.me/posts/445_synthesizing-cutting/</guid><description>&lt;h2 id="texture-synthesis-and-hole-filling">Texture Synthesis and Hole-Filling&lt;/h2>
 &lt;blockquote>
-&lt;p>How do we cut something out of an image, and fill the hole naturally?&lt;/p>
-&lt;/blockquote>
+&lt;p>How do we cut something out of an image, and fill the hole naturally?&lt;/p>&lt;/blockquote>
 &lt;p>&lt;span style="color:#28a745">Definition&lt;/span> Texture depicts spacially repeating patterns.&lt;/p>
 &lt;h3 id="texture-synthesis">Texture Synthesis&lt;/h3>
 &lt;p>Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.&lt;/p>

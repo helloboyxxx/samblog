@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cryptography on Yue's Notes</title><link>https://ofuro.me/tags/cryptography/</link><description>Recent content in Cryptography on Yue's Notes</description><generator>Hugo -- 0.139.4</generator><language>en-us</language><lastBuildDate>Fri, 13 Dec 2024 00:03:24 -0600</lastBuildDate><atom:link href="https://ofuro.me/tags/cryptography/index.xml" rel="self" type="application/rss+xml"/><item><title>Commitment and Signatures</title><link>https://ofuro.me/posts/commitment-and-signatures/</link><pubDate>Fri, 13 Dec 2024 00:03:24 -0600</pubDate><guid>https://ofuro.me/posts/commitment-and-signatures/</guid><description>&lt;h3 id="span-stylecolor28a745definitionspan-commitment">&lt;span style="color:#28a745">Definition&lt;/span> Commitment&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cryptography on Yue's Notes</title><link>https://ofuro.me/tags/cryptography/</link><description>Recent content in Cryptography on Yue's Notes</description><generator>Hugo -- 0.143.1</generator><language>en-us</language><lastBuildDate>Fri, 13 Dec 2024 00:03:24 -0600</lastBuildDate><atom:link href="https://ofuro.me/tags/cryptography/index.xml" rel="self" type="application/rss+xml"/><item><title>Commitment and Signatures</title><link>https://ofuro.me/posts/commitment-and-signatures/</link><pubDate>Fri, 13 Dec 2024 00:03:24 -0600</pubDate><guid>https://ofuro.me/posts/commitment-and-signatures/</guid><description>&lt;h3 id="span-stylecolor28a745definitionspan-commitment">&lt;span style="color:#28a745">Definition&lt;/span> Commitment&lt;/h3>
 &lt;ul>
 &lt;li>Parameters $\mathsf{pp} \gets \mathsf{Gen}(1^n)$.&lt;/li>
 &lt;li>$\mathsf{com} \gets \mathsf{Commit}(m, r)$&lt;/li>
@@ -7,8 +7,7 @@
 &lt;p>&lt;strong>Binding:&lt;/strong> an adversary can’t open the commitment to a different message $m&amp;rsquo;$.&lt;/p>
 &lt;p>&lt;strong>Hiding:&lt;/strong> $\mathsf{com}$ does not reveal any information about the message $m$.&lt;/p>
 &lt;blockquote>
-&lt;p>One naive approach is to use hash. However, hash is not hiding.&lt;/p>
-&lt;/blockquote>
+&lt;p>One naive approach is to use hash. However, hash is not hiding.&lt;/p>&lt;/blockquote>
 &lt;h3 id="pedersen-commitment">Pedersen commitment&lt;/h3>
 &lt;ul>
 &lt;li>$\mathsf{Gen}(1^n)$: group $\mathbb{G}$ with order $q$ and random generators $g, h$.&lt;/li>
@@ -25,8 +24,7 @@ $$
 (a+b)^p \equiv a^p + b^p \mod p
 $$
 &lt;span style="color:#eb861c">Proof&lt;/span> It suffices to show that $\binom{p}{k} \equiv 0 \mod p$ if $0 &amp;lt; k &amp;lt; p$. Observe: $p \mid p!, p \nmid k!, p \nmid (p-k)!$, hence $p \mid \binom{p}{k}$. $\blacksquare$&lt;/p></description></item><item><title>Taste of Fully Homomorphic Encryption</title><link>https://ofuro.me/posts/taste_of_fhe/</link><pubDate>Wed, 18 Sep 2024 17:56:58 -0600</pubDate><guid>https://ofuro.me/posts/taste_of_fhe/</guid><description>&lt;blockquote>
-&lt;p>The following is a note for my talk during Ling&amp;rsquo;s group meeting.&lt;/p>
-&lt;/blockquote>
+&lt;p>The following is a note for my talk during Ling&amp;rsquo;s group meeting.&lt;/p>&lt;/blockquote>
 &lt;h3 id="what-is-fhe">What is FHE?&lt;/h3>
 &lt;p>Homomorphic encryption allows some computation (addition, scalar multiplication, ct-ct multiplication) directly on ciphertexts without first having to decrypt it.&lt;/p>
 &lt;p>Partially Homomorphic Encryption support only one of those possible operation. RSA is an example:

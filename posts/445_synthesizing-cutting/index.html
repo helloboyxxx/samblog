@@ -2,7 +2,6 @@
 <meta name=keywords content="Computational Photography"><meta name=description content="Texture Synthesis and Hole-Filling
 
 How do we cut something out of an image, and fill the hole naturally?
-
 Definition Texture depicts spacially repeating patterns.
 Texture Synthesis
 Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.
@@ -22,7 +21,6 @@ One idea:
 Compute statistics of input texture Generate a new texture that keeps those same statistics. But it is hard to model those probabilities distributions."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-10-30T10:33:26-05:00"><meta property="article:modified_time" content="2023-10-30T10:33:26-05:00"><meta property="article:tag" content="Computational Photography"><meta name=twitter:card content="summary"><meta name=twitter:title content="445_Synthesizing and Cutting"><meta name=twitter:description content="Texture Synthesis and Hole-Filling
 
 How do we cut something out of an image, and fill the hole naturally?
-
 Definition Texture depicts spacially repeating patterns.
 Texture Synthesis
 Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.
@@ -47,7 +45,7 @@ $$
 \exp\left{
 \frac{-|c(x)-c(y)|^2}{2 \sigma^2}
 \right}
-$$</p><ol start=4><li>Apply min-cut/max-flow algorithm foreground, background models</li><li>Return to 2, using current labels to compute foreground, background models.</li></ol><h4 id=limitations-of-graph-cut>Limitations of Graph Cut<a hidden class=anchor aria-hidden=true href=#limitations-of-graph-cut>#</a></h4><ul><li>Requires associative graphs<ul><li>Connected notes should prefer to have the same label</li></ul></li><li>Is optimal only for binary problems</li></ul><h3 id=reference>Reference<a hidden class=anchor aria-hidden=true href=#reference>#</a></h3><p>CS445 Derek Hoiem: <a href=https://courses.engr.illinois.edu/cs445/fa2023/>https://courses.engr.illinois.edu/cs445/fa2023/</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://ofuro.me/tags/computational-photography/>Computational Photography</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2024 <a href=https://ofuro.me/>Yue's Notes</a></span> ·
+$$</p><ol start=4><li>Apply min-cut/max-flow algorithm foreground, background models</li><li>Return to 2, using current labels to compute foreground, background models.</li></ol><h4 id=limitations-of-graph-cut>Limitations of Graph Cut<a hidden class=anchor aria-hidden=true href=#limitations-of-graph-cut>#</a></h4><ul><li>Requires associative graphs<ul><li>Connected notes should prefer to have the same label</li></ul></li><li>Is optimal only for binary problems</li></ul><h3 id=reference>Reference<a hidden class=anchor aria-hidden=true href=#reference>#</a></h3><p>CS445 Derek Hoiem: <a href=https://courses.engr.illinois.edu/cs445/fa2023/>https://courses.engr.illinois.edu/cs445/fa2023/</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://ofuro.me/tags/computational-photography/>Computational Photography</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://ofuro.me/>Yue's Notes</a></span> ·
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
         <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>

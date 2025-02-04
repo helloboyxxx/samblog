@@ -59,7 +59,7 @@ for i = 1 to n do {
 }
 </code></pre><p>$O(n^2)$ running time.</p><h3 id=algorithm-2-graham-scan-1972>Algorithm 2: Graham Scan (1972)<a hidden class=anchor aria-hidden=true href=#algorithm-2-graham-scan-1972>#</a></h3><blockquote><p>Looks like an insertion sort.</p></blockquote><p>Idea:</p><ul><li>add points one at a time and maintain the UH. (Incremental approach).</li><li>go from left to right. (Sweeping technique)</li><li>We add the highest point on the scanning line, then update the hull by relaxing. Keep deleting suffix untill a CW appears.</li></ul><p>I will skip the pseudocode.</p><h4 id=analysis>Analysis:<a hidden class=anchor aria-hidden=true href=#analysis>#</a></h4><p>Naively $O(n^2)$. But, what if we bound the number of iterations for relaxation? Observation, the total relaxation time is bounded by $O(n)$.<div>$$
 O(n + \# \text{decrement}) \leq O(n + \# \text{increment}) = O(n)
-$$</div>But we do have a sorting in $O(n \log n)$.</p></div><footer class=post-footer><ul class=post-tags></ul></footer></article></main><footer class=footer><span>&copy; 2024 <a href=https://ofuro.me/>Yue's Notes</a></span> ·
+$$</div>But we do have a sorting in $O(n \log n)$.</p></div><footer class=post-footer><ul class=post-tags></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://ofuro.me/>Yue's Notes</a></span> ·
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
         <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>

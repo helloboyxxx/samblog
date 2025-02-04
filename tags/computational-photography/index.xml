@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Computational Photography on Yue's Notes</title><link>https://ofuro.me/tags/computational-photography/</link><description>Recent content in Computational Photography on Yue's Notes</description><generator>Hugo -- 0.139.4</generator><language>en-us</language><lastBuildDate>Mon, 30 Oct 2023 10:36:20 -0500</lastBuildDate><atom:link href="https://ofuro.me/tags/computational-photography/index.xml" rel="self" type="application/rss+xml"/><item><title>445_camera</title><link>https://ofuro.me/posts/445_camera/</link><pubDate>Mon, 30 Oct 2023 10:36:20 -0500</pubDate><guid>https://ofuro.me/posts/445_camera/</guid><description>&lt;h1 id="world-coordinates-and-image-coordinates">World Coordinates and Image coordinates&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Computational Photography on Yue's Notes</title><link>https://ofuro.me/tags/computational-photography/</link><description>Recent content in Computational Photography on Yue's Notes</description><generator>Hugo -- 0.143.1</generator><language>en-us</language><lastBuildDate>Mon, 30 Oct 2023 10:36:20 -0500</lastBuildDate><atom:link href="https://ofuro.me/tags/computational-photography/index.xml" rel="self" type="application/rss+xml"/><item><title>445_camera</title><link>https://ofuro.me/posts/445_camera/</link><pubDate>Mon, 30 Oct 2023 10:36:20 -0500</pubDate><guid>https://ofuro.me/posts/445_camera/</guid><description>&lt;h1 id="world-coordinates-and-image-coordinates">World Coordinates and Image coordinates&lt;/h1>
 &lt;h2 id="pinhole-camera-model">Pinhole Camera Model&lt;/h2>
 &lt;p>$$
 x = K \left[
@@ -50,8 +50,7 @@ $$&lt;/p>
 L_{12}^i=L_1^i \cdot R^i+L_2^i \cdot\left(1-R^i\right)
 $$&lt;/p></description></item><item><title>445_Synthesizing and Cutting</title><link>https://ofuro.me/posts/445_synthesizing-cutting/</link><pubDate>Mon, 30 Oct 2023 10:33:26 -0500</pubDate><guid>https://ofuro.me/posts/445_synthesizing-cutting/</guid><description>&lt;h2 id="texture-synthesis-and-hole-filling">Texture Synthesis and Hole-Filling&lt;/h2>
 &lt;blockquote>
-&lt;p>How do we cut something out of an image, and fill the hole naturally?&lt;/p>
-&lt;/blockquote>
+&lt;p>How do we cut something out of an image, and fill the hole naturally?&lt;/p>&lt;/blockquote>
 &lt;p>&lt;span style="color:#28a745">Definition&lt;/span> Texture depicts spacially repeating patterns.&lt;/p>
 &lt;h3 id="texture-synthesis">Texture Synthesis&lt;/h3>
 &lt;p>Create new samples of a given texture. Many applications: virtual environments, hole-filling, texturing surfaces.&lt;/p>
