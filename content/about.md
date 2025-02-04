@@ -24,7 +24,7 @@ My academic journey has led me to develop a deep interest in cryptography. In Sp
 
 When taking pictures, I don't want to take it too serious. I don't want my photos to look too professional. Instead, I want them to look warm, peaceful, full of vitality.
 
-<div style="overflow-x: auto; white-space: nowrap; padding: 10px 0;">
+<!-- <div style="overflow-x: auto; white-space: nowrap; padding: 10px 0;">
   <img src="/myimg/photography/kodak_bird.jpg" style="width: auto; height: auto; max-height: 400px; display: inline-block; margin-right: 10px;">
   <img src="/myimg/photography/riding_bike.jpg" style="width: auto; height: auto; max-height: 400px; display: inline-block; margin-right: 10px;">
   <img src="/myimg/photography/yellow_flower.jpg" style="width: auto; height: auto; max-height: 400px; display: inline-block; margin-right: 10px;">
@@ -41,5 +41,28 @@ When taking pictures, I don't want to take it too serious. I don't want my photo
   <img src="/myimg/photography/pool.jpg" style="width: auto; height: auto; max-height: 400px; display: inline-block; margin-right: 10px;">
   <img src="/myimg/photography/roof.JPG" style="width: auto; height: auto; max-height: 400px; display: inline-block; margin-right: 10px;">
   <img src="/myimg/photography/studying_girl.JPG" style="width: auto; height: auto; max-height: 400px; display: inline-block; margin-right: 10px;">
+</div> -->
+
+
+
+<div style="max-height: 1200px; overflow-y: auto; padding: 10px;">
+  <img src="/myimg/photography/kodak_bird.jpg" alt="Kodak Bird" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/riding_bike.jpg" alt="Riding Bike" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/yellow_flower.jpg" alt="Yellow Flower" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/Allen_blue copy.jpg" alt="Allen Blue" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/Teton_couple.jpeg" alt="Teton Couple" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/to_heaven.jpeg" alt="To Heaven" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/blue_sky_airplane.jpg" alt="Blue Sky Airplane" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/chilling_chair.jpeg" alt="Chilling Chair" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/afternoon.jpg" alt="Afternoon" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/free_walk.jpeg" alt="Free Walk" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/girl_playing_water.jpeg" alt="Girl Playing Water" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/great_Teton.jpeg" alt="Great Teton" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/man_in_sun.jpg" alt="Man in Sun" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/pool.jpg" alt="Pool" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/roof.JPG" alt="Roof" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
+  <img src="/myimg/photography/studying_girl.JPG" alt="Studying Girl" style="width: auto; height: auto; max-width: 100%; display: block; margin-bottom: 10px;">
 </div>
-<p style="text-align:center; color:#b3b3b3">⬆️ Scroll right for more ⬆️</p>
+
+
+<!-- <p style="text-align:center; color:#b3b3b3">⬆️ Scroll right for more ⬆️</p> -->
