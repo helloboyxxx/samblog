@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cryptography on Yue's Notes</title><link>https://ofuro.me/tags/cryptography/</link><description>Recent content in Cryptography on Yue's Notes</description><generator>Hugo -- 0.143.1</generator><language>en-us</language><lastBuildDate>Fri, 13 Dec 2024 00:03:24 -0600</lastBuildDate><atom:link href="https://ofuro.me/tags/cryptography/index.xml" rel="self" type="application/rss+xml"/><item><title>Commitment and Signatures</title><link>https://ofuro.me/posts/commitment-and-signatures/</link><pubDate>Fri, 13 Dec 2024 00:03:24 -0600</pubDate><guid>https://ofuro.me/posts/commitment-and-signatures/</guid><description>&lt;h3 id="span-stylecolor28a745definitionspan-commitment">&lt;span style="color:#28a745">Definition&lt;/span> Commitment&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cryptography on Yue's Notes</title><link>https://ofuro.me/tags/cryptography/</link><description>Recent content in Cryptography on Yue's Notes</description><generator>Hugo -- 0.143.1</generator><language>en-us</language><lastBuildDate>Tue, 11 Feb 2025 02:36:16 -0600</lastBuildDate><atom:link href="https://ofuro.me/tags/cryptography/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding SimplePIR &amp; DoublePIR</title><link>https://ofuro.me/posts/simple-double/</link><pubDate>Tue, 11 Feb 2025 02:36:16 -0600</pubDate><guid>https://ofuro.me/posts/simple-double/</guid><description>&lt;h3 id="notations">Notations&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Database size: $N$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Plaintext modulus:$p \in \mathbb{N}$. In SimplePIR, $\log(p) \leq 10$.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Ciphertext modulus: $q \in \mathbb{N}$. In SimplePIR, $\log(q) = 32$.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LWE Dimension: $n = 1024$&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LWE secret vector: $\vec{s} \in \mathbb{Z}_q^{n}$.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LWE enc factor: $\Delta = q / p$.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>LWE Randomized matrix $A \gets \mathbb{Z}_q^{m \times n}$, where $m$ is the number of samples you want to encrypt.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Plain message vector: $\vec{\mu} \in \mathbb{Z}_p^m$. In simplePIR, we also write $\mu_i$ to denote the vector with all zero entries except a single $1$ at index $i$.&lt;/p></description></item><item><title>Commitment and Signatures</title><link>https://ofuro.me/posts/commitment-and-signatures/</link><pubDate>Fri, 13 Dec 2024 00:03:24 -0600</pubDate><guid>https://ofuro.me/posts/commitment-and-signatures/</guid><description>&lt;h3 id="span-stylecolor28a745definitionspan-commitment">&lt;span style="color:#28a745">Definition&lt;/span> Commitment&lt;/h3>
 &lt;ul>
 &lt;li>Parameters $\mathsf{pp} \gets \mathsf{Gen}(1^n)$.&lt;/li>
 &lt;li>$\mathsf{com} \gets \mathsf{Commit}(m, r)$&lt;/li>
